@@ -1,26 +1,25 @@
-solve = function(value)
-{
-    // Lấy element
-    const menu = document.querySelector(".menu");
-    const menuOverlay = document.querySelector(".menu-overlay");
-    const menuBtn = document.querySelector(".button .btn");
-    const closeBtn = document.querySelector(".menu-close");
+sloveSlide = function(value){
+    const elementButton = document.querySelector(value.clmenuToggle)
+    const elementOverlay = document.querySelector(value.cloverlay)
+    const elementSlideContainer = document.querySelector(value.clslideContainer)
+    const elementCloseBtn = document.querySelector(value.clcloseBtn)
 
-    // Mở menu
-    menuBtn.addEventListener("click", () => {
-        menu.classList.add("active");
-        menuOverlay.classList.add("show");
-    });
+    elementButton.onclick = function(e){
+        e.stopPropagation()
+        elementSlideContainer.classList.add('active')
+        elementOverlay.classList.add('active')
+    }
 
-    // Đóng menu
-    closeBtn.addEventListener("click", () => {
-        menu.classList.remove("active");
-        menuOverlay.classList.remove("show");
-    });
-
-    // Click ra ngoài để đóng
-    menuOverlay.addEventListener("click", () => {
-        menu.classList.remove("active");
-        menuOverlay.classList.remove("show");
-    });
+    elementCloseBtn.onclick = function(e){
+        e.stopPropagation()
+        elementSlideContainer.classList.remove('active')
+        elementOverlay.classList.remove('active')
+    }
+    
+    elementOverlay.onclick = function(e){
+        e.stopPropagation()
+        elementSlideContainer.classList.remove('active')
+        elementOverlay.classList.remove('active')
+    }
+    
 }

@@ -58,37 +58,34 @@
                 </div>
             </div>
 
-            <!-- button-MENU -->
-            <div class="button">
-                <button type="button" class="btn btn-outline-secondary" id="menuToggle">
-                    <svg width="24" height="24" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round">
-                        <line x1="3" y1="6" x2="21" y2="6"></line>
-                        <line x1="3" y1="12" x2="21" y2="12"></line>
-                        <line x1="3" y1="18" x2="21" y2="18"></line>
-                    </svg>
-                </button>
-            </div>
+            <!-- Button để mở slide menu -->
+            <button class="menu-toggle" id="menuToggle">
+                <span class="hamburger"></span>
+                <span class="hamburger"></span>
+                <span class="hamburger"></span>
+            </button>
+
         </div>
     </nav>
-    
+    <!-- Overlay để đóng menu khi click bên ngoài -->
+    <div class="overlay" id="overlay"></div>
     <!-- Menu slide từ bên phải -->
-    <div class="menu" id="mobileMenu">
-        <button class="menu-close">&times;</button>
-        <h3>Menu</h3>
-        <ul class="menu-list">
-            <li data-action="home">Trang chủ</li>
-            <li class="nav-item dropdown">
-                <a class="nav-link dropdown-toggle" href="#" role="button" data-bs-toggle="dropdown" aria-expanded="false">
-                  <i class="fas fa-book me-2"></i>Thể loại
-                </a>
-                <ul class="dropdown-menu">
-                  <li><a class="dropdown-item" href="#">Anime</a></li>
-                  <li><a class="dropdown-item" href="#">Hoạt hình</a></li>
-                  <li><a class="dropdown-item" href="#">Đọc truyện</a></li>
-                </ul>
-            </li>
-            <li data-action="account">Quản lí tài khoản</li>
-        </ul>
+    <div class="slide-container" id="slideContainer">
+        <div class="slide-header">
+            <h2>Menu</h2>
+            <button class="close-btn" id="closeBtn">&times;</button>
+        </div>
+        <div class="slide-body">
+            <ul class="slide-items-list">
+                <li class="item"><a href="#">Trang chủ</a></li>
+                <li class="item"><a href="#">Sản phẩm</a></li>
+                <li class="item"><a href="#">Dịch vụ</a></li>
+                <li class="item"><a href="#">Giới thiệu</a></li>
+                <li class="item"><a href="#">Liên hệ</a></li>
+                <li class="item"><a href="#">Tin tức</a></li> 
+                <li class="item"><a href="#">Hỗ trợ</a></li>
+            </ul>
+        </div>
     </div>
     
     <!-- Bootstrap JS -->
@@ -97,8 +94,11 @@
     <!-- JS riêng -->
     <script src="{% static 'shop/js/home.js' %}"></script>
     <script>
-        solve({
-            
+        sloveSlide({
+            clmenuToggle: '#menuToggle',
+            cloverlay: '#overlay',
+            clslideContainer: '#slideContainer',
+            clcloseBtn: '#closeBtn',
         });
     </script>
 </body>
