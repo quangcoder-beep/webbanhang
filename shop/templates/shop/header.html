@@ -1,0 +1,150 @@
+{% load static %}
+<!-- header -->
+<nav class="header">
+    <!-- đăng nhập / đăng ký + slide-images -->
+    <div class="header-manage0">
+        <!-- đăng nhập / đăng ký -->
+        <div class="account">
+            <ul class="account-ul">
+                <li><a href="#">Login</a></li>
+                <li><span>or</span></li>
+                <li><a href="#">Logup</a></li>
+            </ul>
+        </div>
+        <!-- logo -->
+        <div class="logo-text">
+            <a href="#"><h1>Anime HQM</h1></a>
+        </div>
+    </div>
+
+    <!-- phần danh mục, thể loại,... -->
+    <div class="header-manage1">
+        <ul>
+            <li>
+                <div class="dropdown-container">
+                    <a class="clickDropdown" href="#" role="button" aria-expanded="false">DANH MỤC</a>
+                    <ul class="dropdown-items" id="dropdown-danhmuc">
+                        <li><a class="item" href="#">Phim mới</a></li>
+                        <li><a class="item" href="#">Phim hot</a></li>
+                        <li><a class="item" href="#">Phim đang chiếu</a></li>
+                    </ul>
+                </div>
+            </li>
+            <li>
+                <div class="dropdown-container">
+                    <a class="clickDropdown" href="#" role="button" aria-expanded="false">Thể loại</a>
+                    <ul class="dropdown-items" id="dropdown-items">
+                        <li><a class="item" href="#">Anime</a></li>
+                        <li><a class="item" href="#">Hoạt hình</a></li>
+                        <li><a class="item" href="#">Đọc truyện</a></li>
+                    </ul>
+                </div>
+            </li>
+            <li>
+                <div class="dropdown-container">
+                    <a class="clickDropdown" href="#" role="button" aria-expanded="false">GIỚI THIỆU</a>
+                    <ul class="dropdown-items" id="dropdown-gioithieu">
+                        <li><a class="item" href="#">Về chúng tôi</a></li>
+                        <li><a class="item" href="#">Liên hệ</a></li>
+                        <li><a class="item" href="#">Hỗ trợ</a></li>
+                    </ul>
+                </div>
+            </li>
+            <li>
+                <div class="dropdown-container">
+                    <a class="clickDropdown" href="#" role="button" aria-expanded="false">TOP TRUYỆN</a>
+                    <ul class="dropdown-items" id="dropdown-top">
+                        <li><a class="item" href="#">Top tuần</a></li>
+                        <li><a class="item" href="#">Top tháng</a></li>
+                        <li><a class="item" href="#">Top năm</a></li>
+                    </ul>
+                </div>
+            </li>
+        </ul>
+    </div>
+
+    <!-- phần tìm kiếm + button -->
+    <div class="header-manage2">
+        <!-- phần tìm kiếm -->
+        <div class="search">
+            <div class="search-container"> 
+                <input type="search" name="search" id="searchInput" placeholder="Tìm kiếm...">
+                <button type="submit" class="search-btn">
+                    <svg width="16" height="16" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round">
+                        <circle cx="11" cy="11" r="8"></circle>
+                        <path d="m21 21-4.35-4.35"></path>
+                    </svg>
+                </button>
+            </div>
+        </div>
+
+        <!-- Button để mở slide menu -->
+        <button class="menu-toggle" id="menuToggle">
+            <span class="hamburger"></span>
+            <span class="hamburger"></span>
+            <span class="hamburger"></span>
+        </button>
+
+    </div>
+</nav>
+<!-- Overlay để đóng menu khi click bên ngoài -->
+<div class="overlay" id="overlay"></div>
+<!-- Menu slide từ bên phải -->
+<div class="slide-container" id="slideContainer">
+    <div class="slide-header">
+        <h2>Menu</h2>
+        <button class="close-btn" id="closeBtn">&times;</button>
+    </div>
+    <div class="slide-body">
+        <ul class="slide-items-list">
+            <li class="item"><a class="header-item"><i class="fa-solid fa-house"></i> Trang chủ</a></li>
+            <li class="item">
+                <a class="header-item dropdown"><i class="fa-solid fa-book-open"></i> Danh mục</a>
+                <ul class="child-item">
+                    <li><a href="#">Phim mới </a></li>
+                    <li><a href="#">Phim hot</a></li>
+                    <li><a href="#">Phim đang chiếu</a></li>
+                </ul>
+            </li>
+            <li class="item">
+                <a class="header-item dropdown"><i class="fa-solid fa-shapes"></i>  Thể loại</a>
+                <ul class="child-item">
+                    <li><a href="#">Anime</a></li>
+                    <li><a href="#">Hoạt hình</a></li>
+                    <li><a href="#">Đọc truyện</a></li>
+                </ul>
+            </li>
+            <li class="item">
+                <a class="header-item dropdown"><i class="fa-solid fa-star"></i> Top truyện</a>
+                <ul class="child-item">
+                    <li><a href="#">Top tuần</a></li>
+                    <li><a href="#">Top tháng</a></li>
+                    <li><a href="#">Top năm</a></li>
+                </ul>
+            </li>
+            <li class="item">
+                <a class="header-item dropdown"><i class="fa-solid fa-circle-info"></i> Giới thiệu</a>
+                <ul class="child-item">
+                    <li><a href="#">Về chúng tôi</a></li>
+                    <li><a href="#">Liên hệ</a></li>
+                    <li><a href="#">Hỗ trợ</a></li>
+                </ul>
+            </li>
+            <li class="item">
+                <a class="header-item dropdown"><i class="fa-solid fa-comments"></i> Hỗ trợ</a>
+                <ul class="child-item" >
+                    <li><a href="#">Liên hệ</a></li>
+                </ul>
+            </li>
+            <li class="item"><a class="header-item dropdown"><i class="fa-solid fa-gear"></i> Quản lí tài khoản</a>
+                <ul class="child-item">
+                    <li><a href="#">Quyền riêng tư</a></li>
+                </ul>
+            </li>
+        </ul>
+    </div>
+</div>
+<!-- end-header -->
+
+
+
