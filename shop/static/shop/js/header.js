@@ -24,31 +24,50 @@ sloveSlide = function(value){
     
 }
 
-function sloveDropdown(value) {
+sloveDropdown = function(value) {
     const elementClick = document.querySelectorAll("." + value.clclickDropdown);
     const elementDropdownItems = document.querySelectorAll("." + value.cldropdown_items);
 
     // Gắn sự kiện click cho từng nút
     elementClick.forEach(function (btn, index) {
-        btn.addEventListener("click", function (e) {
-            e.preventDefault();      // tránh reload khi href="#"
+        btn.addEventListener('click', function(e) {
+            e.preventDefault();
             e.stopPropagation();
 
-            // Đóng tất cả menu trước
-            elementDropdownItems.forEach(menu => menu.classList.remove("show"));
+            const targetMenu = elementDropdownItems[index];
+            const isOpen = targetMenu.classList.contains('show');
 
-            // Mở đúng menu theo index
-            elementDropdownItems[index].classList.toggle("show");
+            // Đóng tất cả trước
+            elementDropdownItems.forEach(function(menu){
+                menu.classList.remove('show');
+            });
+
+            // Nếu menu mục tiêu chưa mở thì mở
+            if (!isOpen) {
+                targetMenu.classList.add('show');
+            }
+            
         });
     });
 
     // Khi click ra ngoài thì đóng menu
-    window.addEventListener("click", function (e) {
-        elementDropdownItems.forEach(function (menu, index) {
-            if (!menu.contains(e.target) && !elementClick[index].contains(e.target)) {
-                menu.classList.remove("show");
+    window.addEventListener('click', function(e) {
+        elementDropdownItems.forEach(function (menu, i) {
+            const clickInsideMenu = menu.contains(e.target);
+            const clickOnTrigger = elementClick[i] && elementClick[i].contains(e.target);
+            if (!clickInsideMenu && !clickOnTrigger) {
+                menu.classList.remove('show');
             }
         });
     });
+}
+
+solveScroll = function(value){
+    const elementFade = document.querySelector("." + value.clElementFade)
+    window.onscroll = function(){
+        if (window.scrollY > 50) elementFade.classList.add("fade");
+        else elementFade.classList.remove("fade");
+        
+    }
 }
 

@@ -1,5 +1,3 @@
-
-  
   /* ===== RESET CHUNG ===== */
   ul, li {
     margin: 0;                               /* Bỏ margin mặc định */
@@ -9,18 +7,28 @@
   
   /* ===== MAIN HEADER STYLES ===== */
   .header {
+    height: auto;
+    position: fixed;
     display: grid;                           /* Sử dụng Grid layout */
     grid-template-columns: 2fr 2fr 1fr;      /* 3 cột */
     align-items: stretch;                    /* Các phần tử kéo dài bằng nhau */
-    min-height: 120px;                       /* Tăng chiều cao */
+    min-height: 50px;                       /* Tăng chiều cao */
     background: #0F1416;
     box-shadow: 0 12px 40px rgba(102, 126, 234, 0.4), 0 4px 12px rgba(0, 0, 0, 0.15);
-    position: relative;                      /* Định vị tương đối */
-    z-index: 1000;                           /* Luôn nổi trên */
+    position: fixed;                      /* Định vị tương đối */
+    top: 0;                                  /* Cố định trên cùng */
+    left: 0;
+    right: 0;
+    width: 100%;
+    z-index: 2001;                           /* Luôn nổi trên */
     margin-bottom: 15px;                     /* Cách nội dung dưới */
     backdrop-filter: blur(15px);             /* Hiệu ứng blur mạnh hơn */
     border: 2px solid rgba(255, 255, 255, 0.3);
-    overflow: hidden;                        /* Ẩn phần thừa */
+    transition: opacity 0.25s ease, backdrop-filter 0.25s ease, background-color 0.25s ease;
+  }
+  .header.fade {
+    opacity: 0.5; /* mờ đi */
+    backdrop-filter: blur(8px); /* thêm blur nếu muốn đẹp hơn */
   }
   
   /* Thêm hiệu ứng ánh sáng */
@@ -69,7 +77,6 @@
   }
   
   .header-manage1 ul li:hover {
-    background: linear-gradient(135deg, #ff6b6b 0%, #4ecdc4 50%, #45b7d1 100%);
     color: #ffffff;
     transform: translateY(-3px) scale(1.05);
     box-shadow: 0 8px 25px rgba(255, 107, 107, 0.4), 0 4px 15px rgba(78, 205, 196, 0.3);
@@ -131,7 +138,7 @@
   }
   
   .logo-text h1 {
-    font-size: 2.5rem;
+    font-size: 30px;
     font-weight: 900;
     background: linear-gradient(45deg, #ff6b6b, #4ecdc4, #45b7d1, #96ceb4);
     background-size: 400% 400%;
@@ -145,23 +152,9 @@
     position: relative;
   }
   
-  .logo-text h1::before {
-    content: '';
-    position: absolute;
-    top: -5px;
-    left: -10px;
-    right: -10px;
-    bottom: -5px;
-    background: linear-gradient(45deg, rgba(255, 107, 107, 0.2), rgba(78, 205, 196, 0.2));
-    border-radius: 15px;
-    z-index: -1;
-    filter: blur(10px);
-  }
+
   
-  @keyframes gradientShift {
-    0%, 100% { background-position: 0% 50%; }
-    50% { background-position: 100% 50%; }
-  }
+
   
   /* ===== SEARCH CONTAINER ===== */
   .search-container {
@@ -248,6 +241,7 @@
   justify-content: space-between;
   align-items: center;
   padding: 0 20px;
+  min-height: 80px;
 }
 
 .slide-header h2 {
@@ -286,8 +280,40 @@
 }
 
 .item a:hover {
-  background: #f5f5f5;
+  transform: translateY(-2px) scale(1.05);
+  box-shadow: 0 8px 25px rgba(137, 155, 236, 0.4), 0 4px 15px rgba(118, 75, 162, 0.3);
+  background: linear-gradient(135deg, #dabff5 0%, #9cadfa 100%);
 }
+.header-item:hover{
+  cursor: pointer;
+}
+
+.item ul{
+  display: none;                      /* chuẩn bị cho hiệu ứng mở/đóng */
+  margin: 6px 0 10px 10px;             /* tách khỏi item cha một chút */
+  padding: 6px 0 6px 10px;             /* khoảng cách bên trong */
+  border-left: 3px solid rgba(102, 126, 234, 0.35);
+  border-radius: 6px;
+  background: linear-gradient(135deg, rgba(218, 191, 245, 0.15) 0%, rgba(156, 173, 250, 0.1) 100%);
+  transition: max-height 0.3s ease, opacity 0.2s ease; 
+}
+.item ul.show{
+  display: block;                
+  opacity: 1;                           /* hiện rõ khi mở */
+}
+
+/* style cho mục con bên trong submenu */
+.item ul li a{
+  padding: 10px 14px;                   /* nhỏ gọn hơn cấp 1 */
+  color: #2f2f2f;
+  font-size: 14px;
+  border-radius: 6px;
+}
+.item ul li a:hover{
+  background: rgba(156, 173, 250, 0.2);
+  color: #111;
+}
+
 
   
   /* ===== SEARCH & TOOLS SECTION ===== */
@@ -497,13 +523,59 @@
 
 
 /* Responsive */
+
+
+/* ===================== RESPONSIVE ===================== */
+
+/* Tablet (≤ 768px) */
 @media (max-width: 768px) {
-    .dropdown-items {
-        min-width: 150px;
-    }
-    
-    .clickDropdown {
-        padding: 10px 16px;
-        font-size: 14px;
-    }
+  .header {
+    grid-template-columns: 1fr 1fr;   /* Header chia 2 cột */
+    min-height: 120px;                /* Giảm chiều cao header */
+  }
+
+  .logo-text h1 {
+    font-size: 2rem;                  /* Giảm kích thước logo */
+  }
+
+
+
+  .search-container {
+    width: 200px;                     /* Thu nhỏ ô tìm kiếm */
+  }
+  .header-manage1{
+    display: none;
+  }
+  .slide-container{
+    max-width: 50%;
+  }
 }
+
+/* Mobile (≤ 480px) */
+@media (max-width: 480px) {
+  .header {
+    grid-template-columns: 1fr;       /* Header 1 cột (xếp dọc) */
+    min-height: auto;
+    text-align: center;
+  }
+
+  .logo-text h1 {
+    font-size: 1.5rem;
+    letter-spacing: 1px;
+  }
+
+
+  .search-container {
+    width: 100%;                      /* Ô tìm kiếm full chiều ngang */
+    max-width: 280px;
+  }
+  .header-manage1{
+    display: none;
+  }
+  .slide-container{
+    max-width: 70%;
+  }
+}
+
+
+/* =================== */

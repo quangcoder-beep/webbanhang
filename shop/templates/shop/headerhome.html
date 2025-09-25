@@ -112,13 +112,50 @@
         </div>
         <div class="slide-body">
             <ul class="slide-items-list">
-                <li class="item"><a href="#">Trang chủ</a></li>
-                <li class="item"><a href="#">Sản phẩm</a></li>
-                <li class="item"><a href="#">Dịch vụ</a></li>
-                <li class="item"><a href="#">Giới thiệu</a></li>
-                <li class="item"><a href="#">Liên hệ</a></li>
-                <li class="item"><a href="#">Tin tức</a></li> 
-                <li class="item"><a href="#">Hỗ trợ</a></li>
+                <li class="item"><a class="header-item"><i class="fa-solid fa-house"></i> Trang chủ</a></li>
+                <li class="item">
+                    <a class="header-item dropdown"><i class="fa-solid fa-book-open"></i> Danh mục</a>
+                    <ul class="child-item">
+                        <li><a href="#">Phim mới </a></li>
+                        <li><a href="#">Phim hot</a></li>
+                        <li><a href="#">Phim đang chiếu</a></li>
+                    </ul>
+                </li>
+                <li class="item">
+                    <a class="header-item dropdown"><i class="fa-solid fa-shapes"></i>  Thể loại</a>
+                    <ul class="child-item">
+                        <li><a href="#">Anime</a></li>
+                        <li><a href="#">Hoạt hình</a></li>
+                        <li><a href="#">Đọc truyện</a></li>
+                    </ul>
+                </li>
+                <li class="item">
+                    <a class="header-item dropdown"><i class="fa-solid fa-star"></i> Top truyện</a>
+                    <ul class="child-item">
+                        <li><a href="#">Top tuần</a></li>
+                        <li><a href="#">Top tháng</a></li>
+                        <li><a href="#">Top năm</a></li>
+                    </ul>
+                </li>
+                <li class="item">
+                    <a class="header-item dropdown"><i class="fa-solid fa-circle-info"></i> Giới thiệu</a>
+                    <ul class="child-item">
+                        <li><a href="#">Về chúng tôi</a></li>
+                        <li><a href="#">Liên hệ</a></li>
+                        <li><a href="#">Hỗ trợ</a></li>
+                    </ul>
+                </li>
+                <li class="item">
+                    <a class="header-item dropdown"><i class="fa-solid fa-comments"></i> Hỗ trợ</a>
+                    <ul class="child-item" >
+                        <li><a href="#">Liên hệ</a></li>
+                    </ul>
+                </li>
+                <li class="item"><a class="header-item dropdown"><i class="fa-solid fa-gear"></i> Quản lí tài khoản</a>
+                    <ul class="child-item">
+                        <li><a href="#">Quyền riêng tư</a></li>
+                    </ul>
+                </li>
             </ul>
         </div>
     </div>
@@ -130,7 +167,7 @@
     <script src="https://cdn.jsdelivr.net/npm/bootstrap@5.3.3/dist/js/bootstrap.bundle.min.js"></script>
 
     <!-- JS riêng -->
-    <script src="{% static 'shop/js/home.js' %}"></script>
+    <script src="{% static 'shop/js/header.js' %}"></script>
     <script>
         sloveSlide({
             clmenuToggle: '#menuToggle',
@@ -144,6 +181,13 @@
             cldropdown_items: "dropdown-items",
             clItem: "item",
         });
+        sloveDropdown({
+            clclickDropdown: "dropdown",
+            cldropdown_items: "child-item",
+        })
+        solveScroll({
+            clElementFade: "header",
+        })
  
     </script>
 {% endblock %}

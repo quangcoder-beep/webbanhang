@@ -39,6 +39,11 @@
   color: #fff;
 }
 
+.items img{
+  width: 100%;
+  max-height: 700px;
+}
+
 .section-one .inner-items img {
   height: 370px;
   width: 100%;
@@ -75,7 +80,7 @@
   display: flex;
   flex-direction: column;
   gap: 15px;
-  z-index: 1000;
+  z-index: 2003;
 }
 
 .inner-buttons-icon img {
@@ -83,6 +88,7 @@
   width: auto;
   border-radius: 10px;
 }
+
 
 .inner-buttons-icon a:hover {
   transform: translateY(-3px);
