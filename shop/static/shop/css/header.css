@@ -20,15 +20,16 @@
     left: 0;
     right: 0;
     width: 100%;
-    z-index: 2001;                           /* Luôn nổi trên */
+    z-index: 2001;
     margin-bottom: 15px;                     /* Cách nội dung dưới */
     backdrop-filter: blur(15px);             /* Hiệu ứng blur mạnh hơn */
     border: 2px solid rgba(255, 255, 255, 0.3);
     transition: opacity 0.25s ease, backdrop-filter 0.25s ease, background-color 0.25s ease;
   }
   .header.fade {
-    opacity: 0.5; /* mờ đi */
-    backdrop-filter: blur(8px); /* thêm blur nếu muốn đẹp hơn */
+    /* Luôn hiển thị rõ khi cuộn */
+    opacity: 0.7 !important;
+    background: rgba(15, 20, 22, 0.9);
   }
   
   /* Thêm hiệu ứng ánh sáng */
@@ -272,17 +273,20 @@
 }
 
 .item a {
-  display: block;
-  padding: 15px 20px;
+  display: flex;                 /* Căn giữa dọc nội dung */
+  align-items: center;           /* Căn giữa theo trục dọc */
+  height: 54px;                  /* Chiều cao đồng nhất theo yêu cầu */
+  padding: 0 20px;               /* Chỉ padding ngang */
+  width: 100%;                   /* Chiếm hết chiều ngang mỗi dòng */
   text-decoration: none;
   color: #333;
-  transition: background 0.3s ease;
+  transition: background-color 0.2s ease, color 0.2s ease;
 }
 
 .item a:hover {
-  transform: translateY(-2px) scale(1.05);
-  box-shadow: 0 8px 25px rgba(137, 155, 236, 0.4), 0 4px 15px rgba(118, 75, 162, 0.3);
-  background: linear-gradient(135deg, #dabff5 0%, #9cadfa 100%);
+  background-color: rgba(156, 173, 250, 0.22); /* hover đậm hơn một chút */
+  transform: none;
+  box-shadow: none;
 }
 .header-item:hover{
   cursor: pointer;
