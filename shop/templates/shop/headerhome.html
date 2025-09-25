@@ -1,11 +1,8 @@
-{% load static %}
-<!DOCTYPE html>
-<html lang="en">
-<head>
-    <meta charset="UTF-8">
-    <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <title>Document</title>
+{% extends "shop/bodyhome.html" %}
 
+{% load static %}
+
+{% block linkCSSHeader%}
     <!-- Bootstrap CSS -->
     <link href="https://cdn.jsdelivr.net/npm/bootstrap@5.3.3/dist/css/bootstrap.min.css" rel="stylesheet">
 
@@ -14,9 +11,10 @@
 
     <!-- CSS riêng -->
     <link rel="stylesheet" href="{% static 'shop/css/home.css' %}">
-</head>
-<body>
-    
+{% endblock %}
+
+{%block contenHeader%}
+<!-- header -->
     <nav class="header">
         <!-- đăng nhập / đăng ký + slide-images -->
         <div class="header-manage0">
@@ -37,10 +35,46 @@
         <!-- phần danh mục, thể loại,... -->
         <div class="header-manage1">
             <ul>
-                <li>DANH MỤC</li>
-                <li>THỂ LOẠI</li>
-                <li>GIỚI THIỆU</li>
-                <li>TOP TRUYỆN</li>
+                <li>
+                    <div class="dropdown-container">
+                        <a class="clickDropdown" href="#" role="button" aria-expanded="false">DANH MỤC</a>
+                        <ul class="dropdown-items" id="dropdown-danhmuc">
+                            <li><a class="item" href="#">Phim mới</a></li>
+                            <li><a class="item" href="#">Phim hot</a></li>
+                            <li><a class="item" href="#">Phim đang chiếu</a></li>
+                        </ul>
+                    </div>
+                </li>
+                <li>
+                    <div class="dropdown-container">
+                        <a class="clickDropdown" href="#" role="button" aria-expanded="false">Thể loại</a>
+                        <ul class="dropdown-items" id="dropdown-items">
+                            <li><a class="item" href="#">Anime</a></li>
+                            <li><a class="item" href="#">Hoạt hình</a></li>
+                            <li><a class="item" href="#">Đọc truyện</a></li>
+                        </ul>
+                    </div>
+                </li>
+                <li>
+                    <div class="dropdown-container">
+                        <a class="clickDropdown" href="#" role="button" aria-expanded="false">GIỚI THIỆU</a>
+                        <ul class="dropdown-items" id="dropdown-gioithieu">
+                            <li><a class="item" href="#">Về chúng tôi</a></li>
+                            <li><a class="item" href="#">Liên hệ</a></li>
+                            <li><a class="item" href="#">Hỗ trợ</a></li>
+                        </ul>
+                    </div>
+                </li>
+                <li>
+                    <div class="dropdown-container">
+                        <a class="clickDropdown" href="#" role="button" aria-expanded="false">TOP TRUYỆN</a>
+                        <ul class="dropdown-items" id="dropdown-top">
+                            <li><a class="item" href="#">Top tuần</a></li>
+                            <li><a class="item" href="#">Top tháng</a></li>
+                            <li><a class="item" href="#">Top năm</a></li>
+                        </ul>
+                    </div>
+                </li>
             </ul>
         </div>
 
@@ -88,8 +122,11 @@
             </ul>
         </div>
     </div>
-    
-    <!-- Bootstrap JS -->
+    <!-- end-header -->
+{%endblock%}
+
+{%block scriptHeader%}
+<!-- Bootstrap JS -->
     <script src="https://cdn.jsdelivr.net/npm/bootstrap@5.3.3/dist/js/bootstrap.bundle.min.js"></script>
 
     <!-- JS riêng -->
@@ -101,6 +138,15 @@
             clslideContainer: '#slideContainer',
             clcloseBtn: '#closeBtn',
         });
+        // Khởi tạo tất cả dropdown
+        sloveDropdown({
+            clclickDropdown: "clickDropdown",
+            cldropdown_items: "dropdown-items",
+            clItem: "item",
+        });
+ 
     </script>
-</body>
-</html>
+{% endblock %}
+
+
+    

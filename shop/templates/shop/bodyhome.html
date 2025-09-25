@@ -1,0 +1,148 @@
+{% load static %}
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <!-- Required meta tags -->
+    <meta charset="utf-8" />
+    <meta
+      name="viewport"
+      content="width=device-width, initial-scale=1, shrink-to-fit=no"
+    />
+
+    <!-- SLICK-BACKGROUND -->
+    <link
+      rel="stylesheet"
+      type="text/css"
+      href="//cdn.jsdelivr.net/npm/slick-carousel@1.8.1/slick/slick.css"
+    />
+    <link
+      rel="stylesheet"
+      type="text/css"
+      href="https://kenwheeler.github.io/slick/slick/slick-theme.css"
+    />
+    <!-- END SLICK-BACKGROUND -->
+
+    <!-- Bootstrap CSS -->
+    <link
+      rel="stylesheet"
+      href="https://cdn.jsdelivr.net/npm/bootstrap@4.6.2/dist/css/bootstrap.min.css"
+      integrity="sha384-xOolHFLEh07PJGoPkLv1IbcEPTNtaed2xpHsD9ESMhqIYd0nLMwNLD69Npy4HI+N"
+      crossorigin="anonymous"
+    />
+
+    <!-- CSS riêng -->
+    <link rel="stylesheet" href="{% static 'shop/css/style.css' %}" />
+    <link rel="stylesheet" href="{% static 'shop/css/home.css' %}" />
+
+    <!-- Font Awesome -->
+    <link
+      rel="stylesheet"
+      href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/7.0.1/css/all.min.css"
+      integrity="sha512-2SwdPD6INVrV/lHTZbO2nodKhrnDdJK9/kg2XD1r9uGqPo1cUbujc+IYdlYdEErWNu69gVcYgdxlmVmzTWnetw=="
+      crossorigin="anonymous"
+      referrerpolicy="no-referrer"
+    />
+
+    {% block linkCSSHeader %}{% endblock %}
+    <title>Hello, world!</title>
+  </head>
+
+  <body>
+    <!-- HEADER -->
+{%block contenHeader%}{%endblock%}
+
+    <!-- NAV + CONTENT giống của bạn -->
+
+    <!-- BACKGROUND HEADER -->
+    <div class="background-header">
+      <div class="items-slick">
+        <div class="items"><img src="{% static 'shop/images/item-1.jpg' %}" alt="item" /></div>
+        <div class="items"><img src="{% static 'shop/images/item-2.jpg' %}" alt="item" /></div>
+        <div class="items"><img src="{% static 'shop/images/item-3.jpg' %}" alt="item" /></div>
+        <div class="items"><img src="{% static 'shop/images/item-4.jpg' %}" alt="item" /></div>
+        <div class="items"><img src="{% static 'shop/images/item-5.jpg' %}" alt="item" /></div>
+        <div class="items"><img src="{% static 'shop/images/item-6.jpg' %}" alt="item" /></div>
+      </div>
+    </div>
+    <!-- ENDBACKGROUND HEADER -->
+
+    <!-- SECTION-ONE -->
+    <div class="section-one">
+      <div class="container">
+        <div class="row">
+          <!-- BOX-ONE -->
+          <div class="col-xl-3">
+            <div class="inner-items">
+              <a href="#"> <img src="{% static 'shop/images/anh1.jpg' %}" alt="1" /></a>
+              <a href=""><p class="inner-items-title">Mưa đỏ</p></a>
+            </div>
+          </div>
+          <div class="col-xl-3">
+            <div class="inner-items">
+              <a href="#"> <img src="{% static 'shop/images/anh2.png' %}" alt="1" /></a>
+              <a href="#"><p class="inner-items-title">Tiểu yêu tinh của Bạc Gia</p></a>
+            </div>
+          </div>
+          <!-- ... các ảnh khác chỉnh tương tự -->
+        </div>
+      </div>
+    </div>
+    <!-- END SECTION-ONE -->
+
+    <!-- ICON-FLOATING -->
+    <div class="inner-buttons-icon">
+      <a href="#"><img src="{% static 'shop/images/zalo.jpg' %}" alt="zalo" /></a>
+      <a href="#"><img src="{% static 'shop/images/phone.jpg' %}" alt="phone" /></a>
+    </div>
+    <!-- END ICON-FLOATING -->
+
+    <!-- JS thư viện -->
+    <script src="https://cdn.jsdelivr.net/npm/jquery@3.5.1/dist/jquery.slim.min.js"
+      integrity="sha384-DfXdz2htPH0lsSSs5nCTpuj/zy4C+OGpamoFVy38MVBnE+IbbVYUew+OrCXaRkfj"
+      crossorigin="anonymous"></script>
+
+    <script src="https://cdn.jsdelivr.net/npm/bootstrap@4.6.2/dist/js/bootstrap.bundle.min.js"
+      integrity="sha384-Fy6S3B9q64WdZWQUiU+q4/2Lc9npb8tCaSX9FK7E8HnRr0Jz8D6OP9dO5Vg3Q9ct"
+      crossorigin="anonymous"></script>
+
+    <!-- SLICK-JS -->
+    <script type="text/javascript"
+      src="//cdn.jsdelivr.net/npm/slick-carousel@1.8.1/slick/slick.min.js"></script>
+
+    <script>
+      $(".items-slick").slick({
+        slidesToShow: 1,
+        slidesToScroll: 1,
+        autoplay: true,
+        autoplaySpeed: 2000,
+      });
+    </script>
+
+    <!-- Bootstrap 5 JS -->
+    <script src="https://cdn.jsdelivr.net/npm/bootstrap@5.3.3/dist/js/bootstrap.bundle.min.js"></script>
+
+    <!-- JS riêng -->
+    <script src="{% static 'shop/js/home.js' %}"></script>
+    {%block scriptHeader%}{% endblock %}
+
+  </body>
+
+  <!-- FOOTER -->
+  <div class="footer">
+    <footer>
+      <div class="container">
+        <div class="inner-list">
+          <ul>
+            <li><a href="#"><i class="fa-brands fa-facebook"></i></a></li>
+            <li><a href="#"><i class="fa-brands fa-twitter"></i></a></li>
+            <li><a href="#"><i class="fa-brands fa-linkedin-in"></i></a></li>
+            <li><a href="#"><i class="fa-solid fa-wifi"></i></a></li>
+            <li><a href="#"><i class="fa-solid fa-basketball"></i></a></li>
+          </ul>
+        </div>
+        <p class="text">COPYRIGHT © 2025 UTC COMPANY - DESIGN: HIEPCODER</p>
+      </div>
+    </footer>
+  </div>
+  <!-- END FOOTER -->
+</html>
