@@ -237,7 +237,7 @@
 
           <div class="col-xl-3 col-md-6 col-sm-12">
             <div class="inner__items" data-ep="Tập 463">
-              <a href="#"><img src="{% static 'shop/images/anh3.png' %}" alt="1" /></a>
+              <a href="#"><img src="./assets/images/anh3.png" alt="1" /></a>
               <a href="#">
                 <p class="inner__items--title">Cô vợ nhỏ của ngài Phó</p>
               </a>
@@ -251,7 +251,7 @@
 
           <div class="col-xl-3 col-md-6 col-sm-12">
             <div class="inner__items" data-ep="Tập 463">
-              <a href="#"><img src="{% static 'shop/images/anh4.jpg' %}" alt="1" /></a>
+              <a href="#"><img src="./assets/images/anh4.jpg" alt="1" /></a>
               <a href="#">
                 <p class="inner__items--title">Siêu cấp cưng chiều</p>
               </a>
@@ -279,7 +279,7 @@
 
           <div class="col-xl-3 col-md-6 col-sm-12">
             <div class="inner__items" data-ep="Tập 235">
-              <a href="#"><img src="{% static 'shop/images/anh5.jpg' %}" alt="1" /></a>
+              <a href="#"><img src="./assets/images/anh5.jpg" alt="1" /></a>
               <a href="">
                 <p class="inner__items--title">Phép màu chữa lành trái tim</p>
               </a>
@@ -293,7 +293,7 @@
 
           <div class="col-xl-3 col-md-6 col-sm-12">
             <div class="inner__items" data-ep="Tập 956">
-              <a href="#"><img src="{% static 'shop/images/anh6.jpg' %}" alt="1" /></a>
+              <a href="#"><img src="./assets/images/anh6.jpg" alt="1" /></a>
               <a href="#"><p class="inner__items--title">365 ngày tâm an</p></a>
               <div class="overlay">
                 <h4>365 ngày tâm an</h4>
@@ -305,7 +305,7 @@
 
           <div class="col-xl-3 col-md-6 col-sm-12">
             <div class="inner__items" data-ep="Tập 87">
-              <a href="#"><img src="{% static 'shop/images/anh7.jpg' %}" alt="1" /></a>
+              <a href="#"><img src="./assets/images/anh7.jpg" alt="1" /></a>
               <a href="#">
                 <p class="inner__items--title">Bạn thật sự là ai?</p>
               </a>
@@ -319,7 +319,7 @@
 
           <div class="col-xl-3 col-md-6 col-sm-12">
             <div class="inner__items" data-ep="Tập 5">
-              <a href="#"><img src="{% static 'shop/images/anh8.jpg' %}" alt="1" /></a>
+              <a href="#"><img src="./assets/images/anh8.jpg" alt="1" /></a>
               <a href="">
                 <p class="inner__items--title">
                   Quên hôm qua và sống cho ngày mai
@@ -347,7 +347,7 @@
 
           <div class="col-xl-3 col-md-6 col-sm-12">
             <div class="inner__items" data-ep="Tập 2006">
-              <a href="#"><img src="{% static 'shop/images/demon.jpg' %}" alt="1" /></a>
+              <a href="#"><img src="./assets/images/demon.jpg" alt="1" /></a>
               <a href="">
                 <p class="inner__items--title">Chú Thuật Hồi Chiến</p>
               </a>
@@ -361,7 +361,7 @@
 
           <div class="col-xl-3 col-md-6 col-sm-12">
             <div class="inner__items" data-ep="Tập 1088">
-              <a href="#"><img src="{% static 'shop/images/naruto.jpg' %}" alt="1" /></a>
+              <a href="#"><img src="./assets/images/naruto.jpg" alt="1" /></a>
               <a href="#"><p class="inner__items--title">Naruto</p></a>
               <div class="overlay">
                 <h4>Naruto</h4>
@@ -373,7 +373,7 @@
 
           <div class="col-xl-3 col-md-6 col-sm-12">
             <div class="inner__items" data-ep="Tập 993">
-              <a href="#"><img src="{% static 'shop/images/solo.jpg' %}" alt="1" /></a>
+              <a href="#"><img src="./assets/images/solo.jpg" alt="1" /></a>
               <a href="#"><p class="inner__items--title">SOLO TRAVELLING</p></a>
               <div class="overlay">
                 <h4>SOLO TRAVELLING</h4>
@@ -385,7 +385,7 @@
 
           <div class="col-xl-3 col-md-6 col-sm-12">
             <div class="inner__items" data-ep="Tập 153">
-              <a href="#"><img src="{% static 'shop/images/demon.jpg' %}" alt="1" /></a>
+              <a href="#"><img src="./assets/images/demon.jpg" alt="1" /></a>
               <a href="">
                 <p class="inner__items--title">Thanh Gươm Diệt Quỷ</p>
               </a>
@@ -411,7 +411,7 @@
 
           <div class="col-xl-3 col-md-6 col-sm-12">
             <div class="inner__items" data-ep="Tập 109">
-              <a href="#"><img src="{% static 'shop/images/gt.jpg' %}" alt="1" /></a>
+              <a href="#"><img src="./assets/images/gt.jpg" alt="1" /></a>
               <a href=""><p class="inner__items--title">Tiên Nghịch</p></a>
               <div class="overlay">
                 <h4>Tiên Nghịch</h4>
@@ -423,7 +423,7 @@
 
           <div class="col-xl-3 col-md-6 col-sm-12">
             <div class="inner__items" data-ep="Tập 163">
-              <a href="#"><img src="{% static 'shop/images/pntt.jpg' %}" alt="1" /></a>
+              <a href="#"><img src="./assets/images/pntt.jpg" alt="1" /></a>
               <a href="#">
                 <p class="inner__items--title">Phàm Nhân Tu Tiên</p>
               </a>
@@ -437,7 +437,7 @@
 
           <div class="col-xl-3 col-md-6 col-sm-12">
             <div class="inner__items" data-ep="Tập 199">
-              <a href="#"><img src="{% static 'shop/images/dptk.jpg' %}" alt="1" /></a>
+              <a href="#"><img src="./assets/images/dptk.jpg" alt="1" /></a>
               <a href="#">
                 <p class="inner__items--title">Đấu Phá Thương Khung</p>
               </a>
@@ -451,7 +451,7 @@
 
           <div class="col-xl-3 col-md-6 col-sm-12">
             <div class="inner__items" data-ep="Tập 263">
-              <a href="#"><img src="{% static 'shop/images/tghm.jpg' %}" alt="1" /></a>
+              <a href="#"><img src="./assets/images/tghm.jpg" alt="1" /></a>
               <a href="#">
                 <p class="inner__items--title">Thế Giới Hoàn Mỹ</p>
               </a>
