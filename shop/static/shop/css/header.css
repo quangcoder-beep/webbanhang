@@ -25,6 +25,7 @@
     backdrop-filter: blur(15px);             /* Hiệu ứng blur mạnh hơn */
     border: 2px solid rgba(255, 255, 255, 0.3);
     transition: opacity 0.25s ease, backdrop-filter 0.25s ease, background-color 0.25s ease;
+    overflow: visible;                       /* Cho phép dropdown hiển thị vượt ra ngoài header */
   }
   .header.fade {
     /* Luôn hiển thị rõ khi cuộn */
@@ -55,10 +56,9 @@
     align-items: center;
     padding: 0 10px;                         /* Cách lề 2 bên */
     width: 100%;
-    gap: 2px;
+    gap: 2px;height: 100%;
   }
   /* Đảm bảo UL chiếm toàn bộ chiều cao của vùng header để LI có thể căn giữa dọc theo 100% */
-  .header-manage1 ul { height: 100%; }
   
   .header-manage1 ul li {
     display: flex;
@@ -439,7 +439,7 @@
 
 /* Nút dropdownClick */
 .clickDropdown {
-    background: linear-gradient(135deg, #212529 0%, #764ba2 100%);
+    background: linear-gradient(135deg, #212529 0%, #7340a7 100%);
     color: white;
     padding: 6px 10px;
     border: none;
@@ -466,11 +466,11 @@
     top: 100%;
     left: 0;
     min-width: 200px;
-    background: white;
+    background: linear-gradient(135deg, #212529 0%, #d3b8ee 100%);
     border-radius: 12px;
     box-shadow: 0 10px 30px rgba(0, 0, 0, 0.15);
     z-index: 99999 ;
-    overflow: hidden;
+    overflow: visible;                       /* Không cắt nội dung các mục phía dưới */
     border: 1px solid rgba(0, 0, 0, 0.05);
     width: auto;
 }
@@ -493,7 +493,7 @@
 .dropdown-items .item {
     display: block;
     padding: 12px 20px 12px 0;
-    color: #333;
+    color: #fff;
     text-decoration: none;
     transition: all 0.2s ease;
     border-bottom: 1px solid rgba(0, 0, 0, 0.05);
@@ -507,26 +507,10 @@
 }
 
 .dropdown-items .item:hover {
-    background: linear-gradient(135deg, #f093fb 0%, #f5576c 100%);
+    background: linear-gradient(135deg, #6110b3 0%, #e66475 100%);
     color: white;
-    transform: translateX(5px);
 }
 
-.dropdown-items .item:before {
-    content: '';
-    position: absolute;
-    left: 0;
-    top: 0;
-    height: 100%;
-    width: 3px;
-    background: linear-gradient(135deg, #667eea 0%, #764ba2 100%);
-    transform: scaleY(0);
-    transition: transform 0.2s ease;
-}
-
-.dropdown-items .item:hover:before {
-    transform: scaleY(1);
-}
 
 /* Hiệu ứng loading cho từng item */
 .dropdown-items .item:nth-child(1) {
@@ -540,4 +524,3 @@
 .dropdown-items .item:nth-child(3) {
     animation-delay: 0.3s;
 }
-
