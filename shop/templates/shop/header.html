@@ -6,9 +6,9 @@
         <!-- đăng nhập / đăng ký -->
         <div class="account">
             <ul class="account-ul">
-                <li><a href="#">Login</a></li>
+                <li><a href="{% url 'login' %}">Login</a></li>
                 <li><span>or</span></li>
-                <li><a href="#">Logup</a></li>
+                <li><a href="{% url 'logup' %}">Logup</a></li>
             </ul>
         </div>
         <!-- logo -->
@@ -97,7 +97,7 @@
     </div>
     <div class="slide-body">
         <ul class="slide-items-list">
-            <li class="item"><a class="header-item"><i class="fa-solid fa-house"></i> Trang chủ</a></li>
+            <li class="item"><a class="header-item" href="{% url 'home' %}"><i class="fa-solid fa-house"></i> Trang chủ</a></li>
             <li class="item">
                 <a class="header-item dropdown"><i class="fa-solid fa-book-open"></i> Danh mục</a>
                 <ul class="child-item">

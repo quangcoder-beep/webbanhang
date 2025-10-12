@@ -1,0 +1,83 @@
+{% load static %}
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <title>Đăng ký - Anime HQM</title>
+    <link rel="stylesheet" href="{% static 'account/css/dangki.css' %}">
+    <link rel="stylesheet" href="{% static 'account/css/responsive.css' %}">
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.0.0/css/all.min.css">
+</head>
+<body>
+    <div class="top-left-section">
+        <a href="/" class="home-button">
+            <i class="fas fa-home"></i>
+        </a>
+        <span class="site-title">Anime HQM</span>
+    </div>
+    
+    <div class="container">
+        <form action="{% url 'home' %}" id="form-1" method="POST">
+            {% csrf_token %}
+            <h1>Đăng kí tài khoản</h1>
+
+            <div id="username" class="input">
+                <label for="username">Tên đầy đủ</label>
+                <input type="text" id="username" name="username" placeholder="VD: Lai_Vinh_Quang" value="{{ old_username|default:'' }}">
+                <span class="form-message"></span>
+            </div>
+            
+            <div id="email" class="input">
+                <label for="email">Email</label>
+                <input type="email" id="email" name="email" placeholder="VD: example@gmail.com" value="{{ old_email|default:'' }}">
+                <span class="form-message"></span>
+            </div>
+
+            <div id="password" class="input">
+                <label for="password">Mật khẩu</label>
+                <input type="password" id="password" name="password" placeholder="Nhập mật khẩu">
+                <span class="form-message"></span>
+            </div>
+
+            <div id="repassword" class="input">
+                <label for="repassword">Xác nhận lại mật khẩu</label>
+                <input type="password" id="repassword" name="confirm_password" placeholder="Nhập lại mật khẩu">
+                <span class="form-message"></span>
+            </div>
+
+            <div id="submit" style="margin: 0 auto; height: 60px;"> 
+                <button type="submit">Đăng kí</button> 
+            </div>
+            
+            <div style="text-align: center; margin-top: 20px;">
+                <p>Đã có tài khoản? <a href="{% url 'login' %}" style="color: #29a3a3; text-decoration: none;">Đăng nhập ngay</a></p>
+            </div>
+        </form>
+        
+
+
+    <script src="{% static 'account/js/dangki.js' %}"></script>
+    <script>
+    document.addEventListener("DOMContentLoaded", function() {
+        solve({
+            username: "#username",
+            email: "#email",
+            password: "#password",
+            repassword: "#repassword",
+        });
+    });
+
+    // Form validation enhancement
+    document.getElementById('form-1').addEventListener('submit', function(e) {
+        const password = document.getElementById('password').value;
+        const repassword = document.getElementById('repassword').value;
+        
+        if (password !== repassword) {
+            e.preventDefault();
+            alert('Mật khẩu xác nhận không khớp!');
+            return false;
+        }
+    });
+    </script>
+</body>
+</html>

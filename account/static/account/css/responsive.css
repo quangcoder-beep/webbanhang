@@ -1,0 +1,84 @@
+/* Responsive styles shared by login and signup pages */
+
+/* Large screens down (≤ 1200px) */
+@media (max-width: 1200px) {
+  .container { max-width: 900px; gap: 35px; }
+  form { width: 360px; }
+  .gradient-image { width: 260px; height: 260px; }
+  .learning-icon { width: 170px; height: 170px; }
+}
+
+/* Tablets/landscape small laptops (≤ 992px) */
+@media (max-width: 992px) {
+  body { padding: 15px; }
+  .container { flex-direction: column; gap: 25px; padding: 10px 0; }
+  .image-section { order: -1; }
+  .gradient-image { width: 240px; height: 240px; }
+  .learning-icon { width: 150px; height: 150px; }
+  form { width: 100%; max-width: 400px; padding: 18px; }
+  h1 { font-size: 24px; }
+  p { font-size: 16px; }
+}
+
+/* Tablets/phones (≤ 768px) */
+@media (max-width: 768px) {
+  body { padding: 20px 10px; height: auto; min-height: 100vh; }
+  .top-left-section { top: 15px; left: 15px; gap: 10px; }
+  .home-button { width: 45px; height: 45px; font-size: 18px; }
+  .site-title { font-size: 16px; }
+  .container { gap: 20px; padding: 80px 0 20px 0; }
+  .gradient-image { width: 220px; height: 220px; }
+  .learning-icon { width: 140px; height: 140px; }
+  form { width: 90%; max-width: 380px; padding: 16px; }
+  h1 { font-size: 22px; margin-top: 15px; }
+  p { font-size: 16px; }
+  .input label { font-size: 16px; }
+  .input input { font-size: 16px; padding: 8px; }
+  button { height: 42px; font-size: 16px; }
+}
+
+/* Small phones (≤ 576px) */
+@media (max-width: 576px) {
+  body { padding: 15px 8px; }
+  .top-left-section { top: 10px; left: 10px; gap: 8px; flex-wrap: wrap; max-width: calc(100% - 20px); }
+  .home-button { width: 40px; height: 40px; font-size: 16px; }
+  .site-title { font-size: 14px; }
+  .container { gap: 15px; padding: 70px 0 15px 0; }
+  .gradient-image { width: 180px; height: 180px; }
+  .learning-icon { width: 120px; height: 120px; }
+  form { width: 95%; max-width: 100%; padding: 14px; }
+  h1 { font-size: 20px; margin-top: 10px; }
+  p { font-size: 14px; margin-bottom: 12px; }
+  .input { margin: 5px auto; }
+  .input label { font-size: 15px; margin-bottom: 4px; }
+  .input input { font-size: 15px; padding: 7px; }
+  button { height: 40px; font-size: 15px; margin: 8px auto 0 auto; }
+  .form-message { font-size: 11px; }
+}
+
+/* Extra small (≤ 400px) */
+@media (max-width: 400px) {
+  .top-left-section { position: static; margin-bottom: 10px; justify-content: center; }
+  .gradient-image { width: 160px; height: 160px; }
+  .learning-icon { width: 100px; height: 100px; }
+  h1 { font-size: 18px; }
+  p { font-size: 13px; }
+  .input label { font-size: 14px; }
+  .input input { font-size: 14px; }
+  button { font-size: 14px; }
+}
+
+/* Landscape orientation for short screens */
+@media (max-height: 600px) and (orientation: landscape) {
+  body { padding: 10px; }
+  .container { flex-direction: row; gap: 20px; padding: 10px 0; }
+  .image-section { order: 0; flex: 0 0 auto; }
+  .gradient-image { width: 150px; height: 150px; }
+  .learning-icon { width: 100px; height: 100px; }
+  form { max-width: 350px; padding: 12px; }
+  h1 { font-size: 18px; margin-top: 8px; }
+  .input { margin: 4px auto; }
+  .input label { font-size: 14px; margin-bottom: 3px; }
+  .input input { padding: 5px; }
+  button { height: 36px; margin: 6px auto 0 auto; }
+}
