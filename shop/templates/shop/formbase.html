@@ -13,6 +13,7 @@
 
     <!-- css riêng của footer + header-->
     <link rel="stylesheet" href="{% static 'shop/css/header.css' %}">
+    <link rel="stylesheet" href="{% static 'shop/css/header.responsive.css' %}">
     <link rel="stylesheet" href="{% static 'shop/css/footer.css' %}">
 
     <!-- CSS/JS của body -->
@@ -22,48 +23,27 @@
   </head>
 
   <body>
-    <!-- HEADER -->
+    <!-- HEADER file: header.html -->
       {% include "shop/header.html" %}
     <!-- endHEADER -->
 
-    <!-- CONTENT -->
+    <!-- CONTENT file: bodyhome.html -->
     {% block contentbodyhome%}{%endblock%}
     <!-- endCONTENT -->
     
-
-    <!-- Bootstrap JS -->
-    <script src="https://cdn.jsdelivr.net/npm/bootstrap@5.3.3/dist/js/bootstrap.bundle.min.js"></script>
-
-    <!-- JS riêng -->
-    <script src="{% static 'shop/js/header.js' %}"></script>
-    <script>
-        sloveSlide({
-            clmenuToggle: '#menuToggle',
-            cloverlay: '#overlay',
-            clslideContainer: '#slideContainer',
-            clcloseBtn: '#closeBtn',
-        });
-        // Khởi tạo tất cả dropdown
-        sloveDropdown({
-            clclickDropdown: "clickDropdown",
-            cldropdown_items: "dropdown-items",
-            clItem: "item",
-        });
-        sloveDropdown({
-            clclickDropdown: "dropdown",
-            cldropdown_items: "child-item",
-        })
-        solveScroll({
-            clElementFade: "header",
-        })
- 
-    </script>
-
+    <!-- code html js file: jshtmlheader.html gọi hàm js riêng cho header-->
+    {% include "shop/jshtmlheader.html" %}
+    <!-- end code html js -->
+    
+    <!-- link css js end body file: bodyhome.html -->
     {% block linkCSSJSEndbodyhome %}{%endblock%}
+    <!-- end link css js end body -->
+
+    <!-- FOOTER file: footer.html -->
+    {% include "shop/footer.html" %}
+    <!-- END FOOTER -->
 
   </body>
 
-  <!-- FOOTER -->
-  {% include "shop/footer.html" %}
-  <!-- END FOOTER -->
+  
 </html>

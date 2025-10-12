@@ -12,7 +12,7 @@
     display: grid;                           /* Sử dụng Grid layout */
     grid-template-columns: 2fr 2fr 1fr;      /* 3 cột */
     align-items: stretch;                    /* Các phần tử kéo dài bằng nhau */
-    min-height: 50px;                       /* Tăng chiều cao */
+    min-height: 80px;                       /* Chiều cao tối thiểu */
     background: #0F1416;
     box-shadow: 0 12px 40px rgba(102, 126, 234, 0.4), 0 4px 12px rgba(0, 0, 0, 0.15);
     position: fixed;                      /* Định vị tương đối */
@@ -46,10 +46,7 @@
   
   /* ===== MAIN MENU STYLES ===== */
   .header-manage1 {
-    display: flex;                           /* Flexbox */
-    align-items: center;                     /* Căn giữa dọc */
-    justify-content: center;                 /* Căn giữa ngang */
-    min-height: 120px;                       /* Tăng chiều cao */
+    min-height: 36px;                        /* ~1/2 so với trước đây */
   }
   
   .header-manage1 ul:first-child {
@@ -60,21 +57,33 @@
     width: 100%;
     gap: 2px;
   }
+  /* Đảm bảo UL chiếm toàn bộ chiều cao của vùng header để LI có thể căn giữa dọc theo 100% */
+  .header-manage1 ul { height: 100%; }
   
   .header-manage1 ul li {
-    display: inline-block;
+    display: flex;
+    align-items: center;
+    height: 100%;
     position: relative;
-    padding: 10px 14px;
+    padding: 4px 6px;
     margin: 0 1px;
     border-radius: 6px;
     transition: all 0.3s ease;
     cursor: pointer;
     font-weight: 700;
-    font-size: 16px;
+    font-size: 11px;
     color: #ffffff;
     text-transform: uppercase;
     letter-spacing: 0.5px;
     text-shadow: 0 1px 2px rgba(0, 0, 0, 0.3);
+  }
+
+  /* Căn giữa nội dung (anchor/nút) bên trong từng LI theo chiều dọc và cho cao bằng LI */
+  .header-manage1 ul li > a,
+  .header-manage1 ul li > .clickDropdown {
+    display: flex;
+    align-items: center;
+    height: 100%;
   }
   
   .header-manage1 ul li:hover {
@@ -98,13 +107,13 @@
     align-items: center;
     justify-content: flex-start;
     padding: 0 15px;
-    min-height: 120px;
+    min-height: 36px;
   }
   
   .account-ul {
     display: flex;
     align-items: center;
-    gap: 2px;
+    gap: 15px;
     padding: 0;
   }
   
@@ -112,8 +121,8 @@
     text-decoration: none;                   /* Bỏ gạch chân */
     color: #ffffff;
     font-weight: 600;
-    font-size: 14px;
-    padding: 6px 10px;
+    font-size: 11px;
+    padding: 3px 6px;
   }
   
   .account-ul li a:hover {
@@ -123,7 +132,7 @@
   
   .account-ul li span {
     color: rgba(255, 255, 255, 0.8);
-    font-size: 12px;
+    font-size: 10px;
     font-weight: 400;
     margin: 0 1px;
     text-shadow: 0 1px 2px rgba(0, 0, 0, 0.3);
@@ -134,12 +143,12 @@
     display: flex;
     align-items: center;
     justify-content: center;
-    height: 120px;
+    height: 36px;
     width: 100%;
   }
   
   .logo-text h1 {
-    font-size: 30px;
+    font-size: 16px;
     font-weight: 900;
     background: linear-gradient(45deg, #ff6b6b, #4ecdc4, #45b7d1, #96ceb4);
     background-size: 400% 400%;
@@ -148,7 +157,7 @@
     background-clip: text;
     text-shadow: 0 0 30px rgba(255, 255, 255, 0.5);
     animation: gradientShift 3s ease-in-out infinite;
-    letter-spacing: 2px;
+    letter-spacing: 1.2px;
     text-transform: uppercase;
     position: relative;
   }
@@ -164,19 +173,25 @@
     background: #fff;
     border: 1px solid #ddd;
     border-radius: 25px;
-    padding: 5px 15px;
+    padding: 1px 6px;
     box-shadow: 0 2px 4px rgba(0,0,0,0.1);
-    width: 280px;
-    min-width: 250px;
+    width: 160px;
+    min-width: 140px;
+    box-sizing: border-box;
+    height: 32px;
+    gap: 6px;
+    overflow: hidden;
+    position: relative;
   }
   
   .search-container input {
     border: none;
     outline: none;
-    padding: 8px 10px;
+    padding: 4px 6px;
     flex: 1;
-    font-size: 14px;
+    font-size: 12px;
     background: transparent;
+    min-width: 0;
   }
   
   .search-container input::placeholder {
@@ -188,15 +203,16 @@
     background: none;
     border: none;
     cursor: pointer;
-    padding: 5px;
+    padding: 0;
     display: flex;
     align-items: center;
     justify-content: center;
     color: #666;
     transition: all 0.3s ease;
     border-radius: 50%;
-    min-width: 32px;
-    min-height: 32px;
+    width: 28px;
+    height: 28px;
+    flex-shrink: 0;
   }
   
   .search-btn:hover {
@@ -209,8 +225,8 @@
   }
   
   .search-btn svg {
-    width: 16px;
-    height: 16px;
+    width: 14px;
+    height: 14px;
     stroke-width: 2;
   }
   
@@ -302,7 +318,7 @@
   transition: max-height 0.3s ease, opacity 0.2s ease; 
 }
 .item ul.show{
-  display: block;                
+  display: block;                /* hiện rõ khi mở */
   opacity: 1;                           /* hiện rõ khi mở */
 }
 
@@ -326,24 +342,24 @@
     align-items: center;
     justify-content: flex-end;
     gap: 15px;
-    padding: 0 20px;
-    min-height: 120px;
+    padding: 0 16px;
+    min-height: 36px;
   }
   
    /* ===== HAMBURGER BUTTON ===== */
  .menu-toggle {
-   background: linear-gradient(135deg, #667eea 0%, #764ba2 100%);
-   border: none;
-   padding: 12px;
-   cursor: pointer;
-   border-radius: 8px;
-   display: flex;
-   flex-direction: column;
-   gap: 4px;
-   transition: all 0.3s cubic-bezier(0.4, 0, 0.2, 1);
-   box-shadow: 0 4px 15px rgba(102, 126, 234, 0.3);
-   position: relative;
-   overflow: hidden;
+  background: linear-gradient(135deg, #667eea 0%, #764ba2 100%);
+  border: none;
+  padding: 8px;
+  cursor: pointer;
+  border-radius: 8px;
+  display: flex;
+  flex-direction: column;
+  gap: 4px;
+  transition: all 0.3s cubic-bezier(0.4, 0, 0.2, 1);
+  box-shadow: 0 4px 15px rgba(102, 126, 234, 0.3);
+  position: relative;
+  overflow: hidden;
  }
  
  .menu-toggle::before {
@@ -372,13 +388,13 @@
  }
  
  .hamburger {
-   width: 25px;
-   height: 3px;
-   background: white;
-   transition: all 0.3s cubic-bezier(0.4, 0, 0.2, 1);
-   border-radius: 2px;
-   position: relative;
- }
+  width: 20px;
+  height: 2px;
+  background: white;
+  transition: all 0.3s cubic-bezier(0.4, 0, 0.2, 1);
+  border-radius: 2px;
+  position: relative;
+}
  
  .menu-toggle:hover .hamburger {
    transform: scale(1.1);
@@ -417,19 +433,19 @@
 .dropdown-container {
     position: relative;
     display: inline-block;
-    margin: 20px;
+    margin: 6px;
     z-index: 99999;
 }
 
 /* Nút dropdownClick */
 .clickDropdown {
-    background: linear-gradient(135deg, #667eea 0%, #764ba2 100%);
+    background: linear-gradient(135deg, #212529 0%, #764ba2 100%);
     color: white;
-    padding: 12px 20px;
+    padding: 6px 10px;
     border: none;
     border-radius: 8px;
     cursor: pointer;
-    font-size: 16px;
+    font-size: 12px;
     font-weight: 500;
     box-shadow: 0 4px 15px rgba(102, 126, 234, 0.3);
     transition: all 0.3s ease;
@@ -525,61 +541,3 @@
     animation-delay: 0.3s;
 }
 
-
-/* Responsive */
-
-
-/* ===================== RESPONSIVE ===================== */
-
-/* Tablet (≤ 768px) */
-@media (max-width: 768px) {
-  .header {
-    grid-template-columns: 1fr 1fr;   /* Header chia 2 cột */
-    min-height: 120px;                /* Giảm chiều cao header */
-  }
-
-  .logo-text h1 {
-    font-size: 2rem;                  /* Giảm kích thước logo */
-  }
-
-
-
-  .search-container {
-    width: 200px;                     /* Thu nhỏ ô tìm kiếm */
-  }
-  .header-manage1{
-    display: none;
-  }
-  .slide-container{
-    max-width: 50%;
-  }
-}
-
-/* Mobile (≤ 480px) */
-@media (max-width: 480px) {
-  .header {
-    grid-template-columns: 1fr;       /* Header 1 cột (xếp dọc) */
-    min-height: auto;
-    text-align: center;
-  }
-
-  .logo-text h1 {
-    font-size: 1.5rem;
-    letter-spacing: 1px;
-  }
-
-
-  .search-container {
-    width: 100%;                      /* Ô tìm kiếm full chiều ngang */
-    max-width: 280px;
-  }
-  .header-manage1{
-    display: none;
-  }
-  .slide-container{
-    max-width: 70%;
-  }
-}
-
-
-/* =================== */
