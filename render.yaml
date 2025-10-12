@@ -1,0 +1,29 @@
+services:
+  - type: web
+    name: webquanliphim
+    env: python
+    plan: free
+    buildCommand: bash render-build.sh
+    startCommand: gunicorn webquanliphim.wsgi:application --preload --log-file -
+    autoDeploy: true
+    envVars:
+      - key: PYTHON_VERSION
+        value: 3.11
+      - key: DJANGO_SETTINGS_MODULE
+        value: webquanliphim.settings
+      - key: SECRET_KEY
+        sync: false
+      - key: DEBUG
+        value: "False"
+      - key: ALLOWED_HOSTS
+        value: .onrender.com
+      - key: CSRF_TRUSTED_ORIGINS
+        value: https://*.onrender.com
+      # Optional: configure DATABASE_URL from Render Postgres
+      # - key: DATABASE_URL
+      #   fromDatabase:
+      #     name: webquanliphim-db
+      #     property: connectionString
+# databases:
+#   - name: webquanliphim-db
+#     plan: free
