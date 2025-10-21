@@ -1,0 +1,143 @@
+{% extends "shop/formbase.html" %}
+{% load static %}
+{% block css-js-bodyhome_phimle %}
+<link rel="stylesheet" href="{% static 'shop/css/bodyhome_phimle.css' %}">
+{% endblock %}
+
+{% block content-bodyhome_phimle %}
+<section class="now-playing">
+  <div class="np-header">
+    <h2>Phim lẻ</h2>
+    <div class="np-tools">
+      <select class="np-select">
+        <option value="">Sắp xếp</option>
+        <option value="new">Mới cập nhật</option>
+        <option value="popular">Phổ biến</option>
+        <option value="rating">Đánh giá cao</option>
+      </select>
+      <select class="np-select">
+        <option value="">Thể loại</option>
+        <option>Hành động</option>
+        <option>Tình cảm</option>
+        <option>Kinh dị</option>
+        <option>Hài hước</option>
+      </select>
+    </div>
+  </div>
+
+  <div class="np-grid">
+    <a href="#" class="np-card">
+      <div class="np-thumb">
+        <img src="{% static 'shop/images/placeholder.jpg' %}" alt="Poster">
+        <span class="np-badge">Full HD</span>
+      </div>
+      <div class="np-body">
+        <h3>Your Name</h3>
+        <div class="np-meta">
+          <span>2016</span>
+          <span class="np-dot"></span>
+          <span>Phim lẻ</span>
+        </div>
+        <div class="np-stats">
+          <span class="np-rate"><i class="fa-solid fa-star"></i> 9.2</span>
+          <span class="np-tag">Romance</span>
+        </div>
+      </div>
+    </a>
+
+    <a href="#" class="np-card">
+      <div class="np-thumb">
+        <img src="{% static 'shop/images/placeholder.jpg' %}" alt="Poster">
+        <span class="np-badge">Full</span>
+      </div>
+      <div class="np-body">
+        <h3>Weathering With You</h3>
+        <div class="np-meta">
+          <span>2019</span>
+          <span class="np-dot"></span>
+          <span>Phim lẻ</span>
+        </div>
+        <div class="np-stats">
+          <span class="np-rate"><i class="fa-solid fa-star"></i> 8.5</span>
+          <span class="np-tag">Fantasy</span>
+        </div>
+      </div>
+    </a>
+
+    <a href="#" class="np-card">
+      <div class="np-thumb">
+        <img src="{% static 'shop/images/placeholder.jpg' %}" alt="Poster">
+        <span class="np-badge">HD</span>
+      </div>
+      <div class="np-body">
+        <h3>A Silent Voice</h3>
+        <div class="np-meta">
+          <span>2016</span>
+          <span class="np-dot"></span>
+          <span>Phim lẻ</span>
+        </div>
+        <div class="np-stats">
+          <span class="np-rate"><i class="fa-solid fa-star"></i> 8.1</span>
+          <span class="np-tag">Drama</span>
+        </div>
+      </div>
+    </a>
+
+    <a href="#" class="np-card">
+      <div class="np-thumb">
+        <img src="{% static 'shop/images/placeholder.jpg' %}" alt="Poster">
+        <span class="np-badge">4K</span>
+      </div>
+      <div class="np-body">
+        <h3>Detective Conan Movie</h3>
+        <div class="np-meta">
+          <span>2023</span>
+          <span class="np-dot"></span>
+          <span>Phim lẻ</span>
+        </div>
+        <div class="np-stats">
+          <span class="np-rate"><i class="fa-solid fa-star"></i> 8.0</span>
+          <span class="np-tag">Mystery</span>
+        </div>
+      </div>
+    </a>
+  </div>
+
+  <div class="np-pagination">
+    <a href="#" class="np-page prev"><i class="fa-solid fa-angle-left"></i></a>
+    <a href="#" class="np-page active">1</a>
+    <a href="#" class="np-page">2</a>
+    <a href="#" class="np-page">3</a>
+    <a href="#" class="np-page next"><i class="fa-solid fa-angle-right"></i></a>
+  </div>
+</section>
+{% endblock %}
+
+{% block js-bodyhome_phimle %}
+<script>
+  (function() {
+    const pool = [
+      '{% static "shop/images/1.jpg" %}',
+      '{% static "shop/images/2.jpg" %}',
+      '{% static "shop/images/3.jpg" %}',
+      '{% static "shop/images/4.jpg" %}',
+      '{% static "shop/images/5.jpg" %}',
+      '{% static "shop/images/6.jpg" %}',
+      '{% static "shop/images/7.jpg" %}',
+      '{% static "shop/images/8.jpg" %}'
+    ];
+    const randImg = () => pool[Math.floor(Math.random() * pool.length)];
+    const imgs = document.querySelectorAll('.np-thumb img');
+    imgs.forEach(img => {
+      // assign random if empty or placeholder
+      if (!img.getAttribute('src') || /placeholder\.jpg$/i.test(img.getAttribute('src'))) {
+        img.src = randImg();
+      }
+      // fallback on error (404, etc.)
+      img.addEventListener('error', () => {
+        img.src = randImg();
+      });
+    });
+  })();
+</script>
+{% endblock %}

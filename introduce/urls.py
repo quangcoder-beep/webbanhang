@@ -1,7 +1,7 @@
-from django.contrib import admin
 from django.urls import path
-from .migrations import views
+from . import views
 
 urlpatterns = [
-    path('admin/', admin.site.urls),
-]
+    # introduce/<page>.html -> render introduce/<page>.html template
+    path('<str:page>', views.read_page, name='introduce_read_page'),
+]               

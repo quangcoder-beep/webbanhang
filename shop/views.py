@@ -7,3 +7,8 @@ def login(request):
     return render(request, 'account/login.html')
 def logup(request):
     return render(request, 'account/lopup.html')
+
+def phimdangchieu(request):
+    return render(request, 'shop/bodyhome_phimdangchieu.html')
+def phimle(request):
+    return render(request, 'shop/bodyhome_phimle.html')

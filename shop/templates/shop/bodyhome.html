@@ -64,7 +64,7 @@
             <div class="col-12 outstanding__title">🔥ĐANG THỊNH HÀNH</div>
             <div class="col-xl-3 col-lg-6 outstanding__items">
               <div class="outstanding__img" data-ep="9.0">
-                <a href="#">
+                <a href="{% url 'introduce_read_page' 'dauphathuongkhung' %}">
                   <img
                     src="{% static 'shop/images/dau-pha-thuong-khung-phan-5-gia-nam-hoc-vien-5-300x450.jpg' %}"
                     alt="anh1"
@@ -74,42 +74,42 @@
               <div class="outstanding__inner">
                 <div class="outstanding__inner--number">1</div>
                 <div class="outstanding__inner--desc">
-                  <a href="#"><h3>Đấu Phá Thương Khung</h3></a>
-                  <a href="#"><p>Fights Break Sphere 5</p></a>
+                  <a href="{% url 'introduce_read_page' 'dauphathuongkhung' %}"><h3>Đấu Phá Thương Khung</h3></a>
+                  <a href="{% url 'introduce_read_page' 'dauphathuongkhung' %}"><p>Fights Break Sphere 5</p></a>
                 </div>
               </div>
             </div>
             <div class="col-xl-3 col-lg-6 outstanding__items">
               <div class="outstanding__img" data-ep="9.6">
-                <a href="#">
+                <a href="{% url 'introduce_read_page' 'phamnhantutien' %}">
                   <img src="{% static 'shop/images/pntt.jpg' %}" alt="anh2" />
                 </a>
               </div>
               <div class="outstanding__inner">
                 <div class="outstanding__inner--number">2</div>
                 <div class="outstanding__inner--desc">
-                  <a href="#"><h3>Phàm Nhân Tu Tiên</h3></a>
-                  <a href="#"><p>Fanren Xiu Xian Chuan SS3</p></a>
+                  <a href="{% url 'introduce_read_page' 'phamnhantutien' %}"><h3>Phàm Nhân Tu Tiên</h3></a>
+                  <a href="{% url 'introduce_read_page' 'phamnhantutien' %}"><p>Fanren Xiu Xian Chuan SS3</p></a>
                 </div>
               </div>
             </div>
             <div class="col-xl-3 col-lg-6 outstanding__items">
               <div class="outstanding__img" data-ep="9.4">
-                <a href="#">
+                <a href="{% url 'introduce_read_page' 'thegioihoanmy' %}">
                   <img src="{% static 'shop/images/tghm.jpg' %}" alt="anh3" />
                 </a>
               </div>
               <div class="outstanding__inner">
                 <div class="outstanding__inner--number">3</div>
                 <div class="outstanding__inner--desc">
-                  <a href="#"><h3>Thế Giới Hoàn Mỹ</h3></a>
-                  <a href="#"><p>Perfect World</p></a>
+                  <a href="{% url 'introduce_read_page' 'thegioihoanmy' %}"><h3>Thế Giới Hoàn Mỹ</h3></a>
+                  <a href="{% url 'introduce_read_page' 'thegioihoanmy' %}"><p>Perfect World</p></a>
                 </div>
               </div>
             </div>
             <div class="col-xl-3 col-lg-6 outstanding__items">
               <div class="outstanding__img" data-ep="9.8">
-                <a href="#">
+                <a href="{% url 'introduce_read_page' 'giathien' %}">
                   <img
                     src="{% static 'shop/images/gia-thien-8-300x450.jpg' %}"
                     alt="anh4"
@@ -119,8 +119,8 @@
               <div class="outstanding__inner">
                 <div class="outstanding__inner--number">4</div>
                 <div class="outstanding__inner--desc">
-                  <a href="#"><h3>Già Thiên</h3></a>
-                  <a href="#"><p>Shrouding the Heavens</p></a>
+                  <a href="{% url 'introduce_read_page' 'giathien' %}"><h3>Già Thiên</h3></a>
+                  <a href="{% url 'introduce_read_page' 'giathien' %}"><p>Shrouding the Heavens</p></a>
                 </div>
               </div>
             </div>
@@ -212,8 +212,8 @@
           <!-- 4 cột sách -->
           <div class="col-xl-3 col-md-6 col-sm-12">
             <div class="inner__items" data-ep="Tập 567">
-              <a href="#"><img src="{% static 'shop/images/anh1.jpg' %}" alt="1" /></a>
-              <a href=""><p class="inner__items--title">Mưa đỏ</p></a>
+              <a href="{% url 'introduce_read_page' 'muado' %}"><img src="{% static 'shop/images/anh1.jpg' %}" alt="1" /></a>
+              <a href="{% url 'introduce_read_page' 'muado' %}"><p class="inner__items--title">Mưa đỏ</p></a>
               <div class="overlay">
                 <h4>Mưa đỏ</h4>
                 <p>Tập 567 - Bi kịch trong màn mưa nhuộm đỏ thành phố.</p>
@@ -224,10 +224,8 @@
 
           <div class="col-xl-3 col-md-6 col-sm-12">
             <div class="inner__items" data-ep="Tập 532">
-              <a href="#"><img src="{% static 'shop/images/anh2.png' %}" alt="1" /></a>
-              <a href="#">
-                <p class="inner__items--title">Tiểu yêu tinh của Bạc Gia</p>
-              </a>
+              <a href="{% url 'introduce_read_page' 'tieuyeutinhcuabacgia' %}"><img src="{% static 'shop/images/anh2.png' %}" alt="1" /></a>
+              <a href="{% url 'introduce_read_page' 'tieuyeutinhcuabacgia' %}"><p class="inner__items--title">Tiểu yêu tinh của Bạc Gia</p></a>
               <div class="overlay">
                 <h4>Tiểu yêu tinh của Bạc Gia</h4>
                 <p>Tập 532 - Câu chuyện tình yêu đầy ngang trái.</p>
@@ -238,10 +236,8 @@
 
           <div class="col-xl-3 col-md-6 col-sm-12">
             <div class="inner__items" data-ep="Tập 463">
-              <a href="#"><img src="{% static 'shop/images/anh3.png' %}" alt="1" /></a>
-              <a href="#">
-                <p class="inner__items--title">Cô vợ nhỏ của ngài Phó</p>
-              </a>
+              <a href="{% url 'introduce_read_page' 'covonhocuangaipho' %}"><img src="{% static 'shop/images/anh3.png' %}" alt="1" /></a>
+              <a href="{% url 'introduce_read_page' 'covonhocuangaipho' %}"><p class="inner__items--title">Cô vợ nhỏ của ngài Phó</p></a>
               <div class="overlay">
                 <h4>Cô vợ nhỏ của ngài Phó</h4>
                 <p>Tập 463 - Lựa chọn định mệnh và tình yêu bất diệt.</p>
@@ -252,10 +248,8 @@
 
           <div class="col-xl-3 col-md-6 col-sm-12">
             <div class="inner__items" data-ep="Tập 463">
-              <a href="#"><img src="{% static 'shop/images/anh4.jpg' %}" alt="1" /></a>
-              <a href="#">
-                <p class="inner__items--title">Siêu cấp cưng chiều</p>
-              </a>
+              <a href="{% url 'introduce_read_page' 'sieucapcungchieu' %}"><img src="{% static 'shop/images/anh4.jpg' %}" alt="1" /></a>
+              <a href="{% url 'introduce_read_page' 'sieucapcungchieu' %}"><p class="inner__items--title">Siêu cấp cưng chiều</p></a>
               <div class="overlay">
                 <h4>Siêu cấp cưng chiều</h4>
                 <p>Tập 463 - Khi yêu thương biến thành sức mạnh vô hạn.</p>
@@ -280,10 +274,8 @@
 
           <div class="col-xl-3 col-md-6 col-sm-12">
             <div class="inner__items" data-ep="Tập 235">
-              <a href="#"><img src="{% static 'shop/images/anh5.jpg' %}" alt="1" /></a>
-              <a href="">
-                <p class="inner__items--title">Phép màu chữa lành trái tim</p>
-              </a>
+              <a href="{% url 'introduce_read_page' 'phepmauchualanhtraitim' %}"><img src="{% static 'shop/images/anh5.jpg' %}" alt="1" /></a>
+              <a href="{% url 'introduce_read_page' 'phepmauchualanhtraitim' %}"><p class="inner__items--title">Phép màu chữa lành trái tim</p></a>
               <div class="overlay">
                 <h4>Phép màu chữa lành trái tim</h4>
                 <p>Tập 235 - 21 liệu pháp giúp bạn vượt qua nỗi đau.</p>
@@ -294,8 +286,8 @@
 
           <div class="col-xl-3 col-md-6 col-sm-12">
             <div class="inner__items" data-ep="Tập 956">
-              <a href="#"><img src="{% static 'shop/images/anh6.jpg' %}" alt="1" /></a>
-              <a href="#"><p class="inner__items--title">365 ngày tâm an</p></a>
+              <a href="{% url 'introduce_read_page' '365ngaytaman' %}"><img src="{% static 'shop/images/anh6.jpg' %}" alt="1" /></a>
+              <a href="{% url 'introduce_read_page' '365ngaytaman' %}"><p class="inner__items--title">365 ngày tâm an</p></a>
               <div class="overlay">
                 <h4>365 ngày tâm an</h4>
                 <p>Tập 956 - Hành trình tìm lại sự bình yên.</p>
@@ -306,10 +298,8 @@
 
           <div class="col-xl-3 col-md-6 col-sm-12">
             <div class="inner__items" data-ep="Tập 87">
-              <a href="#"><img src="{% static 'shop/images/anh7.jpg' %}" alt="1" /></a>
-              <a href="#">
-                <p class="inner__items--title">Bạn thật sự là ai?</p>
-              </a>
+              <a href="{% url 'introduce_read_page' 'banthatsulaai' %}"><img src="{% static 'shop/images/anh7.jpg' %}" alt="1" /></a>
+              <a href="{% url 'introduce_read_page' 'banthatsulaai' %}"><p class="inner__items--title">Bạn thật sự là ai?</p></a>
               <div class="overlay">
                 <h4>Bạn thật sự là ai?</h4>
                 <p>Tập 87 - Khám phá bản ngã và ý nghĩa tồn tại.</p>
@@ -320,12 +310,8 @@
 
           <div class="col-xl-3 col-md-6 col-sm-12">
             <div class="inner__items" data-ep="Tập 5">
-              <a href="#"><img src="{% static 'shop/images/anh8.jpg' %}" alt="1" /></a>
-              <a href="">
-                <p class="inner__items--title">
-                  Quên hôm qua và sống cho ngày mai
-                </p>
-              </a>
+              <a href="{% url 'introduce_read_page' 'quenhomquavasongchongaymai' %}"><img src="{% static 'shop/images/anh8.jpg' %}" alt="1" /></a>
+              <a href="{% url 'introduce_read_page' 'quenhomquavasongchongaymai' %}"><p class="inner__items--title">Quên hôm qua và sống cho ngày mai</p></a>
               <div class="overlay">
                 <h4>Quên hôm qua và sống cho ngày mai</h4>
                 <p>Tập 5 - Buông bỏ quá khứ để tiến tới tương lai.</p>
@@ -348,10 +334,8 @@
 
           <div class="col-xl-3 col-md-6 col-sm-12">
             <div class="inner__items" data-ep="Tập 2006">
-              <a href="#"><img src="{% static 'shop/images/demon.jpg' %}" alt="1" /></a>
-              <a href="">
-                <p class="inner__items--title">Chú Thuật Hồi Chiến</p>
-              </a>
+              <a href="{% url 'introduce_read_page' 'chuthuathoichien' %}"><img src="{% static 'shop/images/demon.jpg' %}" alt="1" /></a>
+              <a href="{% url 'introduce_read_page' 'chuthuathoichien' %}"><p class="inner__items--title">Chú Thuật Hồi Chiến</p></a>
               <div class="overlay">
                 <h4>Chú Thuật Hồi Chiến</h4>
                 <p>Tập 2006 - Trận chiến định mệnh giữa các chú thuật sư.</p>
@@ -362,8 +346,8 @@
 
           <div class="col-xl-3 col-md-6 col-sm-12">
             <div class="inner__items" data-ep="Tập 1088">
-              <a href="#"><img src="{% static 'shop/images/naruto.jpg' %}" alt="1" /></a>
-              <a href="#"><p class="inner__items--title">Naruto</p></a>
+              <a href="{% url 'introduce_read_page' 'naruto' %}"><img src="{% static 'shop/images/naruto.jpg' %}" alt="1" /></a>
+              <a href="{% url 'introduce_read_page' 'naruto' %}"><p class="inner__items--title">Naruto</p></a>
               <div class="overlay">
                 <h4>Naruto</h4>
                 <p>Tập 1088 - Con đường trở thành Hokage vĩ đại.</p>
@@ -374,8 +358,8 @@
 
           <div class="col-xl-3 col-md-6 col-sm-12">
             <div class="inner__items" data-ep="Tập 993">
-              <a href="#"><img src="{% static 'shop/images/solo.jpg' %}" alt="1" /></a>
-              <a href="#"><p class="inner__items--title">SOLO TRAVELLING</p></a>
+              <a href="{% url 'introduce_read_page' 'solo_travelling' %}"><img src="{% static 'shop/images/solo.jpg' %}" alt="1" /></a>
+              <a href="{% url 'introduce_read_page' 'solo_travelling' %}"><p class="inner__items--title">SOLO TRAVELLING</p></a>
               <div class="overlay">
                 <h4>SOLO TRAVELLING</h4>
                 <p>Tập 993 - Một mình đối diện bóng tối.</p>
@@ -386,8 +370,8 @@
 
           <div class="col-xl-3 col-md-6 col-sm-12">
             <div class="inner__items" data-ep="Tập 153">
-              <a href="#"><img src="{% static 'shop/images/demon.jpg' %}" alt="1" /></a>
-              <a href="">
+              <a href="{% url 'introduce_read_page' 'chuthuathoichien' %}"><img src="{% static 'shop/images/demon.jpg' %}" alt="1" /></a>
+              <a href="{% url 'introduce_read_page' 'chuthuathoichien' %}">
                 <p class="inner__items--title">Thanh Gươm Diệt Quỷ</p>
               </a>
               <div class="overlay">
@@ -412,8 +396,8 @@
 
           <div class="col-xl-3 col-md-6 col-sm-12">
             <div class="inner__items" data-ep="Tập 109">
-              <a href="#"><img src="{% static 'shop/images/gt.jpg' %}" alt="1" /></a>
-              <a href=""><p class="inner__items--title">Tiên Nghịch</p></a>
+              <a href="{% url 'introduce_read_page' 'tiennghich' %}"><img src="{% static 'shop/images/gt.jpg' %}" alt="1" /></a>
+              <a href="{% url 'introduce_read_page' 'tiennghich' %}"><p class="inner__items--title">Tiên Nghịch</p></a>
               <div class="overlay">
                 <h4>Tiên Nghịch</h4>
                 <p>Tập 109 - Một bước vào tiên giới, trăm kiếp tu hành.</p>
@@ -424,10 +408,8 @@
 
           <div class="col-xl-3 col-md-6 col-sm-12">
             <div class="inner__items" data-ep="Tập 163">
-              <a href="#"><img src="{% static 'shop/images/pntt.jpg' %}" alt="1" /></a>
-              <a href="#">
-                <p class="inner__items--title">Phàm Nhân Tu Tiên</p>
-              </a>
+              <a href="{% url 'introduce_read_page' 'phamnhantutien' %}"><img src="{% static 'shop/images/pntt.jpg' %}" alt="1" /></a>
+              <a href="{% url 'introduce_read_page' 'phamnhantutien' %}"><p class="inner__items--title">Phàm Nhân Tu Tiên</p></a>
               <div class="overlay">
                 <h4>Phàm Nhân Tu Tiên</h4>
                 <p>Tập 163 - Con đường gian nan tìm chân tiên.</p>
@@ -438,10 +420,8 @@
 
           <div class="col-xl-3 col-md-6 col-sm-12">
             <div class="inner__items" data-ep="Tập 199">
-              <a href="#"><img src="{% static 'shop/images/dptk.jpg' %}" alt="1" /></a>
-              <a href="#">
-                <p class="inner__items--title">Đấu Phá Thương Khung</p>
-              </a>
+              <a href="{% url 'introduce_read_page' 'dauphathuongkhung' %}"><img src="{% static 'shop/images/dptk.jpg' %}" alt="1" /></a>
+              <a href="{% url 'introduce_read_page' 'dauphathuongkhung' %}"><p class="inner__items--title">Đấu Phá Thương Khung</p></a>
               <div class="overlay">
                 <h4>Đấu Phá Thương Khung</h4>
                 <p>Tập 199 - Tiến hóa đấu khí, đối đầu cường giả.</p>
@@ -452,10 +432,8 @@
 
           <div class="col-xl-3 col-md-6 col-sm-12">
             <div class="inner__items" data-ep="Tập 263">
-              <a href="#"><img src="{% static 'shop/images/tghm.jpg' %}" alt="1" /></a>
-              <a href="#">
-                <p class="inner__items--title">Thế Giới Hoàn Mỹ</p>
-              </a>
+              <a href="{% url 'introduce_read_page' 'thegioihoanmy' %}"><img src="{% static 'shop/images/tghm.jpg' %}" alt="1" /></a>
+              <a href="{% url 'introduce_read_page' 'thegioihoanmy' %}"><p class="inner__items--title">Thế Giới Hoàn Mỹ</p></a>
               <div class="overlay">
                 <h4>Thế Giới Hoàn Mỹ</h4>
                 <p>Tập 263 - Khám phá huyền bí thế giới cổ xưa.</p>

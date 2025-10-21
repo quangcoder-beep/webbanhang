@@ -12,13 +12,15 @@
     <link href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.5.2/css/all.min.css" rel="stylesheet">
 
     <!-- css riêng của footer + header-->
+    <link rel="stylesheet" href="{% static 'shop/css/style.css' %}"> <!-- global site styles (dark background) -->
     <link rel="stylesheet" href="{% static 'shop/css/header.css' %}">
     <link rel="stylesheet" href="{% static 'shop/css/header.responsive.css' %}">
     <link rel="stylesheet" href="{% static 'shop/css/footer.css' %}">
 
     <!-- CSS/JS của body -->
     {% block linkCSSJSFrontbodyhome %}{%endblock%}
-
+    {% block css-js-bodyhome_phimdangchieu %}{%endblock%}
+    {% block css-js-bodyhome_phimle %} {%endblock%}
     <title>Hello, world!</title>
   </head>
 
@@ -29,6 +31,8 @@
 
     <!-- CONTENT file: bodyhome.html -->
     {% block contentbodyhome%}{%endblock%}
+    {% block content-bodyhome_phimdangchieu %}{%endblock%}
+    {% block content-bodyhome_phimle %}{%endblock%}
     <!-- endCONTENT -->
     
     <!-- code html js file: jshtmlheader.html gọi hàm js riêng cho header-->
@@ -37,6 +41,8 @@
     
     <!-- link css js end body file: bodyhome.html -->
     {% block linkCSSJSEndbodyhome %}{%endblock%}
+    {% block js-bodyhome_phimdangchieu %}{%endblock%}
+    {% block js-bodyhome_phimle %}{%endblock%}
     <!-- end link css js end body -->
 
     <!-- FOOTER file: footer.html -->

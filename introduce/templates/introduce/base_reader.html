@@ -1,0 +1,42 @@
+{% extends "shop/formbase.html" %}
+{% load static %}
+
+{% block linkCSSJSFrontbodyhome %}
+<link rel="stylesheet" href="{% static 'introduce/css/reader.css' %}">
+{% endblock %}
+
+{% block contentbodyhome %}
+<section class="reader" id="readerRoot">
+  <div class="reader__hero">
+    {% block reader_hero %}{% endblock %}
+  </div>
+
+  <div class="reader__nav">
+    {% block reader_nav %}{% endblock %}
+  </div>
+
+  <article class="reader__content">
+    {% block reader_content %}{% endblock %}
+  </article>
+
+  <div class="reader__footer">
+    {% block reader_footer %}{% endblock %}
+  </div>
+</section>
+{% endblock %}
+
+{% block linkCSSJSEndbodyhome %}
+<script>
+  (function(){
+    const pool = [
+      '{% static "shop/images/1.jpg" %}','{% static "shop/images/2.jpg" %}',
+      '{% static "shop/images/3.jpg" %}','{% static "shop/images/4.jpg" %}',
+      '{% static "shop/images/5.jpg" %}','{% static "shop/images/6.jpg" %}'
+    ];
+    const img = document.querySelector('.reader__thumb');
+    if (img && (!img.getAttribute('src') || /placeholder\.jpg$/i.test(img.getAttribute('src')))) {
+      img.src = pool[Math.floor(Math.random()*pool.length)];
+    }
+  })();
+</script>
+{% endblock %}

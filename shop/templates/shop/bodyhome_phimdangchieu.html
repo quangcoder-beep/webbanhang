@@ -1,15 +1,16 @@
-
+{% extends "shop/formbase.html" %}
 {% load static %}
-<link rel="stylesheet" href="{% static 'shop/css/bodyhome_phimdangchieu.css' %}">
 
+{% block css-js-bodyhome_phimdangchieu %}
+<link rel="stylesheet" href="{% static 'shop/css/bodyhome_phimdangchieu.css' %}">
+{% endblock %}
+
+
+{% block content-bodyhome_phimdangchieu %}
 <section class="now-playing">
   <div class="np-header">
     <h2>Phim đang chiếu</h2>
     <div class="np-tools">
-      <div class="np-search">
-        <i class="fa-solid fa-magnifying-glass"></i>
-        <input type="text" placeholder="Tìm theo tên…">
-      </div>
       <select class="np-select">
         <option value="">Sắp xếp</option>
         <option value="new">Mới nhất</option>
@@ -29,7 +30,7 @@
   <div class="np-grid">
     <a href="#" class="np-card">
       <div class="np-thumb">
-        <img src="https://images.unsplash.com/photo-1524985069026-dd778a71c7b4?q=80&w=800&auto=format&fit=crop" alt="Poster">
+        <img src="{% static 'shop/images/placeholder.jpg' %}" alt="Poster">
         <span class="np-badge">Tập 12</span>
       </div>
       <div class="np-body">
@@ -48,7 +49,7 @@
 
     <a href="#" class="np-card">
       <div class="np-thumb">
-        <img src="https://images.unsplash.com/photo-1505682634904-d7c075c09a24?q=80&w=800&auto=format&fit=crop" alt="Poster">
+        <img src="{% static 'shop/images/placeholder.jpg' %}" alt="Poster">
         <span class="np-badge">HD</span>
       </div>
       <div class="np-body">
@@ -67,7 +68,7 @@
 
     <a href="#" class="np-card">
       <div class="np-thumb">
-        <img src="https://images.unsplash.com/photo-1517602302552-471fe67acf66?q=80&w=800&auto=format&fit=crop" alt="Poster">
+        <img src="{% static 'shop/images/placeholder.jpg' %}" alt="Poster">
         <span class="np-badge">Tập 08</span>
       </div>
       <div class="np-body">
@@ -86,7 +87,7 @@
 
     <a href="#" class="np-card">
       <div class="np-thumb">
-        <img src="https://images.unsplash.com/photo-1497032628192-86f99bcd76bc?q=80&w=800&auto=format&fit=crop" alt="Poster">
+        <img src="{% static 'shop/images/placeholder.jpg' %}" alt="Poster">
         <span class="np-badge">Full</span>
       </div>
       <div class="np-body">
@@ -105,7 +106,7 @@
 
     <a href="#" class="np-card">
       <div class="np-thumb">
-        <img src="https://images.unsplash.com/photo-1456926631375-92c8ce872def?q=80&w=800&auto=format&fit=crop" alt="Poster">
+        <img src="{% static 'shop/images/placeholder.jpg' %}" alt="Poster">
         <span class="np-badge">Tập 05</span>
       </div>
       <div class="np-body">
@@ -124,7 +125,7 @@
 
     <a href="#" class="np-card">
       <div class="np-thumb">
-        <img src="https://images.unsplash.com/photo-1497032205916-ac775f0649ae?q=80&w=800&auto=format&fit=crop" alt="Poster">
+        <img src="{% static 'shop/images/placeholder.jpg' %}" alt="Poster">
         <span class="np-badge">Cam</span>
       </div>
       <div class="np-body">
@@ -150,4 +151,33 @@
     <a href="#" class="np-page next"><i class="fa-solid fa-angle-right"></i></a>
   </div>
 </section>
+{% endblock %}
 
+{% block js-bodyhome_phimdangchieu %}
+<script src="{% static 'shop/js/bodyhome_phimdangchieu.js' %}"></script>
+  <script>
+  (function() {
+    const pool = [
+      '{% static "shop/images/1.jpg" %}',
+      '{% static "shop/images/2.jpg" %}',
+      '{% static "shop/images/3.jpg" %}',
+      '{% static "shop/images/4.jpg" %}',
+      '{% static "shop/images/5.jpg" %}',
+      '{% static "shop/images/6.jpg" %}',
+      '{% static "shop/images/7.jpg" %}',
+      '{% static "shop/images/8.jpg" %}'
+    ];
+    const randImg = () => pool[Math.floor(Math.random() * pool.length)];
+    const imgs = document.querySelectorAll('.np-thumb img');
+    imgs.forEach(img => {
+      const src = img.getAttribute('src') || '';
+      if (!src || /placeholder\.jpg$/i.test(src)) {
+        img.src = randImg();
+      }
+      img.addEventListener('error', () => {
+        img.src = randImg();
+      });
+    });
+  })();
+ </script>
+{% endblock %}

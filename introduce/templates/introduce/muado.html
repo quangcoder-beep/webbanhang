@@ -1,0 +1,73 @@
+{% load static %}
+<link rel="stylesheet" href="{% static 'introduce/css/reader.css' %}">
+
+<section class="reader" id="readerRoot">
+  <div class="reader__hero">
+    <img class="reader__thumb" src="{% static 'shop/images/placeholder.jpg' %}" alt="thumb">
+    <div>
+      <h1 class="reader__title">Chương 1 · Khởi đầu</h1>
+      <div class="reader__meta">Tác giả: Sưu tầm · Thể loại: Phiêu lưu · Cập nhật: Hôm nay</div>
+    </div>
+    <div class="reader__tools">
+      <a class="btn" href="{% url 'home' %}"><i class="fa-solid fa-house"></i> Trang chủ</a>
+      <button class="btn" id="toggleTheme"><i class="fa-solid fa-circle-half-stroke"></i> Giao diện</button>
+      <a class="btn" href="/introduce/anm2.html"><i class="fa-solid fa-angles-right"></i> Chương sau</a>
+    </div>
+  </div>
+
+  <div class="reader__nav">
+    <select class="select">
+      <option>Chương 1</option>
+      <option>Chương 2</option>
+      <option>Chương 3</option>
+    </select>
+    <select class="select">
+      <option>Server 1</option>
+      <option>Server 2</option>
+    </select>
+    <select class="select">
+      <option>Chất lượng: Mặc định</option>
+      <option>Chữ lớn</option>
+      <option>Giãn dòng rộng</option>
+    </select>
+  </div>
+
+  <article class="reader__content">
+    <p class="lead">Cơn gió đêm len lỏi qua những tán cây, mang theo mùi hương của đất trời và những bí mật chưa từng được kể.</p>
+    <p>Ở nơi tận cùng của bìa rừng, một cánh cổng cổ xưa hé mở. Ánh sáng mỏng manh rọi xuống từng phiến đá rêu phong, như vết mực ký họa lại thời gian.</p>
+    <p>Nhân vật chính bước tới, đặt bàn tay lên biểu tượng kỳ lạ giữa cổng. Thế giới như khựng lại trước khoảnh khắc bắt đầu chuyến hành trình.</p>
+    <p>Mọi thứ đã sẵn sàng. Câu chuyện bắt đầu từ đây...</p>
+  </article>
+
+  <div class="reader__footer">
+    <div class="reader__pager">
+      <a class="btn pager" href="#" aria-disabled="true"><i class="fa-solid fa-angle-left"></i></a>
+      <a class="btn pager" href="/introduce/anm2.html"><i class="fa-solid fa-angle-right"></i></a>
+    </div>
+    <a class="btn" href="#readerRoot"><i class="fa-solid fa-arrow-up"></i> Lên đầu</a>
+  </div>
+</section>
+
+<script>
+  // random thumb image from existing pool
+  (function(){
+    const pool = [
+      '{% static "shop/images/1.jpg" %}',
+      '{% static "shop/images/2.jpg" %}',
+      '{% static "shop/images/3.jpg" %}',
+      '{% static "shop/images/4.jpg" %}',
+      '{% static "shop/images/5.jpg" %}',
+      '{% static "shop/images/6.jpg" %}'
+    ];
+    const img = document.querySelector('.reader__thumb');
+    if (img) img.src = pool[Math.floor(Math.random()*pool.length)];
+  })();
+
+  // theme toggle
+  (function(){
+    const root = document.getElementById('readerRoot');
+    const btn = document.getElementById('toggleTheme');
+    if (btn) btn.addEventListener('click', function(){ root.classList.toggle('light'); });
+  })();
+</script>
+

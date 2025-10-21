@@ -1,0 +1,36 @@
+{% load static %}
+<link rel="stylesheet" href="{% static 'introduce/css/reader.css' %}">
+<section class="reader" id="readerRoot">
+  <div class="reader__hero">
+    <img class="reader__thumb" src="{% static 'shop/images/placeholder.jpg' %}" alt="thumb">
+    <div>
+      <h1 class="reader__title">Chương 14 · Niềm hi vọng</h1>
+      <div class="reader__meta">Tác giả: Sưu tầm · Thể loại: Phiêu lưu · Cập nhật: Hôm nay</div>
+    </div>
+    <div class="reader__tools">
+      <a class="btn" href="{% url 'home' %}"><i class="fa-solid fa-house"></i> Trang chủ</a>
+      <button class="btn" id="toggleTheme"><i class="fa-solid fa-circle-half-stroke"></i> Giao diện</button>
+      <a class="btn" href="/introduce/anm15.html"><i class="fa-solid fa-angles-right"></i> Chương sau</a>
+    </div>
+  </div>
+  <div class="reader__nav">
+    <select class="select"><option>Chương 14</option></select>
+    <select class="select"><option>Server 1</option><option>Server 2</option></select>
+    <select class="select"><option>Mặc định</option><option>Chữ lớn</option><option>Giãn dòng rộng</option></select>
+  </div>
+  <article class="reader__content">
+    <p class="lead">Một tia sáng nhỏ cũng đủ thắp bừng cả bầu trời u tối.</p>
+    <p>Niềm hi vọng, khi được chia sẻ, trở thành sức mạnh vô song.</p>
+  </article>
+  <div class="reader__footer">
+    <div class="reader__pager">
+      <a class="btn pager" href="/introduce/anm13.html"><i class="fa-solid fa-angle-left"></i></a>
+      <a class="btn pager" href="/introduce/anm15.html"><i class="fa-solid fa-angle-right"></i></a>
+    </div>
+    <a class="btn" href="#readerRoot"><i class="fa-solid fa-arrow-up"></i> Lên đầu</a>
+  </div>
+</section>
+<script>
+(function(){const pool=['{% static "shop/images/1.jpg" %}','{% static "shop/images/2.jpg" %}','{% static "shop/images/3.jpg" %}','{% static "shop/images/4.jpg" %}','{% static "shop/images/5.jpg" %}','{% static "shop/images/6.jpg" %}'];const img=document.querySelector('.reader__thumb');if(img)img.src=pool[Math.floor(Math.random()*pool.length)];})();
+(function(){const root=document.getElementById('readerRoot');const btn=document.getElementById('toggleTheme');if(btn)btn.addEventListener('click',function(){root.classList.toggle('light');});})();
+</script>

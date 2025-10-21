@@ -5,6 +5,18 @@
     list-style: none;                        /* Bỏ dấu chấm mặc định */
   }
 
+  /* Constrain header rows to same width as slick item (930px) */
+  .header > .header1,
+  .header > .header2 {
+    max-width: 1200px; /* dài thêm chút nữa */
+    margin-left: auto;
+    margin-right: auto;
+    width: 100%;
+    padding-left: 8px;
+    padding-right: 8px;
+    box-sizing: border-box;
+  }
+
   /* ===== TOP BAR (.header1) ===== */
   .header1 {
     display: grid;
@@ -26,6 +38,13 @@
     display: flex;
     align-items: center;
     gap: 8px;
+  }
+
+  /* Left-align the top search and allow it to grow */
+  .top-search {
+    display: flex;
+    justify-content: flex-start;  /* align left */
+    align-items: center;
   }
 
   .icon-btn {
@@ -57,7 +76,7 @@
     grid-template-columns: 1fr;              /* 1 cột, xếp chồng */
     align-items: stretch;                    /* Các phần tử kéo dài bằng nhau */
     min-height: 80px;                       /* Chiều cao tối thiểu */
-    background: #0F1416;
+    background: #0e0e0f;                    /* match header2 background */
     box-shadow: 0 12px 40px rgba(102, 126, 234, 0.4), 0 4px 12px rgba(0, 0, 0, 0.15);
     width: 100%;
     z-index: 1500;                           /* above headerBg and page content */
