@@ -1,0 +1,153 @@
+
+{% load static %}
+<link rel="stylesheet" href="{% static 'shop/css/bodyhome_phimdangchieu.css' %}">
+
+<section class="now-playing">
+  <div class="np-header">
+    <h2>Phim đang chiếu</h2>
+    <div class="np-tools">
+      <div class="np-search">
+        <i class="fa-solid fa-magnifying-glass"></i>
+        <input type="text" placeholder="Tìm theo tên…">
+      </div>
+      <select class="np-select">
+        <option value="">Sắp xếp</option>
+        <option value="new">Mới nhất</option>
+        <option value="popular">Phổ biến</option>
+        <option value="rating">Đánh giá cao</option>
+      </select>
+      <select class="np-select">
+        <option value="">Thể loại</option>
+        <option>Hành động</option>
+        <option>Phiêu lưu</option>
+        <option>Học đường</option>
+        <option>Viễn tưởng</option>
+      </select>
+    </div>
+  </div>
+
+  <div class="np-grid">
+    <a href="#" class="np-card">
+      <div class="np-thumb">
+        <img src="https://images.unsplash.com/photo-1524985069026-dd778a71c7b4?q=80&w=800&auto=format&fit=crop" alt="Poster">
+        <span class="np-badge">Tập 12</span>
+      </div>
+      <div class="np-body">
+        <h3>Kimetsu no Yaiba</h3>
+        <div class="np-meta">
+          <span>2024</span>
+          <span class="np-dot"></span>
+          <span>24 phút/tập</span>
+        </div>
+        <div class="np-stats">
+          <span class="np-rate"><i class="fa-solid fa-star"></i> 9.1</span>
+          <span class="np-tag">Action</span>
+        </div>
+      </div>
+    </a>
+
+    <a href="#" class="np-card">
+      <div class="np-thumb">
+        <img src="https://images.unsplash.com/photo-1505682634904-d7c075c09a24?q=80&w=800&auto=format&fit=crop" alt="Poster">
+        <span class="np-badge">HD</span>
+      </div>
+      <div class="np-body">
+        <h3>One Piece</h3>
+        <div class="np-meta">
+          <span>1999</span>
+          <span class="np-dot"></span>
+          <span>~23 phút/tập</span>
+        </div>
+        <div class="np-stats">
+          <span class="np-rate"><i class="fa-solid fa-star"></i> 8.8</span>
+          <span class="np-tag">Adventure</span>
+        </div>
+      </div>
+    </a>
+
+    <a href="#" class="np-card">
+      <div class="np-thumb">
+        <img src="https://images.unsplash.com/photo-1517602302552-471fe67acf66?q=80&w=800&auto=format&fit=crop" alt="Poster">
+        <span class="np-badge">Tập 08</span>
+      </div>
+      <div class="np-body">
+        <h3>Jujutsu Kaisen</h3>
+        <div class="np-meta">
+          <span>2023</span>
+          <span class="np-dot"></span>
+          <span>24 phút/tập</span>
+        </div>
+        <div class="np-stats">
+          <span class="np-rate"><i class="fa-solid fa-star"></i> 9.0</span>
+          <span class="np-tag">Supernatural</span>
+        </div>
+      </div>
+    </a>
+
+    <a href="#" class="np-card">
+      <div class="np-thumb">
+        <img src="https://images.unsplash.com/photo-1497032628192-86f99bcd76bc?q=80&w=800&auto=format&fit=crop" alt="Poster">
+        <span class="np-badge">Full</span>
+      </div>
+      <div class="np-body">
+        <h3>Your Name</h3>
+        <div class="np-meta">
+          <span>2016</span>
+          <span class="np-dot"></span>
+          <span>Phim lẻ</span>
+        </div>
+        <div class="np-stats">
+          <span class="np-rate"><i class="fa-solid fa-star"></i> 9.2</span>
+          <span class="np-tag">Romance</span>
+        </div>
+      </div>
+    </a>
+
+    <a href="#" class="np-card">
+      <div class="np-thumb">
+        <img src="https://images.unsplash.com/photo-1456926631375-92c8ce872def?q=80&w=800&auto=format&fit=crop" alt="Poster">
+        <span class="np-badge">Tập 05</span>
+      </div>
+      <div class="np-body">
+        <h3>Haikyuu!!</h3>
+        <div class="np-meta">
+          <span>2014</span>
+          <span class="np-dot"></span>
+          <span>24 phút/tập</span>
+        </div>
+        <div class="np-stats">
+          <span class="np-rate"><i class="fa-solid fa-star"></i> 8.7</span>
+          <span class="np-tag">Sports</span>
+        </div>
+      </div>
+    </a>
+
+    <a href="#" class="np-card">
+      <div class="np-thumb">
+        <img src="https://images.unsplash.com/photo-1497032205916-ac775f0649ae?q=80&w=800&auto=format&fit=crop" alt="Poster">
+        <span class="np-badge">Cam</span>
+      </div>
+      <div class="np-body">
+        <h3>Spy x Family</h3>
+        <div class="np-meta">
+          <span>2022</span>
+          <span class="np-dot"></span>
+          <span>24 phút/tập</span>
+        </div>
+        <div class="np-stats">
+          <span class="np-rate"><i class="fa-solid fa-star"></i> 8.6</span>
+          <span class="np-tag">Comedy</span>
+        </div>
+      </div>
+    </a>
+  </div>
+
+  <div class="np-pagination">
+    <a href="#" class="np-page prev"><i class="fa-solid fa-angle-left"></i></a>
+    <a href="#" class="np-page active">1</a>
+    <a href="#" class="np-page">2</a>
+    <a href="#" class="np-page">3</a>
+    <a href="#" class="np-page next"><i class="fa-solid fa-angle-right"></i></a>
+  </div>
+</section>
+

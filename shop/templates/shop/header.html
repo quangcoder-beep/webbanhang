@@ -1,73 +1,14 @@
 {% load static %}
 <!-- header -->
 <nav class="header">
-    <!-- đăng nhập / đăng ký + slide-images -->
-    <div class="header-manage0">
-        <!-- đăng nhập / đăng ký -->
-        <div class="account">
-            <ul class="account-ul">
-                <li><a href="{% url 'login' %}">Login</a></li>
-                <li><span>or</span></li>
-                <li><a href="{% url 'logup' %}">Logup</a></li>
-            </ul>
-        </div>
+    <div class="header1">
         <!-- logo -->
         <div class="logo-text">
             <a href="#"><h1>Anime HQM</h1></a>
         </div>
-    </div>
-
-    <!-- phần danh mục, thể loại,... -->
-    <div class="header-manage1">
-        <ul>
-            <li>
-                <div class="dropdown-container">
-                    <a class="clickDropdown" href="#" role="button" aria-expanded="false">DANH MỤC</a>
-                    <ul class="dropdown-items" id="dropdown-danhmuc">
-                        <li><a class="item" href="#">Phim mới</a></li>
-                        <li><a class="item" href="#">Phim hot</a></li>
-                        <li><a class="item" href="#">Phim đang chiếu</a></li>
-                    </ul>
-                </div>
-            </li>
-            <li>
-                <div class="dropdown-container">
-                    <a class="clickDropdown" href="#" role="button" aria-expanded="false">Thể loại</a>
-                    <ul class="dropdown-items" id="dropdown-items">
-                        <li><a class="item" href="#">Anime</a></li>
-                        <li><a class="item" href="#">Hoạt hình</a></li>
-                        <li><a class="item" href="#">Đọc truyện</a></li>
-                    </ul>
-                </div>
-            </li>
-            <li>
-                <div class="dropdown-container">
-                    <a class="clickDropdown" href="#" role="button" aria-expanded="false">GIỚI THIỆU</a>
-                    <ul class="dropdown-items" id="dropdown-gioithieu">
-                        <li><a class="item" href="#">Về chúng tôi</a></li>
-                        <li><a class="item" href="#">Liên hệ</a></li>
-                        <li><a class="item" href="#">Hỗ trợ</a></li>
-                    </ul>
-                </div>
-            </li>
-            <li>
-                <div class="dropdown-container">
-                    <a class="clickDropdown" href="#" role="button" aria-expanded="false">TOP TRUYỆN</a>
-                    <ul class="dropdown-items" id="dropdown-top">
-                        <li><a class="item" href="#">Top tuần</a></li>
-                        <li><a class="item" href="#">Top tháng</a></li>
-                        <li><a class="item" href="#">Top năm</a></li>
-                    </ul>
-                </div>
-            </li>
-        </ul>
-    </div>
-
-    <!-- phần tìm kiếm + button -->
-    <div class="header-manage2">
-        <!-- phần tìm kiếm -->
-        <div class="search">
-            <div class="search-container"> 
+        <!-- search on top bar -->
+        <div class="search top-search">
+            <div class="search-container">
                 <input type="search" name="search" id="searchInput" placeholder="Tìm kiếm...">
                 <button type="submit" class="search-btn">
                     <svg width="16" height="16" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round">
@@ -77,14 +18,56 @@
                 </button>
             </div>
         </div>
+        <!-- right actions -->
+        <div class="top-actions">
+            <a class="icon-btn" href="#" title="Lịch sử">
+                <i class="fa-solid fa-rotate"></i>
+            </a>
+            <a class="icon-btn" href="#" title="Yêu thích">
+                <i class="fa-solid fa-bookmark"></i>
+            </a>
+            <a class="icon-btn icon-btn--text" href="{% url 'login' %}" title="Đăng nhập">
+                <i class="fa-solid fa-right-to-bracket"></i>
+                <span>Login</span>
+            </a>
+        </div>
+    </div>
+    <div class="header2">
+        
 
-        <!-- Button để mở slide menu -->
-        <button class="menu-toggle" id="menuToggle">
-            <span class="hamburger"></span>
-            <span class="hamburger"></span>
-            <span class="hamburger"></span>
-        </button>
+        <!-- phần danh mục, thể loại,... -->
+        <div class="header-manage1">
+            <ul>
+                <li><a class="menu-link active" href="{% url 'home' %}"><i class="fa-solid fa-house"></i> <span>Trang chủ</span></a></li>
+                <li>
+                    <div class="dropdown-container">
+                        <a class="menu-link has-dropdown clickDropdown" href="#" role="button" aria-expanded="false"><i class="fa-solid fa-layer-group"></i> <span>Thể Loại</span></a>
+                        <ul class="dropdown-items" id="dropdown-items">
+                            <li><a class="item" href="#">Anime</a></li>
+                            <li><a class="item" href="#">Hoạt hình</a></li>
+                            <li><a class="item" href="#">Đọc truyện</a></li>
+                        </ul>
+                    </div>
+                </li>
+                <li><a class="menu-link" href="#"><i class="fa-solid fa-film"></i> <span>Phim Lẻ</span></a></li>
+                <li><a class="menu-link" href="#"><i class="fa-solid fa-rotate"></i> <span>Đang Chiếu</span></a></li>
+                <li><a class="menu-link" href="#"><i class="fa-solid fa-circle-check"></i> <span>Hoàn Thành</span></a></li>
+                <li><a class="menu-link" href="#"><i class="fa-solid fa-trophy"></i> <span>Top 10 HH3D</span></a></li>
+                <li><a class="menu-link" href="#"><i class="fa-solid fa-thumbs-up"></i> <span>Đánh Giá Cao</span></a></li>
+                <li><a class="menu-link" href="#"><i class="fa-solid fa-trophy"></i> <span>Giới Thiệu</span></a></li>
+            </ul>
+        </div>
 
+        <!-- phần tìm kiếm + button -->
+        <div class="header-manage2">
+            <!-- Button để mở slide menu -->
+            <button class="menu-toggle" id="menuToggle">
+                <span class="hamburger"></span>
+                <span class="hamburger"></span>
+                <span class="hamburger"></span>
+            </button>
+
+        </div>
     </div>
 </nav>
 <!-- Overlay để đóng menu khi click bên ngoài -->
