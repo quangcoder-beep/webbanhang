@@ -12,3 +12,5 @@ def phimdangchieu(request):
     return render(request, 'shop/bodyhome_phimdangchieu.html')
 def phimle(request):
     return render(request, 'shop/bodyhome_phimle.html')
+def gioithieu(request):
+    return render(request, 'shop/gioithieu.html')

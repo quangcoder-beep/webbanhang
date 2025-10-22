@@ -17,9 +17,9 @@
     </div>
     
     <div class="container">
-        <form action="{% url 'login' %}" id="form-1" method="POST">  
+        <form action="{% url 'home' %}" id="form-1" method="POST"> 
+            {% csrf_token %} 
             <h1>Đăng nhập tài khoản</h1>
-
             <div id="username" class="input">
                 <label for="username">Tên đầy đủ</label>
                 <input type="text" id="username" name="username" placeholder="VD: Lai_Vinh_Quang">

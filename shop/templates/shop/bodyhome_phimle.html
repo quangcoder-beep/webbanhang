@@ -28,7 +28,7 @@
   <div class="np-grid">
     <a href="#" class="np-card">
       <div class="np-thumb">
-        <img src="{% static 'shop/images/placeholder.jpg' %}" alt="Poster">
+        <img src="{% static 'shop/images/muc-than-ky-1-300x450.jpg' %}" alt="Your Name">
         <span class="np-badge">Full HD</span>
       </div>
       <div class="np-body">
@@ -47,7 +47,7 @@
 
     <a href="#" class="np-card">
       <div class="np-thumb">
-        <img src="{% static 'shop/images/placeholder.jpg' %}" alt="Poster">
+        <img src="{% static 'shop/images/dau-pha-thuong-khung-phan-5-gia-nam-hoc-vien-5-300x450.jpg' %}" alt="Weathering With You">
         <span class="np-badge">Full</span>
       </div>
       <div class="np-body">
@@ -66,7 +66,7 @@
 
     <a href="#" class="np-card">
       <div class="np-thumb">
-        <img src="{% static 'shop/images/placeholder.jpg' %}" alt="Poster">
+        <img src="{% static 'shop/images/dau-la-dai-luc-2-tuyet-the-duong-mon-8-300x450.jpg' %}" alt="A Silent Voice">
         <span class="np-badge">HD</span>
       </div>
       <div class="np-body">
@@ -85,7 +85,7 @@
 
     <a href="#" class="np-card">
       <div class="np-thumb">
-        <img src="{% static 'shop/images/placeholder.jpg' %}" alt="Poster">
+        <img src="{% static 'shop/images/pham-nhan-tu-tien-300x450.jpg' %}" alt="Detective Conan Movie">
         <span class="np-badge">4K</span>
       </div>
       <div class="np-body">
@@ -102,42 +102,6 @@
       </div>
     </a>
   </div>
-
-  <div class="np-pagination">
-    <a href="#" class="np-page prev"><i class="fa-solid fa-angle-left"></i></a>
-    <a href="#" class="np-page active">1</a>
-    <a href="#" class="np-page">2</a>
-    <a href="#" class="np-page">3</a>
-    <a href="#" class="np-page next"><i class="fa-solid fa-angle-right"></i></a>
-  </div>
 </section>
 {% endblock %}
 
-{% block js-bodyhome_phimle %}
-<script>
-  (function() {
-    const pool = [
-      '{% static "shop/images/1.jpg" %}',
-      '{% static "shop/images/2.jpg" %}',
-      '{% static "shop/images/3.jpg" %}',
-      '{% static "shop/images/4.jpg" %}',
-      '{% static "shop/images/5.jpg" %}',
-      '{% static "shop/images/6.jpg" %}',
-      '{% static "shop/images/7.jpg" %}',
-      '{% static "shop/images/8.jpg" %}'
-    ];
-    const randImg = () => pool[Math.floor(Math.random() * pool.length)];
-    const imgs = document.querySelectorAll('.np-thumb img');
-    imgs.forEach(img => {
-      // assign random if empty or placeholder
-      if (!img.getAttribute('src') || /placeholder\.jpg$/i.test(img.getAttribute('src'))) {
-        img.src = randImg();
-      }
-      // fallback on error (404, etc.)
-      img.addEventListener('error', () => {
-        img.src = randImg();
-      });
-    });
-  })();
-</script>
-{% endblock %}

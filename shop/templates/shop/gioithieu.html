@@ -1,0 +1,222 @@
+{% extends "shop/formbase.html" %}
+{% load static %}
+
+{% block linkCSSJSfront-gioithieu %}
+<!-- Custom CSS for About Page -->
+<link rel="stylesheet" href="{% static 'shop/css/gioithieu.css' %}">
+<!-- Google Fonts -->
+<link href="https://fonts.googleapis.com/css2?family=Poppins:wght@300;400;500;600;700&display=swap" rel="stylesheet">
+{% endblock %}
+
+{% block content-gioithieu %}
+<!-- Hero Section -->
+<section class="about-hero">
+    <div class="container">
+        <div class="row align-items-center">
+            <div class="col-lg-6">
+                <h1>Chào mừng đến với <span>AnimeHQM</span></h1>
+                <p class="lead">Nơi kết nối cộng đồng yêu thích anime và manga hàng đầu Việt Nam</p>
+            </div>
+            <div class="col-lg-6">
+                <img src="{% static 'shop/images/logo.png' %}" alt="AnimeHQM Community" class="img-fluid rounded-3">
+            </div>
+        </div>
+    </div>
+</section>
+
+<!-- About Section -->
+<section class="about-section py-5">
+    <div class="container">
+        <div class="row">
+            <div class="col-12 text-center mb-5">
+                <h2 class="section-title">Về Chúng Tôi</h2>
+                <div class="divider"></div>
+            </div>
+        </div>
+        <div class="row g-4">
+            <div class="col-md-4">
+                <div class="about-card">
+                    <div class="icon-box">
+                        <i class="fas fa-rocket"></i>
+                    </div>
+                    <h3>Sứ Mệnh</h3>
+                    <p>Mang đến trải nghiệm xem phim anime và đọc manga chất lượng cao, đa dạng thể loại cho cộng đồng yêu thích anime tại Việt Nam.</p>
+                </div>
+            </div>
+            <div class="col-md-4">
+                <div class="about-card">
+                    <div class="icon-box">
+                        <i class="fas fa-eye"></i>
+                    </div>
+                    <h3>Tầm Nhìn</h3>
+                    <p>Trở thành nền tảng hàng đầu về giải trí anime và manga, góp phần phát triển cộng đồng yêu thích văn hóa Nhật Bản.</p>
+                </div>
+            </div>
+            <div class="col-md-4">
+                <div class="about-card">
+                    <div class="icon-box">
+                        <i class="fas fa-gem"></i>
+                    </div>
+                    <h3>Giá Trị Cốt Lõi</h3>
+                    <p>Chất lượng - Đa dạng - Cập nhật - Cộng đồng - Trải nghiệm người dùng tuyệt vời.</p>
+                </div>
+            </div>
+        </div>
+    </div>
+</section>
+
+<!-- Features Section -->
+<section class="features-section py-5">
+    <div class="container">
+        <div class="row">
+            <div class="col-12 text-center mb-5">
+                <h2 class="section-title">Tại Sao Chọn Chúng Tôi?</h2>
+                <div class="divider"></div>
+            </div>
+        </div>
+        <div class="row g-4">
+            <div class="col-md-6 col-lg-3">
+                <div class="feature-card">
+                    <div class="feature-icon">
+                        <i class="fas fa-film"></i>
+                    </div>
+                    <h4>Kho Phim Đa Dạng</h4>
+                    <p>Hàng ngàn bộ phim anime chất lượng cao với đầy đủ thể loại từ hành động, tình cảm đến viễn tưởng.</p>
+                </div>
+            </div>
+            <div class="col-md-6 col-lg-3">
+                <div class="feature-card">
+                    <div class="feature-icon">
+                        <i class="fas fa-book"></i>
+                    </div>
+                    <h4>Truyện Tranh Phong Phú</h4>
+                    <p>Kho truyện tranh đồ sộ với chất lượng hình ảnh sắc nét, cập nhật nhanh chóng.</p>
+                </div>
+            </div>
+            <div class="col-md-6 col-lg-3">
+                <div class="feature-card">
+                    <div class="feature-icon">
+                        <i class="fas fa-clock"></i>
+                    </div>
+                    <h4>Cập Nhật Nhanh</h4>
+                    <p>Luôn cập nhật những tập phim mới nhất ngay khi phát sóng tại Nhật Bản.</p>
+                </div>
+            </div>
+            <div class="col-md-6 col-lg-3">
+                <div class="feature-card">
+                    <div class="feature-icon">
+                        <i class="fas fa-users"></i>
+                    </div>
+                    <h4>Cộng Đồng Sôi Động</h4>
+                    <p>Tham gia cộng đồng yêu thích anime đông đảo và thân thiện.</p>
+                </div>
+            </div>
+        </div>
+    </div>
+</section>
+
+<!-- Team Section -->
+<section class="team-section py-5">
+    <div class="container">
+        <div class="row">
+            <div class="col-12 text-center mb-5">
+                <h2 class="section-title">Đội Ngũ Của Chúng Tôi</h2>
+                <p class="section-subtitle">Những người đã tạo nên AnimeHQM ngày hôm nay</p>
+            </div>
+        </div>
+        <div class="row g-4">
+            <div class="col-md-4">
+                <div class="team-card">
+                    <div class="team-img">
+                        <div class="social-links">
+                            <a href="#"><i class="fab fa-facebook"></i></a>
+                            <a href="#"><i class="fab fa-twitter"></i></a>
+                            <a href="#"><i class="fab fa-instagram"></i></a>
+                            <a href="#"><i class="fab fa-linkedin"></i></a>
+                        </div>
+                    </div>
+                    <div class="team-info">
+                        <h4>Lại Vinh Quang</h4>
+                        <p>Founder & CEO</p>
+                    </div>
+                </div>
+            </div>
+            <div class="col-md-4">
+                <div class="team-card">
+                    <div class="team-img">
+                        <div class="social-links">
+                            <a href="#"><i class="fab fa-facebook"></i></a>
+                            <a href="#"><i class="fab fa-twitter"></i></a>
+                            <a href="#"><i class="fab fa-instagram"></i></a>
+                            <a href="#"><i class="fab fa-linkedin"></i></a>
+                        </div>
+                    </div>
+                    <div class="team-info">
+                        <h4>Đàm Đình Hiệp</h4>
+                        <p>Content Manager</p>
+                    </div>
+                </div>
+            </div>
+            <div class="col-md-4">
+                <div class="team-card">
+                    <div class="team-img">
+                        <div class="social-links">
+                            <a href="#"><i class="fab fa-facebook"></i></a>
+                            <a href="#"><i class="fab fa-twitter"></i></a>
+                            <a href="#"><i class="fab fa-instagram"></i></a>
+                            <a href="#"><i class="fab fa-linkedin"></i></a>
+                        </div>
+                    </div>
+                    <div class="team-info">
+                        <h4>Lại Huy Mạnh</h4>
+                        <p>Lead Developer</p>
+                    </div>
+                </div>
+            </div>
+        </div>
+    </div>
+</section>
+
+<!-- CTA Section -->
+<section class="cta-section py-5 bg-primary text-white">
+    <div class="container text-center">
+        <h2>Sẵn sàng khám phá thế giới anime?</h2>
+        <p class="lead mb-4">Tham gia cộng đồng của chúng tôi ngay hôm nay để không bỏ lỡ những bộ phim và truyện tranh hấp dẫn nhất!</p>
+        <a href="{% url 'home' %}" class="btn btn-light btn-lg me-3">Xem Ngay</a>
+    </div>
+</section>
+
+{% endblock %}
+
+{% block linkCSSJSEnd-gioithieu%}
+<!-- Custom JS for About Page -->
+<script>
+    // Add smooth scrolling to all links
+    document.querySelectorAll('a[href^="#"]').forEach(anchor => {
+        anchor.addEventListener('click', function (e) {
+            e.preventDefault();
+            document.querySelector(this.getAttribute('href')).scrollIntoView({
+                behavior: 'smooth'
+            });
+        });
+    });
+
+    // Add animation on scroll
+    document.addEventListener('DOMContentLoaded', function() {
+        const animateOnScroll = function() {
+            const elements = document.querySelectorAll('.about-card, .feature-card, .team-card');
+            elements.forEach(element => {
+                const elementPosition = element.getBoundingClientRect().top;
+                const screenPosition = window.innerHeight / 1.3;
+                
+                if (elementPosition < screenPosition) {
+                    element.classList.add('animate__animated', 'animate__fadeInUp');
+                }
+            });
+        };
+
+        window.addEventListener('scroll', animateOnScroll);
+        animateOnScroll(); // Run once on page load
+    });
+</script>
+{% endblock %}

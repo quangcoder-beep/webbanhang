@@ -30,7 +30,7 @@
   <div class="np-grid">
     <a href="#" class="np-card">
       <div class="np-thumb">
-        <img src="{% static 'shop/images/placeholder.jpg' %}" alt="Poster">
+        <img src="{% static 'shop/images/demon.jpg' %}" alt="Kimetsu no Yaiba">
         <span class="np-badge">Tập 12</span>
       </div>
       <div class="np-body">
@@ -49,7 +49,7 @@
 
     <a href="#" class="np-card">
       <div class="np-thumb">
-        <img src="{% static 'shop/images/placeholder.jpg' %}" alt="Poster">
+        <img src="{% static 'shop/images/onepice.png' %}" alt="One Piece">
         <span class="np-badge">HD</span>
       </div>
       <div class="np-body">
@@ -68,7 +68,7 @@
 
     <a href="#" class="np-card">
       <div class="np-thumb">
-        <img src="{% static 'shop/images/placeholder.jpg' %}" alt="Poster">
+        <img src="{% static 'shop/images/gojo.jpg' %}" alt="Jujutsu Kaisen">
         <span class="np-badge">Tập 08</span>
       </div>
       <div class="np-body">
@@ -87,7 +87,7 @@
 
     <a href="#" class="np-card">
       <div class="np-thumb">
-        <img src="{% static 'shop/images/placeholder.jpg' %}" alt="Poster">
+        <img src="{% static 'shop/images/muc-than-ky-1-300x450.jpg' %}" alt="Your Name">
         <span class="np-badge">Full</span>
       </div>
       <div class="np-body">
@@ -106,7 +106,7 @@
 
     <a href="#" class="np-card">
       <div class="np-thumb">
-        <img src="{% static 'shop/images/placeholder.jpg' %}" alt="Poster">
+        <img src="{% static 'shop/images/item-5.jpg' %}" alt="Haikyuu!!">
         <span class="np-badge">Tập 05</span>
       </div>
       <div class="np-body">
@@ -125,7 +125,7 @@
 
     <a href="#" class="np-card">
       <div class="np-thumb">
-        <img src="{% static 'shop/images/placeholder.jpg' %}" alt="Poster">
+        <img src="{% static 'shop/images/item-6.jpg' %}" alt="Spy x Family">
         <span class="np-badge">Cam</span>
       </div>
       <div class="np-body">
@@ -142,42 +142,6 @@
       </div>
     </a>
   </div>
-
-  <div class="np-pagination">
-    <a href="#" class="np-page prev"><i class="fa-solid fa-angle-left"></i></a>
-    <a href="#" class="np-page active">1</a>
-    <a href="#" class="np-page">2</a>
-    <a href="#" class="np-page">3</a>
-    <a href="#" class="np-page next"><i class="fa-solid fa-angle-right"></i></a>
-  </div>
 </section>
 {% endblock %}
 
-{% block js-bodyhome_phimdangchieu %}
-<script src="{% static 'shop/js/bodyhome_phimdangchieu.js' %}"></script>
-  <script>
-  (function() {
-    const pool = [
-      '{% static "shop/images/1.jpg" %}',
-      '{% static "shop/images/2.jpg" %}',
-      '{% static "shop/images/3.jpg" %}',
-      '{% static "shop/images/4.jpg" %}',
-      '{% static "shop/images/5.jpg" %}',
-      '{% static "shop/images/6.jpg" %}',
-      '{% static "shop/images/7.jpg" %}',
-      '{% static "shop/images/8.jpg" %}'
-    ];
-    const randImg = () => pool[Math.floor(Math.random() * pool.length)];
-    const imgs = document.querySelectorAll('.np-thumb img');
-    imgs.forEach(img => {
-      const src = img.getAttribute('src') || '';
-      if (!src || /placeholder\.jpg$/i.test(src)) {
-        img.src = randImg();
-      }
-      img.addEventListener('error', () => {
-        img.src = randImg();
-      });
-    });
-  })();
- </script>
-{% endblock %}

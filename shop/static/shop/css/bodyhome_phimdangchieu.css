@@ -77,18 +77,6 @@
 .np-tag{ background: #23262b; border: 1px solid rgba(255,255,255,.08); color: #c9d2df;
   padding: 3px 8px; border-radius: 999px; font-size: 12px; }
 
-.np-pagination{
-  margin-top: 18px; display: flex; align-items: center; justify-content: center; gap: 8px;
-}
-.np-page{
-  display: inline-flex; align-items: center; justify-content: center;
-  width: 36px; height: 36px; border-radius: 10px;
-  background: #23262b; color: #cfd6e3; border: 1px solid rgba(255,255,255,.08);
-  text-decoration: none; transition: .2s ease;
-}
-.np-page:hover{ background: #2b2f35; color: #fff; }
-.np-page.active{ background: #2f3540; color: #fff; box-shadow: 0 0 0 2px rgba(255,255,255,.06) inset; }
-
 /* ===== Responsive ===== */
 @media (max-width: 992px){
   .np-header{ flex-direction: column; align-items: stretch; }

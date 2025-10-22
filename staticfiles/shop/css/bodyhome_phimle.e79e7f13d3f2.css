@@ -1,0 +1,9 @@
+/* Reuse the Now Playing styles */
+@import url("./bodyhome_phimdangchieu.9e6ba9788dfe.css");
+
+/* Optional: tweak heading accent for Phim lẻ if desired */
+.now-playing .np-header h2 {
+  background: linear-gradient(90deg,#8ec5ff,#91f2c3);
+  -webkit-background-clip: text; background-clip: text; -webkit-text-fill-color: transparent;
+}
+
