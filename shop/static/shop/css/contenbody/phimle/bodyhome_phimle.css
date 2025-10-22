@@ -1,5 +1,5 @@
 /* Reuse the Now Playing styles */
-@import url('./bodyhome_phimdangchieu.css');
+@import url('../phimdangchieu/bodyhome_phimdangchieu.css');
 
 /* Optional: tweak heading accent for Phim lẻ if desired */
 .now-playing .np-header h2 {
