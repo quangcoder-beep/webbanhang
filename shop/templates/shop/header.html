@@ -1,7 +1,42 @@
 {% load static %}
+<!-- Overlay cho mobile menu -->
+<div class="mobile-sidebar-overlay" id="overlay"></div>
+<!-- Menu slide từ bên trái -->
+<div class="mobile-sidebar" id="slideContainer">
+    <button class="close-sidebar" aria-label="Đóng menu">
+        <i class="fas fa-times"></i>
+    </button>
+    <nav class="mobile-nav">
+        <ul>
+                <li><a class="menu-link" href="{% url 'home' %}"><i class="fa-solid fa-house"></i> <span>Trang chủ</span></a></li>
+                <li>
+                    <div class="dropdown-container">
+                        <a class="menu-link has-dropdown clickDropdown" id="clickDropdown" href="#" role="button" aria-expanded="false"><i class="fa-solid fa-layer-group"></i> <span>Thể Loại</span></a>
+                        <ul class="dropdown-items" id="dropdown-items">
+                            <li><a class="item" href="#">Anime</a></li>
+                            <li><a class="item" href="#">Hoạt hình</a></li>
+                            <li><a class="item" href="#">Đọc truyện</a></li>
+                        </ul>
+                    </div>
+                </li>
+                <li><a class="menu-link" href="{% url 'phimle' %}"><i class="fa-solid fa-film"></i> <span>Phim Lẻ</span></a></li>
+                <li><a class="menu-link" href="{% url 'phimdangchieu' %}"><i class="fa-solid fa-rotate"></i> <span>Đang Chiếu</span></a></li>
+                <li><a class="menu-link" href="#"><i class="fa-solid fa-trophy"></i> <span>Top 10 HH3D</span></a></li>
+                <li><a class="menu-link" href="#"><i class="fa-solid fa-thumbs-up"></i> <span>Đánh Giá Cao</span></a></li>
+                <li><a class="menu-link" href="#"><i class="fa-solid fa-circle-check"></i> <span>Lịch Sử</span></a></li>
+                <li><a class="menu-link" href="{% url 'gioithieu' %}"><i class="fa-solid fa-trophy"></i> <span>Giới Thiệu</span></a></li>
+            </ul>
+        </nav>
+</div>
 <!-- header -->
 <nav class="header">
     <div class="header1">
+        <!-- Button để mở slide menu -->
+        <button class="menu-toggle" id="menuToggle">
+            <span class="hamburger"></span>
+            <span class="hamburger"></span>
+            <span class="hamburger"></span>
+        </button>
         <!-- logo -->
         <div class="logo-text">
             <a href="#"><h1>Anime HQM</h1></a>
@@ -55,77 +90,11 @@
                 <li><a class="menu-link" href="#"><i class="fa-solid fa-circle-check"></i> <span>Lịch Sử</span></a></li>
                 <li><a class="menu-link" href="{% url 'gioithieu' %}"><i class="fa-solid fa-trophy"></i> <span>Giới Thiệu</span></a></li>
             </ul>
-        </div>
-
-        <!-- phần tìm kiếm + button -->
-        <div class="header-manage2">
-            <!-- Button để mở slide menu -->
-            <button class="menu-toggle" id="menuToggle">
-                <span class="hamburger"></span>
-                <span class="hamburger"></span>
-                <span class="hamburger"></span>
-            </button>
-
-        </div>
+        </div>    
     </div>
 </nav>
-<!-- Overlay để đóng menu khi click bên ngoài -->
-<div class="overlay" id="overlay"></div>
-<!-- Menu slide từ bên phải -->
-<div class="slide-container" id="slideContainer">
-    <div class="slide-header">
-        <h2>Menu</h2>
-        <button class="close-btn" id="closeBtn">&times;</button>
-    </div>
-    <div class="slide-body">
-        <ul class="slide-items-list">
-            <li class="item"><a class="header-item" href="{% url 'home' %}"><i class="fa-solid fa-house"></i> Trang chủ</a></li>
-            <li class="item">
-                <a class="header-item dropdown"><i class="fa-solid fa-book-open"></i> Danh mục</a>
-                <ul class="child-item">
-                    <li><a href="#">Phim mới </a></li>
-                    <li><a href="#">Phim hot</a></li>
-                    <li><a href="#">Phim đang chiếu</a></li>
-                </ul>
-            </li>
-            <li class="item">
-                <a class="header-item dropdown"><i class="fa-solid fa-shapes"></i>  Thể loại</a>
-                <ul class="child-item">
-                    <li><a href="#">Anime</a></li>
-                    <li><a href="#">Hoạt hình</a></li>
-                    <li><a href="#">Đọc truyện</a></li>
-                </ul>
-            </li>
-            <li class="item">
-                <a class="header-item dropdown"><i class="fa-solid fa-star"></i> Top truyện</a>
-                <ul class="child-item">
-                    <li><a href="#">Top tuần</a></li>
-                    <li><a href="#">Top tháng</a></li>
-                    <li><a href="#">Top năm</a></li>
-                </ul>
-            </li>
-            <li class="item">
-                <a class="header-item dropdown"><i class="fa-solid fa-circle-info"></i> Giới thiệu</a>
-                <ul class="child-item">
-                    <li><a href="#">Về chúng tôi</a></li>
-                    <li><a href="#">Liên hệ</a></li>
-                    <li><a href="#">Hỗ trợ</a></li>
-                </ul>
-            </li>
-            <li class="item">
-                <a class="header-item dropdown"><i class="fa-solid fa-comments"></i> Hỗ trợ</a>
-                <ul class="child-item" >
-                    <li><a href="#">Liên hệ</a></li>
-                </ul>
-            </li>
-            <li class="item"><a class="header-item dropdown"><i class="fa-solid fa-gear"></i> Quản lí tài khoản</a>
-                <ul class="child-item">
-                    <li><a href="#">Quyền riêng tư</a></li>
-                </ul>
-            </li>
-        </ul>
-    </div>
-</div>
+
+
 <!-- end-header -->
 
 

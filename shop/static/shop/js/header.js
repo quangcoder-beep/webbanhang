@@ -1,28 +1,81 @@
-sloveSlide = function(value){
-    const elementButton = document.querySelector(value.clmenuToggle)
-    const elementOverlay = document.querySelector(value.cloverlay)
-    const elementSlideContainer = document.querySelector(value.clslideContainer)
-    const elementCloseBtn = document.querySelector(value.clcloseBtn)
+sloveSlide = function(value) {
+    const menuToggle = document.querySelector(value.clmenuToggle);
+    const overlay = document.querySelector(value.cloverlay);
+    const slideContainer = document.querySelector(value.clslideContainer);
+    const closeBtn = document.querySelector(value.clcloseBtn);
 
-    elementButton.onclick = function(e){
-        e.stopPropagation()
-        elementSlideContainer.classList.add('active')
-        elementOverlay.classList.add('active')
+    // Toggle menu function
+    function toggleMenu() {
+        const isOpening = !slideContainer.classList.contains('active');
+        
+        // Toggle active class on menu and overlay
+        slideContainer.classList.toggle('active');
+        overlay.classList.toggle('active');
+        
+        // Toggle aria-expanded attribute for accessibility
+        menuToggle.setAttribute('aria-expanded', isOpening);
+        
+        // Prevent body scroll when menu is open
+        document.body.style.overflow = isOpening ? 'hidden' : '';
+        
+        // Focus management
+        if (isOpening) {
+            // Focus first focusable element in the menu when opening
+            const firstFocusable = slideContainer.querySelector('a, button, [tabindex="0"]');
+            if (firstFocusable) firstFocusable.focus();
+        } else {
+            // Return focus to menu toggle when closing
+            menuToggle.focus();
+        }
     }
 
-    elementCloseBtn.onclick = function(e){
-        e.stopPropagation()
-        elementSlideContainer.classList.remove('active')
-        elementOverlay.classList.remove('active')
+    // Close menu function
+    function closeMenu() {
+        slideContainer.classList.remove('active');
+        overlay.classList.remove('active');
+        menuToggle.setAttribute('aria-expanded', 'false');
+        document.body.style.overflow = '';
+        menuToggle.focus();
     }
-    
-    elementOverlay.onclick = function(e){
-        e.stopPropagation()
-        elementSlideContainer.classList.remove('active' )
-        elementOverlay.classList.remove('active')
+
+    // Event Listeners
+    if (menuToggle) {
+        menuToggle.addEventListener('click', function(e) {
+            e.stopPropagation();
+            toggleMenu();
+        });
+        
+        // Add keyboard support (Enter/Space)
+        menuToggle.addEventListener('keydown', function(e) {
+            if (e.key === 'Enter' || e.key === ' ') {
+                e.preventDefault();
+                toggleMenu();
+            }
+        });
     }
-    
-}
+
+    if (closeBtn) {
+        closeBtn.addEventListener('click', function(e) {
+            e.stopPropagation();
+            closeMenu();
+        });
+    }
+
+    if (overlay) {
+        overlay.addEventListener('click', function(e) {
+            if (e.target === overlay) {
+                closeMenu();
+            }
+        });
+    }
+
+    // Close menu when pressing Escape key
+    document.addEventListener('keydown', function(e) {
+        if (e.key === 'Escape' && slideContainer.classList.contains('active')) {
+            closeMenu();
+        }
+    });
+};
 
 sloveDropdown = function(value) {
     const elementClick = document.querySelectorAll("." + value.clclickDropdown);

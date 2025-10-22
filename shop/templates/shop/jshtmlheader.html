@@ -6,24 +6,27 @@
     <!-- JS riêng -->
     <script src="{% static 'shop/js/header.js' %}"></script>
     <script>
-        sloveSlide({
-            clmenuToggle: '#menuToggle',
-            cloverlay: '#overlay',
-            clslideContainer: '#slideContainer',
-            clcloseBtn: '#closeBtn',
+        document.addEventListener('DOMContentLoaded', function() {
+            // Khởi tạo slide menu
+            sloveSlide({
+                clmenuToggle: '#menuToggle',      // Selector cho nút mở menu
+                cloverlay: '#overlay',           // Selector cho overlay
+                clslideContainer: '#slideContainer', // Selector cho container menu trượt
+                clcloseBtn: '.close-sidebar'     // Selector cho nút đóng menu
+            });
+
+            // Khởi tạo dropdown menu
+            sloveDropdown({
+                clclickDropdown: "clickDropdown",    // Class cho nút dropdown
+                cldropdown_items: "dropdown-items",  // Class cho menu dropdown
+                clItem: "item"                       // Class cho các item trong dropdown
+            });
+
+            // Khởi tạo hiệu ứng scroll
+            if (typeof solveScroll === 'function') {
+                solveScroll({
+                    clElementFade: "header"  // Selector cho phần tử cần hiệu ứng khi scroll
+                });
+            }
         });
-        // Khởi tạo tất cả dropdown
-        sloveDropdown({
-            clclickDropdown: "clickDropdown",
-            cldropdown_items: "dropdown-items",
-            clItem: "item",
-        });
-        sloveDropdown({
-            clclickDropdown: "dropdown",
-            cldropdown_items: "child-item",
-        })
-        solveScroll({
-            clElementFade: "header",
-        })
- 
     </script>

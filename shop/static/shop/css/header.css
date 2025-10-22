@@ -1,5 +1,9 @@
   /* ===== RESET CHUNG ===== */
-  ul, li {
+* {
+  box-sizing: border-box;
+}
+
+ul, li {
     margin: 0;                               /* Bỏ margin mặc định */
     padding: 0;                              /* Bỏ padding mặc định */
     list-style: none;                        /* Bỏ dấu chấm mặc định */
@@ -32,6 +36,7 @@
     right: 0;
     width: 100%;
     z-index: 2001;
+    height: 70px; /* Fixed height for mobile header */
   }
 
   .top-actions {
@@ -106,33 +111,37 @@
   
   /* Bottom row container */
   .header2 {
-    display: grid;
-    grid-template-columns: 1fr auto 1fr;     /* spacer | menu(center) | tools(right) */
+    max-height: 70px;
+    min-height: 60px;
+    display: flex;
+    justify-content: center;
     align-items: center;
-    gap: 6px;
-    padding: 6px 8px;
-    background: #1b1c1f;                     /* dark bar like screenshot */
+    padding: 0 16px;
+    background: #1b1c1f;
     box-shadow: inset 0 -1px 0 rgba(255,255,255,0.04);
-    margin-top: 48px;                        /* nằm ngay dưới thanh header1 cố định */
-    position: relative;                      /* create stacking context */
-    z-index: 1600;                           /* ensure menus appear above headerBg */
+    margin-top: 70px; /* Match header1 height */
+    position: relative;
+    z-index: 1600;
   }
   
   /* ===== MAIN MENU STYLES ===== */
   .header-manage1 {
-    min-height: 36px;                        /* ~1/2 so với trước đây */
-    grid-column: 2;                          /* center column */
-    justify-self: center;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    height: 100%;
+    margin: 0;
   }
   
   .header-manage1 ul:first-child {
-    display: flex;                           /* Menu ngang */
-    justify-content: center;                 /* Căn giữa ngang */
+    display: flex;
+    justify-content: center;
     align-items: center;
-    padding: 0 10px;                         /* Cách lề 2 bên */
-    width: 100%;
-    gap: 6px; 
+    margin: 0;
+    padding: 0;
+    list-style: none;
     height: 100%;
+    gap: 6px;
   }
   /* Đảm bảo UL chiếm toàn bộ chiều cao của vùng header để LI có thể căn giữa dọc theo 100% */
   
@@ -434,20 +443,23 @@
   }
   
    /* ===== HAMBURGER BUTTON ===== */
- .menu-toggle {
+.menu-toggle {
   background: linear-gradient(135deg, #667eea 0%, #764ba2 100%);
   border: none;
   padding: 8px;
   cursor: pointer;
   border-radius: 8px;
-  display: none; /* hidden by default on desktop */
+  display: none; /* Ẩn mặc định */
   flex-direction: column;
-  gap: 4px;
+  justify-content: space-between;
+  width: 40px;
+  height: 30px;
   transition: all 0.3s cubic-bezier(0.4, 0, 0.2, 1);
   box-shadow: 0 4px 15px rgba(102, 126, 234, 0.3);
   position: relative;
   overflow: hidden;
- }
+  z-index: 1001;
+}
  
  .menu-toggle::before {
    content: '';
@@ -474,27 +486,6 @@
    transform: translateY(0) scale(0.98);
  }
  
- .hamburger {
-  width: 20px;
-  height: 2px;
-  background: white;
-  transition: all 0.3s cubic-bezier(0.4, 0, 0.2, 1);
-  border-radius: 2px;
-  position: relative;
-}
- 
- .menu-toggle:hover .hamburger {
-   transform: scale(1.1);
-   box-shadow: 0 0 10px rgba(255, 255, 255, 0.5);
- }
- 
- .menu-toggle:hover .hamburger:nth-child(1) {
-   transform: translateY(-1px) scale(1.1);
- }
- 
- .menu-toggle:hover .hamburger:nth-child(3) {
-   transform: translateY(1px) scale(1.1);
- }
 /* Overlay */
 .overlay {
   position: fixed;
@@ -520,7 +511,7 @@
 .dropdown-container {
     position: relative;
     display: inline-block;
-    margin: 6px;
+    /* margin: 6px; */
     z-index: 99999;
 }
 
