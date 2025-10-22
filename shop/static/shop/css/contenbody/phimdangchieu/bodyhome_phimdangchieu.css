@@ -1,9 +1,14 @@
 /* ===== PHIM ĐANG CHIẾU ===== */
+body {
+  background: #1c1c1c;
+}
+
 .now-playing {
   max-width: 1200px;
   margin: 24px auto;
   padding: 0 16px 48px;
   color: #e9edf3;
+  background: #1c1c1c;
 }
 
 .np-header {

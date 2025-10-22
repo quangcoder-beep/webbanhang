@@ -1,6 +1,11 @@
 /* Reuse the Now Playing styles */
 @import url('../phimdangchieu/bodyhome_phimdangchieu.css');
 
+/* Nền tương đồng với website chính */
+body {
+  background: #1c1c1c;
+}
+
 /* Optional: tweak heading accent for Phim lẻ if desired */
 .now-playing .np-header h2 {
   background: linear-gradient(90deg,#8ec5ff,#91f2c3);
