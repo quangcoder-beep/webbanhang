@@ -12,11 +12,8 @@
     <link href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.5.2/css/all.min.css" rel="stylesheet">
 
     <!-- css riêng của footer + header-->
-    <link rel="stylesheet" href="{% static 'shop/css/style.css' %}"> <!-- global site styles (dark background) -->
-    <link rel="stylesheet" href="{% static 'shop/css/header.css' %}">
-    <link rel="stylesheet" href="{% static 'shop/css/header.responsive.css' %}">
-    <link rel="stylesheet" href="{% static 'shop/css/footer.css' %}">
-
+    {% include "shop/cssheader.html" %}
+    {% include "shop/cssfooter.html" %}
     <!-- CSS/JS của body -->
     {% block linkCSSJSFrontbodyhome %}{%endblock%}
     {% block css-js-bodyhome_phimdangchieu %}{%endblock%}

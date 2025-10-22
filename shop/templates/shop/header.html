@@ -1,47 +1,49 @@
 {% load static %}
-<!-- Overlay cho mobile menu -->
+<!-- Lớp phủ cho menu di động -->
 <div class="mobile-sidebar-overlay" id="overlay"></div>
-<!-- Menu slide từ bên trái -->
+<!-- Menu trượt từ bên trái -->
 <div class="mobile-sidebar" id="slideContainer">
     <button class="close-sidebar" aria-label="Đóng menu">
         <i class="fas fa-times"></i>
     </button>
     <nav class="mobile-nav">
         <ul>
-                <li><a class="menu-link" href="{% url 'home' %}"><i class="fa-solid fa-house"></i> <span>Trang chủ</span></a></li>
-                <li>
-                    <div class="dropdown-container">
-                        <a class="menu-link has-dropdown clickDropdown" id="clickDropdown" href="#" role="button" aria-expanded="false"><i class="fa-solid fa-layer-group"></i> <span>Thể Loại</span></a>
-                        <ul class="dropdown-items" id="dropdown-items">
-                            <li><a class="item" href="#">Anime</a></li>
-                            <li><a class="item" href="#">Hoạt hình</a></li>
-                            <li><a class="item" href="#">Đọc truyện</a></li>
-                        </ul>
-                    </div>
-                </li>
-                <li><a class="menu-link" href="{% url 'phimle' %}"><i class="fa-solid fa-film"></i> <span>Phim Lẻ</span></a></li>
-                <li><a class="menu-link" href="{% url 'phimdangchieu' %}"><i class="fa-solid fa-rotate"></i> <span>Đang Chiếu</span></a></li>
-                <li><a class="menu-link" href="#"><i class="fa-solid fa-trophy"></i> <span>Top 10 HH3D</span></a></li>
-                <li><a class="menu-link" href="#"><i class="fa-solid fa-thumbs-up"></i> <span>Đánh Giá Cao</span></a></li>
-                <li><a class="menu-link" href="#"><i class="fa-solid fa-circle-check"></i> <span>Lịch Sử</span></a></li>
-                <li><a class="menu-link" href="{% url 'gioithieu' %}"><i class="fa-solid fa-trophy"></i> <span>Giới Thiệu</span></a></li>
-            </ul>
-        </nav>
+            <li><a class="menu-link" href="{% url 'home' %}"><i class="fa-solid fa-house"></i> <span>Trang chủ</span></a></li>
+            <li>
+                <div class="dropdown-container">
+                    <a class="menu-link has-dropdown clickDropdown" id="clickDropdown" href="#" role="button" aria-expanded="false"><i class="fa-solid fa-layer-group"></i> <span>Thể Loại</span></a>
+                    <ul class="dropdown-items" id="dropdown-items">
+                        <li><a class="item" href="#">Anime</a></li>
+                        <li><a class="item" href="#">Hoạt hình</a></li>
+                        <li><a class="item" href="#">Đọc truyện</a></li>
+                    </ul>
+                </div>
+            </li>
+            <li><a class="menu-link" href="{% url 'phimle' %}"><i class="fa-solid fa-film"></i> <span>Phim Lẻ</span></a></li>
+            <li><a class="menu-link" href="{% url 'phimdangchieu' %}"><i class="fa-solid fa-rotate"></i> <span>Đang Chiếu</span></a></li>
+            <li><a class="menu-link" href="#"><i class="fa-solid fa-trophy"></i> <span>Top 10 HH3D</span></a></li>
+            <li><a class="menu-link" href="#"><i class="fa-solid fa-thumbs-up"></i> <span>Đánh Giá Cao</span></a></li>
+            <li><a class="menu-link" href="#"><i class="fa-solid fa-circle-check"></i> <span>Lịch Sử</span></a></li>
+            <li><a class="menu-link" href="{% url 'gioithieu' %}"><i class="fa-solid fa-trophy"></i> <span>Giới Thiệu</span></a></li>
+        </ul>
+    </nav>
 </div>
+
+
 <!-- header -->
 <nav class="header">
     <div class="header1">
-        <!-- Button để mở slide menu -->
+        <!-- Nút để mở menu trượt -->
         <button class="menu-toggle" id="menuToggle">
             <span class="hamburger"></span>
             <span class="hamburger"></span>
             <span class="hamburger"></span>
         </button>
-        <!-- logo -->
+        <!-- Logo -->
         <div class="logo-text">
             <a href="#"><h1>Anime HQM</h1></a>
         </div>
-        <!-- search on top bar -->
+        <!-- Thanh tìm kiếm -->
         <div class="search top-search">
             <div class="search-container">
                 <input type="search" name="search" id="searchInput" placeholder="Tìm kiếm...">
@@ -53,7 +55,7 @@
                 </button>
             </div>
         </div>
-        <!-- right actions -->
+        <!-- Các hành động người dùng -->
         <div class="top-actions">
             <a class="icon-btn" href="#" title="Lịch sử">
                 <i class="fa-solid fa-rotate"></i>

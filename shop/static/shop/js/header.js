@@ -4,32 +4,32 @@ sloveSlide = function(value) {
     const slideContainer = document.querySelector(value.clslideContainer);
     const closeBtn = document.querySelector(value.clcloseBtn);
 
-    // Toggle menu function
+    // Hàm bật/tắt menu
     function toggleMenu() {
         const isOpening = !slideContainer.classList.contains('active');
         
-        // Toggle active class on menu and overlay
+        // Bật/tắt class active trên menu và lớp phủ
         slideContainer.classList.toggle('active');
         overlay.classList.toggle('active');
         
-        // Toggle aria-expanded attribute for accessibility
+        // Bật/tắt thuộc tính aria-expanded cho khả năng truy cập
         menuToggle.setAttribute('aria-expanded', isOpening);
         
-        // Prevent body scroll when menu is open
+        // Đóng menu khi nhấp vào liên kết trong menu mở
         document.body.style.overflow = isOpening ? 'hidden' : '';
         
-        // Focus management
+        // Quản lý tiêu điểm
         if (isOpening) {
-            // Focus first focusable element in the menu when opening
+            // Đặt tiêu điểm vào phần tử có thể focus đầu tiên trong menu khi mở
             const firstFocusable = slideContainer.querySelector('a, button, [tabindex="0"]');
             if (firstFocusable) firstFocusable.focus();
         } else {
-            // Return focus to menu toggle when closing
+            // Trả lại tiêu điểm về nút chuyển đổi menu khi đóng
             menuToggle.focus();
         }
     }
 
-    // Close menu function
+    // Hàm đóng menu
     function closeMenu() {
         slideContainer.classList.remove('active');
         overlay.classList.remove('active');
@@ -45,7 +45,7 @@ sloveSlide = function(value) {
             toggleMenu();
         });
         
-        // Add keyboard support (Enter/Space)
+        // Thêm hỗ trợ bàn phím (Enter/Space)
         menuToggle.addEventListener('keydown', function(e) {
             if (e.key === 'Enter' || e.key === ' ') {
                 e.preventDefault();
@@ -69,7 +69,7 @@ sloveSlide = function(value) {
         });
     }
 
-    // Close menu when pressing Escape key
+    // Đóng menu khi nhấn phím Escape
     document.addEventListener('keydown', function(e) {
         if (e.key === 'Escape' && slideContainer.classList.contains('active')) {
             closeMenu();

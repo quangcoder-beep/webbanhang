@@ -2,14 +2,14 @@
 {% load static %}
 
 {% block linkCSSJSfront-gioithieu %}
-<!-- Custom CSS for About Page -->
+<!-- CSS tùy chỉnh cho trang Giới thiệu -->
 <link rel="stylesheet" href="{% static 'shop/css/gioithieu.css' %}">
-<!-- Google Fonts -->
+<!-- Phông chữ Google -->
 <link href="https://fonts.googleapis.com/css2?family=Poppins:wght@300;400;500;600;700&display=swap" rel="stylesheet">
 {% endblock %}
 
 {% block content-gioithieu %}
-<!-- Hero Section -->
+<!-- Phần Hero -->
 <section class="about-hero">
     <div class="container">
         <div class="row align-items-center">
@@ -24,7 +24,7 @@
     </div>
 </section>
 
-<!-- About Section -->
+<!-- Phần Giới thiệu -->
 <section class="about-section py-5">
     <div class="container">
         <div class="row">
@@ -65,7 +65,7 @@
     </div>
 </section>
 
-<!-- Features Section -->
+<!-- Phần Tính năng -->
 <section class="features-section py-5">
     <div class="container">
         <div class="row">
@@ -115,7 +115,7 @@
     </div>
 </section>
 
-<!-- Team Section -->
+<!-- Đội ngũ -->
 <section class="team-section py-5">
     <div class="container">
         <div class="row">
@@ -177,7 +177,7 @@
     </div>
 </section>
 
-<!-- CTA Section -->
+<!-- Kêu gọi hành động -->
 <section class="cta-section py-5 bg-primary text-white">
     <div class="container text-center">
         <h2>Sẵn sàng khám phá thế giới anime?</h2>
@@ -191,7 +191,7 @@
 {% block linkCSSJSEnd-gioithieu%}
 <!-- Custom JS for About Page -->
 <script>
-    // Add smooth scrolling to all links
+    // Thêm cuộn mượt vào tất cả các liên kết
     document.querySelectorAll('a[href^="#"]').forEach(anchor => {
         anchor.addEventListener('click', function (e) {
             e.preventDefault();
@@ -201,7 +201,7 @@
         });
     });
 
-    // Add animation on scroll
+    // Thêm hiệu ứng khi cuộn
     document.addEventListener('DOMContentLoaded', function() {
         const animateOnScroll = function() {
             const elements = document.querySelectorAll('.about-card, .feature-card, .team-card');

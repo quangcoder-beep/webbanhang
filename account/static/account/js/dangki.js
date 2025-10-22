@@ -2,7 +2,7 @@ function solve(value) {
     let element = document.querySelectorAll("#form-1 input");
 
     element.forEach(function(giaTri){
-        // Validate khi rời khỏi input
+        // Hàm kiểm tra hợp lệ khi rời khỏi ô nhập liệu
         giaTri.onblur = function(e) {
             let id = e.target.parentElement.id;
             let tag = e.target.parentElement.querySelector(".form-message");
@@ -22,7 +22,7 @@ function solve(value) {
             }
         }
 
-        // Validate realtime khi gõ
+        // Hàm kiểm tra hợp lệ ngay khi gõ
         giaTri.oninput = function(e) {
             let id = e.target.parentElement.id;
             let tag = e.target.parentElement.querySelector(".form-message");
