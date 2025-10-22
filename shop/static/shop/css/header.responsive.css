@@ -1,77 +1,180 @@
-/* Responsive additions for header without changing existing structure or base CSS */
+/* ===== HEADER RESPONSIVE STYLES ===== */
 
-/* Large tablets and below (≤ 992px) */
-@media (max-width: 992px) {
-  /* Make header 2 columns to reduce crowding */
-  .header {
-    grid-template-columns: 1fr 1fr;
-    min-height: 72px;
+/* Large screens (≤ 1200px) */
+@media (max-width: 1200px) {
+  .header > .header1,
+  .header > .header2 {
+    padding-left: 15px;
+    padding-right: 15px;
   }
-
-  /* Reduce logo size a bit */
-  .logo-text { height: 72px; }
-  .logo-text h1 { font-size: 20px; letter-spacing: 1px; }
-
-  /* Shrink search a bit */
-  .search-container { width: 190px; }
-
-  /* Space for account links on one line or wrap nicely */
-  .account-ul { gap: 6px; flex-wrap: wrap; }
-  .account-ul li a { padding: 4px 8px; font-size: 12px; }
-  .account-ul li span { font-size: 11px; }
-
-  /* Hide primary horizontal menu; use slide menu instead */
-  .header-manage1 { display: none; }
-
-  /* Slide container width for tablet */
-  .slide-container { max-width: 50%; }
 }
 
-/* Tablets/phones (≤ 768px) – complement existing rules */
+/* Tablets (≤ 992px) */
+@media (max-width: 992px) {
+  .header1 {
+    grid-template-columns: auto 1fr auto;
+    padding: 6px 15px;
+  }
+  
+  .logo-text h1 {
+    font-size: 1.5rem;
+  }
+  
+  .header-manage1 ul {
+    flex-wrap: wrap;
+    justify-content: center;
+  }
+  
+  .menu-link {
+    padding: 6px 10px;
+    font-size: 13px;
+  }
+}
+
+/* Small tablets (≤ 768px) */
 @media (max-width: 768px) {
-  /* Keep two rows compact */
-  .header { min-height: 64px; }
-
-  /* Tighter logo */
-  .logo-text { height: 64px; }
-  .logo-text h1 { font-size: 18px; }
-
-  /* Search narrower */
-  .search-container { width: 170px; min-width: 0; }
-
-  /* Tools bar spacing */
-  .header-manage2 { gap: 10px; padding: 0 12px; min-height: 64px; }
+  .mobile-menu-toggle {
+    display: block;
+  }
+  
+  .header2 {
+    display: none;
+  }
+  
+  .top-search {
+    display: none;
+  }
+  
+  .top-actions .icon-btn--text span {
+    display: none;
+  }
+  
+  .top-actions .icon-btn {
+    width: 32px;
+    height: 32px;
+  }
 }
 
-/* Small phones (≤ 576px) */
+/* Mobile devices (≤ 576px) */
 @media (max-width: 576px) {
-  /* Stack layout */
-  .header { grid-template-columns: auto 1fr auto; text-align: left; min-height: 60px; }
+  .header1 {
+    padding: 5px 10px;
+  }
+  
+  .logo-text h1 {
+    font-size: 1.3rem;
+  }
+  
+  .top-actions {
+    gap: 5px;
+  }
+  
+  .mobile-sidebar {
+    width: 85%;
+    max-width: 280px;
+  }
+}
 
-  /* Left cluster: account + logo in tighter grid */
-  .header-manage0 { grid-template-columns: 120px 1fr; }
+/* Mobile Sidebar Styles */
+.mobile-sidebar-overlay {
+  display: none;
+  position: fixed;
+  top: 0;
+  left: 0;
+  right: 0;
+  bottom: 0;
+  background: rgba(0, 0, 0, 0.7);
+  z-index: 1999;
+  opacity: 0;
+  transition: opacity 0.3s ease;
+}
 
-  .logo-text { height: 44px; }
-  .logo-text h1 { font-size: 14px; letter-spacing: 1px; }
+.mobile-sidebar-overlay.active {
+  display: block;
+  opacity: 1;
+}
 
-  /* Tighter account links */
-  .account-ul { gap: 4px; }
-  .account-ul li a { font-size: 10px; padding: 2px 4px; }
-  .account-ul li span { font-size: 10px; }
+.mobile-sidebar {
+  position: fixed;
+  top: 0;
+  right: -320px;
+  width: 280px;
+  height: 100%;
+  background: #1e1f22;
+  z-index: 2000;
+  transition: right 0.3s ease;
+  overflow-y: auto;
+  padding: 20px 0;
+}
 
-  /* Shorter search to fit one row */
-  .search-container { width: 120px; min-width: 0; padding: 0 6px; }
-  .search-container input { font-size: 12px; padding: 4px 4px; }
-  .search-btn { min-width: 22px; min-height: 22px; padding: 2px; }
-  .search-btn svg { width: 12px; height: 12px; }
+.mobile-sidebar.active {
+  right: 0;
+}
 
-  /* Smaller hamburger so it fits */
-  .header-manage2 { gap: 6px; padding: 0 8px; min-height: 44px; }
-  .menu-toggle { padding: 6px; }
-  .hamburger { width: 18px; height: 2px; }
-  /* Slide container width for small phones */
-  .slide-container { max-width: 70%; }
+.close-sidebar {
+  position: absolute;
+  top: 10px;
+  right: 10px;
+  background: none;
+  border: none;
+  color: #fff;
+  font-size: 24px;
+  cursor: pointer;
+}
 
-  /* Keep main menu hidden at this size */
-  .header-manage1 { display: none; }
+.mobile-nav {
+  padding: 20px;
+}
+
+.mobile-nav ul {
+  list-style: none;
+  padding: 0;
+  margin: 0;
+}
+
+.mobile-nav li {
+  margin-bottom: 10px;
+}
+
+.mobile-nav a {
+  display: flex;
+  align-items: center;
+  padding: 12px 15px;
+  color: #e1e3e6;
+  text-decoration: none;
+  border-radius: 6px;
+  transition: all 0.2s ease;
+}
+
+.mobile-nav a:hover,
+.mobile-nav a.active {
+  background: rgba(255, 255, 255, 0.1);
+  color: #fff;
+}
+
+.mobile-nav i {
+  margin-right: 10px;
+  width: 20px;
+  text-align: center;
+}
+
+/* Dropdown menu in mobile sidebar */
+.mobile-nav .dropdown-menu {
+  max-height: 0;
+  overflow: hidden;
+  transition: max-height 0.3s ease-out;
+  padding-left: 15px;
+}
+
+.mobile-nav .dropdown-menu.show {
+  max-height: 500px;
+}
+
+.mobile-nav .fa-chevron-down {
+  margin-left: auto;
+  transition: transform 0.3s ease;
+}
+
+.mobile-nav .fa-chevron-down.rotate {
+  transform: rotate(180deg);
 }
