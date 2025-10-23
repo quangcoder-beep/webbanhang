@@ -1280,9 +1280,9 @@
     <div class="pagination">
       <div class="container">
         <ul>
-          <li><a href="{% url 'home' 1 %}" class="active1">1</a></li>
-          <li><a href="{% url 'home' 2 %}">2</a></li>
-          <li><a href="{% url 'home' 3 %}">3</a></li>
+          <li><a href="{% url 'home' 1 %}" {% if page == 1 %}class="active1"{% endif %}>1</a></li>
+          <li><a href="{% url 'home' 2 %}" {% if page == 2 %}class="active1"{% endif %}>2</a></li>
+          <li><a href="{% url 'home' 3 %}" {% if page == 3 %}class="active1"{% endif %}>3</a></li>
         </ul>
       </div>
     </div>

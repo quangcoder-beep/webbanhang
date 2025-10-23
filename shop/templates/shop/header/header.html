@@ -74,7 +74,7 @@
         <!-- phần danh mục, thể loại,... -->
         <div class="header-manage1">
             <ul>
-                <li><a class="menu-link active" href="{% url 'home' %}"><i class="fa-solid fa-house"></i> <span>Trang chủ</span></a></li>
+                <li><a class="menu-link {% if s == 'tt' %}active{% endif %}" href="{% url 'home' 'tt' %}"><i class="fa-solid fa-house"></i> <span>Trang chủ</span></a></li>
                 <li>
                     <div class="dropdown-container">
                         <a class="menu-link has-dropdown clickDropdown" href="#" role="button" aria-expanded="false"><i class="fa-solid fa-layer-group"></i> <span>Thể Loại</span></a>
@@ -85,12 +85,12 @@
                         </ul>
                     </div>
                 </li>
-                <li><a class="menu-link" href="{% url 'phimle' %}"><i class="fa-solid fa-film"></i> <span>Phim Lẻ</span></a></li>
-                <li><a class="menu-link" href="{% url 'phimdangchieu' %}"><i class="fa-solid fa-rotate"></i> <span>Đang Chiếu</span></a></li>
+                <li><a class="menu-link {% if s == 'pl' %}active{% endif %}" href="{% url 'phimle' 'pl' %}"><i class="fa-solid fa-film"></i> <span>Phim Lẻ</span></a></li>
+                <li><a class="menu-link {% if s == 'pc' %}active{% endif %}" href="{% url 'phimdangchieu' 'pc' %}"><i class="fa-solid fa-rotate"></i> <span>Đang Chiếu</span></a></li>
                 <li><a class="menu-link" href="#"><i class="fa-solid fa-trophy"></i> <span>Top 10 HH3D</span></a></li>
                 <li><a class="menu-link" href="#"><i class="fa-solid fa-thumbs-up"></i> <span>Đánh Giá Cao</span></a></li>
                 <li><a class="menu-link" href="#"><i class="fa-solid fa-circle-check"></i> <span>Lịch Sử</span></a></li>
-                <li><a class="menu-link" href="{% url 'gioithieu' %}"><i class="fa-solid fa-trophy"></i> <span>Giới Thiệu</span></a></li>
+                <li><a class="menu-link {% if s == 'gt' %}active{% endif %}" href="{% url 'gioithieu' 'gt' %}"><i class="fa-solid fa-trophy"></i> <span>Giới Thiệu</span></a></li>
             </ul>
         </div>    
     </div>

@@ -59,12 +59,17 @@
     <script src="{% static 'account/js/dangki.js' %}"></script>
     <script>
     document.addEventListener("DOMContentLoaded", function() {
-        solve({
-            username: "#username",
-            email: "#email",
-            password: "#password",
-            repassword: "#repassword",
-        });
+        // Initialize the form validation
+        if (typeof solve === 'function') {
+            solve({
+                username: "#username input",
+                email: "#email input",
+                password: "#password input",
+                repassword: "#repassword input"
+            });
+        } else {
+            console.error('solve function not found. Make sure dangki.js is loaded correctly.');
+        }
     });
 
     // Form validation enhancement
