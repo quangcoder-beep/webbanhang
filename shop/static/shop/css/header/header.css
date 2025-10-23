@@ -78,10 +78,11 @@ ul, li {
   .header {
     position: relative;
     z-index: 1999;
-    background: transparent;
+    background: #1B1C1F;
     box-shadow: none;
     border: none;
     backdrop-filter: none;
+    width: auto;
   }
   
   /* Thêm padding cho body để nội dung không bị ẩn dưới header cố định */
@@ -96,17 +97,7 @@ ul, li {
     background: rgba(15, 20, 22, 0.9);
   }
   
-  /* Hiệu ứng gradient ánh sáng cho header */
-  .header::before {
-    content: '';
-    position: absolute;
-    top: 0;
-    left: 0;
-    right: 0;
-    bottom: 0;
-    background: linear-gradient(45deg, rgba(255, 255, 255, 0.1) 0%, transparent 50%, rgba(255, 255, 255, 0.05) 100%);
-    pointer-events: none;
-  }
+  /* Đã xóa hiệu ứng gradient */
   /* ===== THANH MENU DƯỚI (CUỘN CÙNG TRANG) ===== */
   /* Phần menu chứa các liên kết điều hướng chính */
   .header2 {

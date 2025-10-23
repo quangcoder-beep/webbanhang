@@ -1,0 +1,593 @@
+{%extends "shop/formbase.html" %}
+{%load static%}
+{% block cssjs-font-blog %}
+<link
+      rel="stylesheet"
+      href="https://cdn.jsdelivr.net/npm/bootstrap@4.6.2/dist/css/bootstrap.min.css"
+      integrity="sha384-xOolHFLEh07PJGoPkLv1IbcEPTNtaed2xpHsD9ESMhqIYd0nLMwNLD69Npy4HI+N"
+      crossorigin="anonymous"
+    />
+    <link rel="stylesheet" href="{% static 'blog/css/blog.css' %}" />
+
+    <link
+      rel="stylesheet"
+      href="https://cdn.jsdelivr.net/npm/slick-carousel@1.8.1/slick/slick.css"
+    />
+    <link
+      rel="stylesheet"
+      href="https://cdn.jsdelivr.net/npm/slick-carousel@1.8.1/slick/slick-theme.css"
+    />
+    <link
+      rel="stylesheet"
+      href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.5.0/css/all.min.css"
+    />
+{% endblock %}
+{% block cssjs-end-blog %}
+ <!-- Option 1: jQuery and Bootstrap Bundle (includes Popper) -->
+    <script
+      src="https://cdn.jsdelivr.net/npm/jquery@3.5.1/dist/jquery.slim.min.js"
+      integrity="sha384-DfXdz2htPH0lsSSs5nCTpuj/zy4C+OGpamoFVy38MVBnE+IbbVYUew+OrCXaRkfj"
+      crossorigin="anonymous"
+    ></script>
+    <script
+      src="https://cdn.jsdelivr.net/npm/bootstrap@4.6.2/dist/js/bootstrap.bundle.min.js"
+      integrity="sha384-Fy6S3B9q64WdZWQUiU+q4/2Lc9npb8tCaSX9FK7E8HnRr0Jz8D6OP9dO5Vg3Q9ct"
+      crossorigin="anonymous"
+    ></script>
+    <!-- Slick CSS -->
+    <link
+      rel="stylesheet"
+      type="text/css"
+      href="https://cdn.jsdelivr.net/npm/slick-carousel@1.8.1/slick/slick.css"
+    />
+    <link
+      rel="stylesheet"
+      type="text/css"
+      href="https://cdn.jsdelivr.net/npm/slick-carousel@1.8.1/slick/slick-theme.css"
+    />
+
+    <!-- jQuery (Slick cần jQuery) -->
+    <script src="https://code.jquery.com/jquery-3.6.0.min.js"></script>
+
+    <!-- Slick JS -->
+    <script
+      type="text/javascript"
+      src="https://cdn.jsdelivr.net/npm/slick-carousel@1.8.1/slick/slick.min.js"
+    ></script>
+    <script>
+      $(document).ready(function () {
+        $(".items-slick").slick({
+          slidesToShow: 1,
+          slidesToScroll: 1,
+          infinite: true,
+          arrows: true,
+          dots: true,
+          autoplay: true,
+          autoplaySpeed: 3000,
+        });
+      });
+    </script>
+    <script src="{% static 'blog/js/blog.js' %}"></script>
+{% endblock %}
+{% block content-blog %}
+    <!-- SPEAK -->
+    <div class="speak">
+      <div class="container">
+        <div class="speak__main">
+          <div class="row">
+            <div class="col-xl-12">
+              <h1 class="speak__main--title" style="color: #c03a2a">MƯA ĐỎ</h1>
+              <h3 style="color: #77777b; margin-bottom: 40px">
+                Chương 1: Chiến Hồn Thánh Thú 1
+              </h3>
+              <div class="pagination">
+                <div class="container">
+                  <ul>
+                    <li>
+                      <a href="{% url 'demo' 'demo'%}" class="active1" id="btn1">
+                        <i class="fa-solid fa-arrow-left"></i>
+                        Chương trước
+                      </a>
+                    </li>
+                    <li>
+                      <a href="{% url 'demo' 'demo'%}" class="active2">
+                        <i class="fa-solid fa-bars"></i>
+                      </a>
+                    </li>
+                    <li>
+                      <a href="{% url 'demo' 'demo'%}">
+                        Chương tiếp
+                        <i
+                          class="fa-solid fa-arrow-right"
+                          style="margin-left: 5px; margin-right: 5px"
+                        ></i>
+                      </a>
+                    </li>
+                  </ul>
+                </div>
+              </div>
+              <div class="divider">❧ ❦ ❧</div>
+              <p
+                style="text-align: justify; padding: 0 30px; font-size: 20px"
+                class="desc"
+              >
+                Truyền thuyết kể rằng, mỗi khi thiên đạo mất đi, luân hồi đi đến
+                cuối thì trong giới vực vô tận sẽ sinh ra mười con Cự Thú Hỗn
+                Độn Thái Cổ.Chúng nó có thân thể to còn hơn thần vực, nơi chúng
+                nó đi qua là trời sụp đất nứt, thời không đảo điên, hành tinh
+                suy vong, chúng sinh bị nạn.Sau khi hủy diệt thế giới cũ chúng
+                nó sẽ mất tích.
+                <br />
+                Từ đây thiên địa tái sinh, xây dựng lại trật tự, sinh mệnh sống
+                lại, thế giới mới được sinh ra.......Đêm khuya, trời đổ cơn mưa
+                lớn như trút nước.Mây đen dày đặc như ức vạn ác quỷ hung ác tụ
+                lại với nhau nhìn về chốn trần gian âm u này.Vô số tia chớp hình
+                rắn chói mắt xẹt qua tầng mây, phát ra tiếng sấm nổ đinh tai
+                nhức óc làm thiên địa run rẩy.- Thiên Mệnh, cứu ta!Lý Thiên Mệnh
+                đầu đau như búa bổ, khó khăn mở mí mắt trong cơn mưa to giã
+                thẳng vào người.Đập vào mắt Lý Thiên Mệnh là một con chim đại
+                bàng có đôi cánh chim màu vàng.Chim đại bàng vốn nên thần tuấn
+                nhưng giờ mình đầy vết thương, máu tuôn ồ ạt hòa cùng con mưa to
+                nhuộm đỏ mảng lớn đất đai.Thiên Mệnh thấy cảnh này thì tim đau
+                như dao cắt:- Kim Vũ!Vì đây là thú bản mệnh chim đại bàng bốn
+                cánh vàng của Lý Thiên Mệnh, là huynh đệ sống chết có nhau, cùng
+                kề vai chiến đấu mười sáu năm trời.Đùng!Một tiếng sấm nổ vang, ,
+                tia sáng chợt rạch phá chân trời, ánh sáng nhấp nháy, một con
+                chim ưng đực ba mắt màu tím từ trên trời giáng xuống.Tia điện
+                hình rắn rậm rạp quấn quanh người chim ưng ba mắt, nó phát ra
+                tiếng rít hung ác, móng vuốt sắt bén đè chặt Kim Vũ.
+                <br />
+                Sau đó nó hé mỏ chim nhổ từng mảnh lông chim màu vàng trên người
+                Kim Vũ.Mỗi mảnh lông chim bị giật đứt là để lại một lỗ máu.Tiếng
+                rít đau đớn của Kim Vũ như móc câu đâm vào ngực Lý Thiên Mệnh,
+                làm hắn hít thở cũng thấy đau đớn.Một thiếu niên ngồi trên chim
+                ưng ba mắt nói:- Lý Thiên Mệnh, ngươi dám có ý đồ chuốc thuốc
+                xâm phạm Mộc Tình Tình, xét thấy hành vi không bằng cầm thú của
+                ngươi, ta thân làm đệ tử thiên phủ của Viêm Hoàng học cung phải
+                khiến trách ngươi!Giữa hai mắt của thiếu niên như có ao sét, gã
+                điều khiển chim ung ba mắt trong sấm chớp đì đùng này tựa như
+                con của sét.Thiếu niên trầm giọng tuyên cáo:- Nghĩ tình ngày
+                thường ngươi biểu hiện tốt đẹp nên chừa cho đường sống, phán tử
+                hình thủ bản mệnh chim đại bàng bốn cánh vàng của ngươi!Thiếu
+                niên muốn lăng trì xử chết Kim Vũ.
+                <br />
+                (ác vê lù)Thiếu nữ xinh đẹp dựa sát vào thiếu niên lên tiếng.-
+                Đình ca, chiến hồn Thánh Thú là của ca.
+                <br />
+                Thứ cặn bã, hạ tiện như Lý Thiên Mệnh không xứng có được thần
+                vật như vậy.Trong con mưa lớn tàn phá khiến toàn thân thiếu nữ
+                ướt đẫm, dáng người linh lung thướt tha rúc vào lồng ngực thiếu
+                niên.
+                <br />
+                (Mô tả sơ sơ thấy mùi tiện nhân)Nàng chính là Mộc Tỉnh Tình, dù
+                Lý Thiên Mệnh hóa thành tro cũng nhận ra nàng.Mộc Tỉnh Tình kêu
+                Đình ca là thiếu niên sét ngồi trên chim ung đục ba mắt, Lâm
+                Tiêu Đình.Lý Thiên Mệnh đã nhớ ra, bọn họ giết Kim Vũ là vì muốn
+                cướp lấy chiến hồn Thánh Thú.Trong quốc gia này ai đều biết
+                chiến hồn Thánh Thủ là thứ quý giá biết bao, nó vô giá, là Thánh
+                Thú trong truyền thuyết để lại con cháu đời sau.Nghe nói công
+                hiệu của chiến hồn Thánh Thủ có thể tạo ra cường giả đứng trên
+                chúng sinh.Lý Thiên Mệnh lấy được chiến hồn Thánh Thú đã bị Kim
+                Vũ luyện hóa vào lông chim.Cơn giận như núi lửa bùng cháy trong
+                lồng ngực Lý Thiên Mệnh, núi lửa sắp phun trào, mây khói
+                mùmit.Nhưng không hiểu sao Lý Thiên Mệnh chẳng thể nhúc nhích
+                một đầu ngón tay, hắn chỉ có thể trơ mắt nhìn lông chim trên
+                người Kim Vũ bị Lôi Điện Thần Ưng nhổ từng cọng, nhìn nó toàn
+                thân máu tươi đầm đìa rít gào đau đớn với mình.Khao khát và đau
+                thương ánh trong mắt Kim Vũ làm tim Lý Thiên Mệnh nhói đau.Trên
+                thế giới còn có chuyện gì bất lực, khó chịu hơn là nhìn huynh đệ
+                của mình bị người hành hạ ngay trước mắt không?- Lâm Tiêu Đình,
+                Mộc Tình Tình! Đời này miễn là Lý Thiên Mệnh này không chết thì
+                nhất định sẽ đưa các ngươi xuống địa ngục!Lý Thiên Mệnh đến chết
+                cũng không quên hai cái tên này, hắn cố gắng vùng vẫy, muốn xé
+                rách bộ mặt giả tạo của họ.Nhưng kỳ lạ là hai người cách hắn
+                càng lúc càng xa hơn, sau đó bị sương mù dày đặc và tia chớp
+                nuốt trọn, mọi thứ tan biến trước mắt hắn.Lý Thiện Mệnh đúng
+                trong đất trời tối tăm, mờ mịt nhìn quanh.Mộc Tình Tình đâu?Lâm
+                Tiêu Đình đâu rồi?Bọn họ đi nơi nào?Két!Bên tại Lý Thiên Mệnh
+                bỗng nhiên vang lên tiếng mở cửa.- Mệnh nhi, ngươi lại thấy ác
+                mộng rồi.Lý Thiên Mệnh loáng thoáng nghe một giọng nói tràn ngập
+                trìu mến và đau lòng.Lý Thiên Mệnh đau đầu như búa bổ, hắn nương
+                đôi tay gầy yếu đỡ mình cố gượng ngồi dậy.
+                <br />
+                Rốt cuộc mở mắt ra.Đập vào mắt là một gian phòng ngủ tối mờ, ánh
+                nến chiếu lên bàn ghế để lại cái bóng kéo dài.-Thì ra mới rồi là
+                cơn ác mộng, hèn gì mình không thể nhúc nhích.Nhưng cũng không
+                xem như là mơ, vì việc diễn ra trong mơ đều thật sự xảy ra.
+                <br />
+                Mọi cảnh tượng, mỗi câu Lâm Tiêu Đình và Mộc Tinh Tình nói đều
+                giống hệt lúc ấy.Lý Thiên Mệnh, từng là thiên tài của Ly Hỏa
+                thành, tòa thành trì xa xôi ở Chu Tước quốc, cũng là nhi tử của
+                thành chủ Ly Hỏa thành.Ba năm trước, Lý Thiên Mệnh ở Ly Hỏa
+                thành được Viêm Hoàng học cung, thánh địa cao nhất của Chu Tước
+                quốc nhận vào học.
+                <br />
+                Hắn mang theo hy vọng của mọi người trong thành đi Viêm Hoàng
+                học cung tu luyện.Trên đường đến Viêm Hoàng học cung, Lý Thiên
+                Mệnh gặp gỡ thiên tài Mộc Tình Tình cũng đến từ Thần Phong thành
+                xa xôi, rồi kết bạn với nàng.Một lần anh hùng cứu mỹ nhân khiến
+                hai người từ đây về sau giúp đỡ nhau cùng trưởng thành.
+                <br />
+                Tình cảm đến thật tự nhiên, hai người hẹn hò một năm.Trong một
+                năm đó, Mộc Tinh Tinh lấy cớ là tu luyện quan trọng hơn nên
+                không chịu công khai tình cảm của hai người.Lý Thiên Mệnh từng
+                cho rằng nàng là chân mệnh thiên nữ của mình, hắn cam nguyện cả
+                đời ở bên cạnh bảo vệ nữ nhân này.
+                <br />
+                (thanh niên mới lớn đã dại gái)Nhưng Lý Thiên Mệnh không thể ngờ
+                rằng mình chẳng biết gì cả, hoàn toàn không cảnh giác với dã tâm
+                của Mộc Tình Tình.Năm nọ, Lý Thiên Mệnh ở trong bí cảnh chiến
+                trường Trầm Uyên của Viêm Hoàng học cung lấy được chiến hồn
+                Thánh Thú đủ gây náo động.Đó là một cọng lông chim cổ xưa, mặt
+                trên có hoa văn thời đại thượng cổ.
+                <br />
+                Lý Thiên Mệnh biết thứ này vô cùng quý giá nên giữ kín bí
+                mật.Khi đó Lý Thiên Mệnh cho thú bản mệnh Kim Vũ của mình luyện
+                hóa chiến hồn Thánh Thú vào trong lông chim, từ đầu tới đuôi hắn
+                chỉ kể việc này cho một mình Mộc Tình Tình nghe.Nhưng Lý Thiên
+                Mệnh không bao giờ ngờ rằng người mình tin tưởng nhất lại tiết
+                lộ tin tức chiến hồn Thánh Thú cho Lâm Tiêu Đình, người đến từ
+                Thiên Phủ trong Viêm Hoàng học cung.Thế là Mộc Tình Tình xoay
+                người biến thân, vứt bỏ Lý Thiên Mệnh, trở thành bạn gái của Lâm
+                Tiêu Đình.Thiên Phủ trong Viêm Hoàng học cung là nơi bí mật cao
+                nhất trong học cung, chỉ có thiên tài chói mắt nhất trong cả
+                nước mới được vào, một nơi truyền kỳ.Thế lực sau lưng các thiên
+                tài đó toàn là nhà giàu thế gia, vương công quý tộc của cả
+                nước.Ví dụ như Lâm Tiêu Đình là thiếu niên thiên tài chói mắt
+                nhất trong Lôi Tôn Phủ bá chủ một phương.Lý Thiên Mệnh làm sao
+                bắt kịp bối cảnh của người như vậy?Đêm hôm đó là ngày kỷ niệm
+                tròn một năm hai người quen nhau, Lý Thiên Mệnh chuẩn bị quà đặc
+                biệt đưa đến trước mắt Mộc Tình Tình.Mộc Tình Tình rất vui vẻ,
+                dụ dỗ Lý Thiên Mệnh uống ly rượu.
+                <br />
+                Hắn không hay biết có điều khác lạ, động tình sờ nàng một chút,
+                sau đó Lâm Tiêu Đình xuất hiện.Chuyện tiếp theo giống y như
+                trong mơ, hai người tàn nhẫn giết chết Kim Vũ, cướp lấy chiến
+                hồn Thánh Thú ngang ngửa tài phú nửa quốc gia.Điều khác biệt là
+                khi ấy Lý Thiên Mệnh và Kim Vũ cùng nhau chiến đến cùng, nhưng
+                không địch lại siêu thiên tài Lâm Tiêu Đình của Thiên Phủ trong
+                Viêm Hoàng học cung..
+              </p>
+              <div class="pagination">
+                <div class="container">
+                  <ul>
+                    <li>
+                      <a href="{% url 'demo' 'demo'%}" class="active1" id="btn1">
+                        <i class="fa-solid fa-arrow-left"></i>
+                        Chương trước
+                      </a>
+                    </li>
+                    <li>
+                      <a href="{% url 'demo' 'demo'%}" class="active2">
+                        <i class="fa-solid fa-bars"></i>
+                      </a>
+                    </li>
+                    <li>
+                      <a href="{% url 'demo' 'demo'%}">
+                        Chương tiếp
+                        <i
+                          class="fa-solid fa-arrow-right"
+                          style="margin-left: 5px; margin-right: 5px"
+                        ></i>
+                      </a>
+                    </li>
+                  </ul>
+                </div>
+              </div>
+            </div>
+          </div>
+        </div>
+      </div>
+    </div>
+    <!-- END SPEAK -->
+    <!-- MAIN -->
+    <div class="main inner">
+      <div class="container">
+        <!-- BOX-ONE -->
+        <div class="row">
+          <div class="col-12">
+            <div class="inner__box">
+              <div class="inner__title">
+                <a href="{% url 'demo' 'demo'%}" style="color: white">Dân gian</a>
+              </div>
+            </div>
+          </div>
+
+          <!-- 4 cột sách -->
+          <div class="col-xl-3 col-md-6 col-sm-12">
+            <div class="inner__items" data-ep="TOP 1">
+              <a href="{% url 'demo' 'demo'%}">
+                <img src="{%static 'blog/images/thachsanh.jpg'%}" alt="Thạch Sanh" />
+              </a>
+              <a href="{% url 'demo' 'demo'%}"><p class="inner__items--title">Thạch Sanh</p></a>
+              <div class="overlay">
+                <h4>Thạch Sanh</h4>
+                <p>Chuyện chàng dũng sĩ diệt chằn tinh, cứu công chúa.</p>
+                <span>⭐ 4.9 | 👁 25k</span>
+              </div>
+            </div>
+          </div>
+
+          <div class="col-xl-3 col-md-6 col-sm-12">
+            <div class="inner__items" data-ep="TOP 2">
+              <a href="{% url 'demo' 'demo'%}">
+                <img src="{%static 'blog/images/vusua.jpg'%}" alt="Sự tích cây vú sữa" />
+              </a>
+              <a href="{% url 'demo' 'demo'%}">
+                <p class="inner__items--title">Sự tích cây Vú Sữa</p>
+              </a>
+              <div class="overlay">
+                <h4>Sự tích cây Vú Sữa</h4>
+                <p>
+                  Câu chuyện cảm động về tình mẹ thiêng liêng và lòng hối hận.
+                </p>
+                <span>⭐ 4.8 | 👁 18k</span>
+              </div>
+            </div>
+          </div>
+
+          <div class="col-xl-3 col-md-6 col-sm-12">
+            <div class="inner__items" data-ep="TOP 3">
+              <a href="{% url 'demo' 'demo'%}">
+                <img
+                  src="{%static 'blog/images/miengtrau.jpg'%}"
+                  alt="Sự tích miếng trầu"
+                />
+              </a>
+              <a href="{% url 'demo' 'demo'%}">
+                <p class="inner__items--title">Sự tích Miếng Trầu</p>
+              </a>
+              <div class="overlay">
+                <h4>Sự tích Miếng Trầu</h4>
+                <p>
+                  Truyền thuyết về tình anh em và tình nghĩa vợ chồng son sắt.
+                </p>
+                <span>⭐ 4.7 | 👁 14k</span>
+              </div>
+            </div>
+          </div>
+
+          <div class="col-xl-3 col-md-6 col-sm-12">
+            <div class="inner__items" data-ep="TOP 4">
+              <a href="{% url 'demo' 'demo'%}">
+                <img src="{%static 'blog/images/sodua.jpg'%}" alt="Sọ Dừa" />
+              </a>
+              <a href="{% url 'demo' 'demo'%}"><p class="inner__items--title">Sọ Dừa</p></a>
+              <div class="overlay">
+                <h4>Sọ Dừa</h4>
+                <p>
+                  Chuyện chàng trai nghèo hiền lành lấy được cô gái hiếu thảo.
+                </p>
+                <span>⭐ 4.8 | 👁 22k</span>
+              </div>
+            </div>
+          </div>
+        </div>
+        <!-- END BOX-ONE -->
+
+        <!-- BOX-TWO -->
+        <div class="row mt-5">
+          <div class="col-12">
+            <div class="inner__box">
+              <div class="inner__title">
+                <a href="{% url 'demo' 'demo'%}" style="color: white">Truyện Ma</a>
+              </div>
+            </div>
+          </div>
+
+          <div class="col-xl-3 col-md-6 col-sm-12">
+            <div class="inner__items" data-ep="TOP 1">
+              <a href="{% url 'demo' 'demo'%}">
+                <img src="{%static 'blog/images/tet.jpg'%}" alt="Ma đêm giao thừa" />
+              </a>
+              <a href="{% url 'demo' 'demo'%}">
+                <p class="inner__items--title">Ma Đêm Giao Thừa</p>
+              </a>
+              <div class="overlay">
+                <h4>Ma Đêm Giao Thừa</h4>
+                <p>Những bóng hình kỳ dị xuất hiện giữa đêm tết linh thiêng.</p>
+                <span>⭐ 4.6 | 👁 19k</span>
+              </div>
+            </div>
+          </div>
+
+          <div class="col-xl-3 col-md-6 col-sm-12">
+            <div class="inner__items" data-ep="TOP 2">
+              <a href="{% url 'demo' 'demo'%}">
+                <img src="{%static 'blog/images/gapma.jpg'%}" alt="Gặp ma trong đêm" />
+              </a>
+              <a href="{% url 'demo' 'demo'%}">
+                <p class="inner__items--title">Gặp Ma Trong Đêm</p>
+              </a>
+              <div class="overlay">
+                <h4>Gặp Ma Trong Đêm</h4>
+                <p>Hành trình rợn người trong ngôi làng bị nguyền rủa.</p>
+                <span>⭐ 4.7 | 👁 27k</span>
+              </div>
+            </div>
+          </div>
+
+          <div class="col-xl-3 col-md-6 col-sm-12">
+            <div class="inner__items" data-ep="TOP 3">
+              <a href="{% url 'demo' 'demo'%}">
+                <img src="{%static 'blog/images/cauco.jpg'%}" alt="Cầu Cổ" />
+              </a>
+              <a href="{% url 'demo' 'demo'%}">
+                <p class="inner__items--title">Bóng Ma Trên Cầu Cổ</p>
+              </a>
+              <div class="overlay">
+                <h4>Bóng Ma Trên Cầu Cổ</h4>
+                <p>Truyền thuyết rùng rợn về chiếc cầu đẫm máu năm xưa.</p>
+                <span>⭐ 4.5 | 👁 15k</span>
+              </div>
+            </div>
+          </div>
+
+          <div class="col-xl-3 col-md-6 col-sm-12">
+            <div class="inner__items" data-ep="TOP 4">
+              <a href="{% url 'demo' 'demo'%}">
+                <img src="{%static 'blog/images/datam.jpg'%}" alt="Đa Tâm" />
+              </a>
+              <a href="{% url 'demo' 'demo'%}"><p class="inner__items--title">Ngôi Nhà Đa Tâm</p></a>
+              <div class="overlay">
+                <h4>Ngôi Nhà Đa Tâm</h4>
+                <p>Căn nhà chứa bí mật về những linh hồn không siêu thoát.</p>
+                <span>⭐ 4.8 | 👁 20k</span>
+              </div>
+            </div>
+          </div>
+        </div>
+        <!-- END BOX-TWO -->
+
+        <!-- BOX-THREE -->
+        <div class="row mt-5">
+          <div class="col-12">
+            <div class="inner__box">
+              <div class="inner__title">
+                <a href="{% url 'demo' 'demo'%}" style="color: white" class="title">Thiếu nhi</a>
+              </div>
+            </div>
+          </div>
+
+          <div class="col-xl-3 col-md-6 col-sm-12">
+            <div class="inner__items" data-ep="TOP 1">
+              <a href="{% url 'demo' 'demo'%}"><img src="{%static 'blog/images/ank.jpg'%}" alt="Ank" /></a>
+              <a href="{% url 'demo' 'demo'%}">
+                <p class="inner__items--title">Ank và Rừng Thần Bí</p>
+              </a>
+              <div class="overlay">
+                <h4>Ank và Rừng Thần Bí</h4>
+                <p>
+                  Cuộc phiêu lưu kỳ thú trong khu rừng của loài vật biết nói.
+                </p>
+                <span>⭐ 4.9 | 👁 32k</span>
+              </div>
+            </div>
+          </div>
+
+          <div class="col-xl-3 col-md-6 col-sm-12">
+            <div class="inner__items" data-ep="TOP 2">
+              <a href="{% url 'demo' 'demo'%}">
+                <img src="{%static 'blog/images/lon.jpg'%}" alt="Lợn con tinh nghịch" />
+              </a>
+              <a href="{% url 'demo' 'demo'%}">
+                <p class="inner__items--title">Lợn Con Tinh Nghịch</p>
+              </a>
+              <div class="overlay">
+                <h4>Lợn Con Tinh Nghịch</h4>
+                <p>Bài học về lòng dũng cảm và tình bạn chân thành.</p>
+                <span>⭐ 4.8 | 👁 25k</span>
+              </div>
+            </div>
+          </div>
+
+          <div class="col-xl-3 col-md-6 col-sm-12">
+            <div class="inner__items" data-ep="TOP 3">
+              <a href="{% url 'demo' 'demo'%}">
+                <img src="{%static 'blog/images/tho.jpg'%}" alt="Thỏ con" />
+              </a>
+              <a href="{% url 'demo' 'demo'%}">
+                <p class="inner__items--title">Chú Thỏ Thông Minh</p>
+              </a>
+              <div class="overlay">
+                <h4>Chú Thỏ Thông Minh</h4>
+                <p>Thỏ con dùng trí tuệ để vượt qua sói già gian ác.</p>
+                <span>⭐ 4.7 | 👁 22k</span>
+              </div>
+            </div>
+          </div>
+
+          <div class="col-xl-3 col-md-6 col-sm-12">
+            <div class="inner__items" data-ep="TOP 4">
+              <a href="{% url 'demo' 'demo'%}">
+                <img src="{%static 'blog/images/mom.jpg'%}" alt="Mẹ và bé" />
+              </a>
+              <a href="{% url 'demo' 'demo'%}">
+                <p class="inner__items--title">Mẹ Ơi Con Yêu Mẹ</p>
+              </a>
+              <div class="overlay">
+                <h4>Mẹ Ơi Con Yêu Mẹ</h4>
+                <p>Câu chuyện giản dị đầy yêu thương của tình mẹ bao la.</p>
+                <span>⭐ 4.9 | 👁 45k</span>
+              </div>
+            </div>
+          </div>
+        </div>
+        <!-- END BOX-THREE -->
+
+        <!-- BOX-FOUR -->
+        <div class="row mt-5">
+          <div class="col-12">
+            <div class="inner__box">
+              <div class="inner__title">
+                <a href="{% url 'demo' 'demo'%}" style="color: white" class="title">Ngôn tình</a>
+              </div>
+            </div>
+          </div>
+
+          <div class="col-xl-3 col-md-6 col-sm-12">
+            <div class="inner__items" data-ep="TOP 1">
+              <a href="{% url 'demo' 'demo'%}">
+                <img src="{%static 'blog/images/101.jpg'%}" alt="Hẹn Ước Mùa Hoa" />
+              </a>
+              <a href="{% url 'demo' 'demo'%}"><p class="inner__items--title">Hẹn Ước Mùa Hoa</p></a>
+              <div class="overlay">
+                <h4>Hẹn Ước Mùa Hoa</h4>
+                <p>Chuyện tình nhẹ nhàng giữa hai người trẻ lạc mất nhau.</p>
+                <span>⭐ 4.9 | 👁 40k</span>
+              </div>
+            </div>
+          </div>
+
+          <div class="col-xl-3 col-md-6 col-sm-12">
+            <div class="inner__items" data-ep="TOP 2">
+              <a href="{% url 'demo' 'demo'%}">
+                <img src="{%static 'blog/images/yeu.jpg'%}" alt="Yêu Anh Từ Cái Nhìn Đầu Tiên" />
+              </a>
+              <a href="{% url 'demo' 'demo'%}">
+                <p class="inner__items--title">Yêu Anh Từ Cái Nhìn Đầu Tiên</p>
+              </a>
+              <div class="overlay">
+                <h4>Yêu Anh Từ Cái Nhìn Đầu Tiên</h4>
+                <p>Tình yêu nảy nở trong thế giới game và ngoài đời thực.</p>
+                <span>⭐ 4.8 | 👁 55k</span>
+              </div>
+            </div>
+          </div>
+
+          <div class="col-xl-3 col-md-6 col-sm-12">
+            <div class="inner__items" data-ep="TOP 3">
+              <a href="{% url 'demo' 'demo'%}">
+                <img src="{%static 'blog/images/vuong.png'%}" alt="Vương Phi Nghịch Thiên" />
+              </a>
+              <a href="{% url 'demo' 'demo'%}">
+                <p class="inner__items--title">Vương Phi Nghịch Thiên</p>
+              </a>
+              <div class="overlay">
+                <h4>Vương Phi Nghịch Thiên</h4>
+                <p>Nữ chính xuyên không và hành trình thay đổi vận mệnh.</p>
+                <span>⭐ 4.9 | 👁 70k</span>
+              </div>
+            </div>
+          </div>
+
+          <div class="col-xl-3 col-md-6 col-sm-12">
+            <div class="inner__items" data-ep="TOP 4">
+              <a href="{% url 'demo' 'demo'%}">
+                <img src="{%static 'blog/images/kysu.png'%}" alt="Ký Sự Tình Yêu" />
+              </a>
+              <a href="{% url 'demo' 'demo'%}"><p class="inner__items--title">Ký Sự Tình Yêu</p></a>
+              <div class="overlay">
+                <h4>Ký Sự Tình Yêu</h4>
+                <p>Hành trình tìm lại người yêu trong kiếp sau đầy nước mắt.</p>
+                <span>⭐ 4.7 | 👁 65k</span>
+              </div>
+            </div>
+          </div>
+        </div>
+        <!-- END BOX-FOUR -->
+      </div>
+    </div>
+
+    <!-- END MAIN -->
+{% endblock %}
