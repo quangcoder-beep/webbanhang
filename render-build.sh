@@ -3,10 +3,18 @@
 set -o errexit
 
 # Install dependencies
+echo "Installing Python dependencies..."
+pip install --upgrade pip
 pip install -r requirements.txt
 
 # Collect static files
-python manage.py collectstatic --noinput
+echo "Collecting static files..."
+python manage.py collectstatic --noinput --clear
 
-# Run migrations
+# Apply database migrations
+echo "Applying database migrations..."
 python manage.py migrate --noinput
+
+# Create cache table if using database cache
+echo "Creating cache table..."
+python manage.py createcachetable
