@@ -122,44 +122,6 @@ a {
   font-size: 12px;
 }
 
-.nav {
-  margin-top: 30px;
-  margin-bottom: 20px;
-}
-.nav ul {
-  display: flex;
-  justify-content: center;
-  align-items: center;
-  gap: 20px;
-  padding: 0;
-  margin: 0;
-  list-style: none;
-}
-.nav ul a {
-  display: inline-block;
-  padding: 5px 30px;
-  background: #333333;
-  color: #fff;
-  border-radius: 5px;
-}
-.nav ul a h4 {
-  font-size: 16px;
-  text-align: center;
-  margin: 0;
-  margin-bottom: 3px;
-}
-.nav ul a p {
-  margin: 0;
-  text-align: center;
-  font-weight: 300;
-}
-.nav ul a:hover {
-  background: linear-gradient(135deg, #1e0039, #8a1b61, #ff0055);
-}
-.nav--active {
-  background: linear-gradient(135deg, #1e0039, #8a1b61, #ff0055) !important;
-}
-
 .inner {
   padding-bottom: 30px;
   color: #fff;
