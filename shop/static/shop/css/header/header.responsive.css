@@ -33,99 +33,54 @@
 
 /* Mobile devices (≤ 767.98px) */
 @media (max-width: 767.98px) {
-  .mobile-menu-toggle {
-    display: block;
+  .header1 {
+    grid-template-columns: auto 1fr auto !important;
+    padding: 8px 12px !important;
+    height: 60px !important;
   }
-  
-  .header2 {
-    display: none;
-  }
-  
-  .top-search {
-    display: none;
-  }
-  
-  .top-actions .icon-btn--text span {
-    display: none;
-  }
-  
-  .top-actions .icon-btn {
-    width: 32px;
-    height: 32px;
-  }
-}
 
-/* Mobile devices (≤ 768px) */
-@media (max-width: 768px) {
-  /* Hiển thị nút menu toggle */
-  .menu-toggle {
-    display: flex !important; /* Đảm bảo hiển thị trên mobile */
-    order: 1; /* Đưa nút menu về đầu tiên */
+  .mobile-menu-toggle {
+    display: flex !important;
+    order: 1;
     margin-right: 8px;
   }
   
-  /* Ẩn menu desktop */
-  .header2 {
-    display: none;
+  .header2, .top-search {
+    display: none !important;
   }
   
-  /* Căn chỉnh header trên mobile */
-  .header1 {
-    padding: 8px 12px;
-    grid-template-columns: auto 1fr auto;
-    height: 60px;
-    align-items: center;
+  .top-actions .icon-btn--text span {
+    display: none !important;
   }
   
-  /* Đảm bảo logo và các phần tử khác căn giữa */
+  .top-actions .icon-btn {
+    width: 36px !important;
+    height: 36px !important;
+    margin-left: 5px !important;
+  }
+
   .logo-text {
     order: 2;
     text-align: center;
     margin: 0 auto;
   }
   
-  .top-actions {
-    order: 3;
-  }
-  
-  .top-search {
-    order: 4;
-    grid-column: 1 / -1; /* Chiếm toàn bộ chiều rộng */
-    margin: 8px 0 0;
-  }
-  
   .logo-text h1 {
-    font-size: 1.3rem;
+    font-size: 1.3rem !important;
     white-space: nowrap;
     overflow: hidden;
     text-overflow: ellipsis;
   }
-  
+
   .top-actions {
+    order: 3;
+    display: flex;
     gap: 5px;
   }
   
-  /* Ẩn chữ Login trên mobile */
-  .icon-btn--text span {
-    display: none;
-  }
-  
-  /* Tùy chỉnh kích thước icon */
-  .icon-btn {
-    width: 36px;
-    height: 36px;
-    display: flex;
-    align-items: center;
-    justify-content: center;
-  }
-  
-  /* Tùy chỉnh thanh tìm kiếm */
-  .top-search {
-    margin: 0 8px;
-  }
-  
   .search-container {
-    max-width: 180px;
+    max-width: 100%;
+    margin: 8px 0 0;
   }
 }
 
@@ -156,7 +111,7 @@
   top: 0;
   left: 0;
   width: 85%;
-  max-width: 45%;
+  max-width: 320px;
   height: 100%;
   background: #1e1f22;
   z-index: 2000;
