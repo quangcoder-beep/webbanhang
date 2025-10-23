@@ -50,46 +50,5 @@
     {% include "shop/footer/footer.html" %}
     <!-- END FOOTER -->
 
-    <!-- Mobile Debug Script -->
-    <script>
-      // Debug viewport
-      console.log('Viewport width:', window.innerWidth);
-      console.log('Device pixel ratio:', window.devicePixelRatio);
-      
-      // Force viewport on mobile
-      function setViewport() {
-        const viewport = document.querySelector('meta[name="viewport"]');
-        if (viewport) {
-          viewport.setAttribute('content', 'width=device-width, initial-scale=1.0, maximum-scale=1.0, user-scalable=no, viewport-fit=cover');
-          console.log('Viewport meta tag updated');
-        }
-      }
-      
-      // Run on load and orientation change
-      window.addEventListener('load', setViewport);
-      window.addEventListener('orientationchange', setViewport);
-      
-      // Mobile menu toggle
-      document.addEventListener('DOMContentLoaded', function() {
-        const menuToggle = document.getElementById('menuToggle');
-        const overlay = document.getElementById('overlay');
-        const slideContainer = document.getElementById('slideContainer');
-        
-        if (menuToggle && overlay && slideContainer) {
-          menuToggle.addEventListener('click', function() {
-            console.log('Menu toggle clicked');
-            slideContainer.classList.toggle('active');
-            overlay.classList.toggle('active');
-            document.body.style.overflow = slideContainer.classList.contains('active') ? 'hidden' : '';
-          });
-          
-          overlay.addEventListener('click', function() {
-            slideContainer.classList.remove('active');
-            overlay.classList.remove('active');
-            document.body.style.overflow = '';
-          });
-        }
-      });
-    </script>
   </body>
 </html>
