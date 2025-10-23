@@ -8,6 +8,7 @@ urlpatterns = [
     path('', views.bodyhome, name='home'),
     path('<int:page>/', views.bodyhome, name='home'),
     path('<str:s>/', views.bodyhome, name='home'),
+    
     path('phimdangchieu/', views.phimdangchieu, name='phimdangchieu'),
     path('phimdangchieu/<str:s>/', views.phimdangchieu, name='phimdangchieu'),
     path('phimle/', views.phimle, name='phimle'),

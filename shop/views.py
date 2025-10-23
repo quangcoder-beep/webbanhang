@@ -1,8 +1,8 @@
 from django.shortcuts import render
 
 # Create your views here.
-def bodyhome(request, page=1, s=""):
-    return render(request, 'shop/contenbody/home/bodyhome.html', {"page": page, "s": s})
+def bodyhome(request, page=1, s="", demo=""):
+    return render(request, 'shop/contenbody/home/bodyhome.html', {"page": page, "s": s, "demo": demo})
 
 def login(request):
     return render(request, 'account/login.html')

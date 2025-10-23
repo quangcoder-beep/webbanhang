@@ -4,7 +4,9 @@ from django.template.loader import get_template
 from django.template import TemplateDoesNotExist
 
 # Render an introduce page by its template name (without extension)
-def read_page(request, page):
-    template_path = f'introduce/{page}.html'
-    return render(request, template_path)
+def demo(request, demo):
+    return render(request, 'shop/contenbody/home/bodyhome.html', {'demo': demo, 'page': 1})
+
+
+
 
